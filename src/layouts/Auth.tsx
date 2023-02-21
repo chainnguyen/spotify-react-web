@@ -1,12 +1,5 @@
-// Core
-
 function AuthLayout() {
-  return (
-    <main>
-      Auth Layout
-    </main>
-  )
+  return <main>Auth Layout</main>
 }
-
 
 export default AuthLayout

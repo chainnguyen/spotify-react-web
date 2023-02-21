@@ -1,10 +1,19 @@
-// Core
+import { Suspense } from 'react'
+import { Outlet } from 'react-router-dom'
+
+import { Header, Loading, Sidebar } from '@/share/components'
 
 function DefaultLayout() {
   return (
-    <div>
-      <header>Default Layout</header>
-    </div>
+    <>
+      <Header />
+      <Sidebar />
+      <main>
+        <Suspense fallback={<Loading />}>
+          <Outlet />
+        </Suspense>
+      </main>
+    </>
   )
 }
 
