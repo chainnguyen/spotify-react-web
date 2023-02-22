@@ -1,5 +1,61 @@
+import '@/assets/scss/layouts/_header.scss'
+
 function Header() {
-  return <header>Header nè</header>
+  return (
+    <div className="Root__top-bar">
+      <header
+        aria-label="Top bar and user menu"
+        className="facDIsOQo9q7kiWc4jSg qxbaGYC8rgMLfyOuYRCM">
+        <div className="T1xI1RTSFU7Wu94UuvE6">
+          <div className="EvIR4O7jOSbNmxtMdIQ0"></div>
+        </div>
+
+        <div className="VgSbatGBB9XwTH2_dsxg">
+          <button
+            aria-label="Go back"
+            className="ql0zZd7giPXSnPg75NR0"
+            disabled
+            aria-expanded="false">
+            <svg
+              role="img"
+              height="16"
+              width="16"
+              aria-hidden="true"
+              className="Svg-sc-ytk21e-0 kcBZLg IYDlXmBmmUKHveMzIPCF"
+              viewBox="0 0 16 16">
+              <path d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"></path>
+            </svg>
+          </button>
+
+          <button
+            aria-label="Go forward"
+            className="ql0zZd7giPXSnPg75NR0 pfMoD1MbelMuF1m8QeMc">
+            <svg
+              role="img"
+              height="16"
+              width="16"
+              aria-hidden="true"
+              className="Svg-sc-ytk21e-0 kcBZLg IYDlXmBmmUKHveMzIPCF"
+              viewBox="0 0 16 16">
+              <path d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div className="rovbQsmAS_mwvpKHaVhQ" />
+        <div className="GTAFfOA_w5vh_bDaGJAG" />
+
+        <div className="LKFFk88SIRC9QKKUWR5u">
+          <button className="Button-sc-1dqy6lx-0 dZYxEP sibxBMlr_oxWTfBrEz2G">Sign up</button>
+          <button className="Button-sc-qlcn5g-0 jsmWVV">
+            <span className="ButtonInner-sc-14ud5tc-0 kuwYvr encore-inverted-light-set">
+              Log in
+            </span>
+          </button>
+        </div>
+      </header>
+    </div>
+  )
 }
 
 export default Header

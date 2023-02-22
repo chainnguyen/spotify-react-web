@@ -1,8 +1,8 @@
 function LibraryPage() {
   return (
-    <div>
+    <section aria-label="Library Page">
       <h1>Library Page</h1>
-    </div>
+    </section>
   )
 }
 

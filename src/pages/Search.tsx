@@ -1,8 +1,8 @@
 function SearchPage() {
   return (
-    <div>
+    <section aria-label="Search Page">
       <h1>Search Page</h1>
-    </div>
+    </section>
   )
 }
 

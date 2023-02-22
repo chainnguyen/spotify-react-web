@@ -1,0 +1,57 @@
+// Typography
+$font-family: CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,Helvetica Neue,helvetica,arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+// Layout
+$content-spacing: 32px;
+$nav-bar-width: 218px;
+$content-max-width: 1955px;
+$left-sidebar-item-height: 32px;
+$left-sidebar-padding-left: 24px;
+$left-sidebar-padding-right: 24px;
+$left-sidebar-item-pill-horizontal-padding: 7px;
+$left-sidebar-item-indentation-width: 16px;
+$left-sidebar-edit-input-height: 26px;
+$background-noise: url('@/assets/images/background-noise.svg');
+
+// Color
+$background-base: #121212;
+$background-highlight: #1a1a1a;
+$background-press: #000;
+$background-elevated-base: #242424;
+$background-elevated-highlight: #2a2a2a;
+$background-elevated-press: #000;
+$background-tinted-base: hsla(0,0%,100%,.07);
+$background-tinted-highlight: hsla(0,0%,100%,.1);
+$background-tinted-press: hsla(0,0%,100%,.04);
+$background-unsafe-for-small-text-base: #121212;
+$background-unsafe-for-small-text-highlight: #121212;
+$background-unsafe-for-small-text-press: #121212;
+$text-base: #fff;
+$text-subdued: #a7a7a7;
+$text-bright-accent: #1ed760;
+$text-negative: #f15e6c;
+$text-warning: #ffa42b;
+$text-positive: #1ed760;
+$text-announcement: #3d91f4;
+$essential-base: #fff;
+$essential-subdued: #727272;
+$essential-bright-accent: #1ed760;
+$essential-negative: #e91429;
+$essential-warning: #ffa42b;
+$essential-positive: #1ed760;
+$essential-announcement: #0d72ea;
+$decorative-base: #fff;
+$decorative-subdued: #292929;
+
+// Breakpoint responsive
+$info-desktop: "only screen and (max-width: 1919px)";
+$info-laptop-medium: "only screen and (max-width: 1440px)";
+$info-laptop-normal: "only screen and (max-width: 1368px)";
+$info-laptop-small: "only screen and (max-width: 1280px)";
+$info-laptop-smallest: "only screen and (max-width: 1200px)";
+$min_info-ipad-pro: "only screen and (min-width: 1024px)";
+$min_info-ipad: "only screen and (min-width: 768px)";
+$info-phone-normal: "only screen and (max-width: 576px)";
+$info-phone-small: "only screen and (max-width: 341px)";
