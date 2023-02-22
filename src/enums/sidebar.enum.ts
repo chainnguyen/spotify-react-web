@@ -1,10 +1,11 @@
 import { PERMISSION } from './permission.enum'
 
+export type IconType = 'home' | 'search' | 'library'
+
 type SidebarEnum = {
   id: string
-  icon: string
-  title: string
-  dropdown: boolean
+  icon: IconType
+  content: string
   routePath: string
   childrenRoutes: string[]
   role: string[]
@@ -14,29 +15,29 @@ type SidebarEnum = {
 export const SIDEBAR: SidebarEnum[] = [
   {
     id: 'home',
-    icon: 'dashboard',
-    title: 'home.sidebar_name',
-    dropdown: false,
+    icon: 'home',
+    content: 'Home',
     routePath: '/',
     childrenRoutes: ['/'],
     role: [PERMISSION.ADMIN],
+    dropdownItems: [],
   },
   {
     id: 'search',
-    icon: 'form',
-    title: 'search.sidebar_name',
-    dropdown: false,
+    icon: 'search',
+    content: 'Search',
     routePath: '/search',
     childrenRoutes: ['/search'],
     role: [PERMISSION.ADMIN],
+    dropdownItems: [],
   },
   {
     id: 'library',
-    icon: 'table',
-    title: 'library.sidebar_name',
-    dropdown: false,
+    icon: 'library',
+    content: 'Your Library',
     routePath: '/library',
     childrenRoutes: ['/library'],
     role: [PERMISSION.ADMIN],
+    dropdownItems: [],
   },
 ]

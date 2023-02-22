@@ -1,0 +1,181 @@
+@import "@/assets/scss/helpers/mixins";
+@import "@/assets/scss/helpers/variables";
+
+html, body {
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: $background-base;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, button, input, select, textarea {
+  font-family: $font-family;
+}
+
+html {
+  height: 100%;
+  overscroll-behavior-y: none;
+}
+
+body {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-overflow-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  line-height: normal;
+  min-height: 600px;
+  min-width: 768px;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+body, input {
+  color: #b3b3b3;
+  text-transform: none;
+}
+
+#root, .Root {
+  position: relative;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  isolation: isolate;
+  z-index: 0;
+}
+
+.Root {
+  -webkit-transition: none .5s cubic-bezier(.3,0,.4,1);
+  transition: none .5s cubic-bezier(.3,0,.4,1);
+  -webkit-transition-property: background;
+  transition-property: background;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+  &:hover {
+    color: #535bf2;
+  }
+}
+
+main {
+  &::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    border: 4px solid transparent;
+    border-radius: 16px;
+    min-height: 30px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+[draggable] {
+  @include css3-prefix('user-select', none);
+}
+
+.Root__top-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+        "top-bar top-bar"
+        "nav-bar main-view"
+        "now-playing-bar now-playing-bar";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+.GKnnhbExo0U9l7Jz2rdc, .moDRd9td0KtitPDzR7OJ {
+  &:active, &:focus, &:hover {
+    color: #fff;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+.os-viewport-native-scrollbars-invisible {
+  &#os-dummy-scrollbar-size::-webkit-scrollbar,
+  &#os-dummy-scrollbar-size::-webkit-scrollbar-corner,
+  &.os-viewport::-webkit-scrollbar,
+  &.os-viewport::-webkit-scrollbar-corner {
+    background: transparent!important;
+    display: none!important;
+    height: 0!important;
+    visibility: hidden!important;
+    width: 0!important;
+  }
+}
+
+.link-subtle {
+  color: #b3b3b3;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+
+  &:focus, &:hover {
+    color: #fff;
+  }
+}
+
+.uPxdw, .kcBZLg {
+  fill: currentcolor;
+}
+
+.jdSGNV {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: inherit;
+  @media #{$min_info-ipad} {
+    font-size: 0.875rem;
+  }
+}
+
+.contentSpacing {
+  margin: 0;
+  max-width: $content-max-width;
+  padding: 0 $content-spacing;
+}
