@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import { Home, Library, NotFound, Search } from '@/pages'
+import { Home, Library, NotFound, Search, Section } from '@/pages'
 
 type PropsRoute = {
   path: string
@@ -25,6 +25,10 @@ function RouteList({ path, layout }: PropsRoute) {
         <Route
           path="/library"
           element={<Library />}
+        />
+        <Route
+          path="/section/:id"
+          element={<Section />}
         />
         <Route
           path="*"

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function NotFound() {
   return (
     <div className="exception h-screen justify-center">
-      <center className="mt-24 m-auto">
+      <center className="m-auto">
         <svg
           className="emoji-404"
           enableBackground="new 0 0 226 249.135"
@@ -110,6 +110,7 @@ function NotFound() {
             strokeWidth="8"
           />
         </svg>
+
         <div className=" tracking-widest mt-4">
           <span className="text-gray-500 text-6xl block">
             <span>4 0 4</span>
@@ -119,10 +120,11 @@ function NotFound() {
           </span>
         </div>
       </center>
+
       <center className="mt-6">
         <Link
           to="/"
-          className="text-gray-500 font-mono text-xl bg-gray-200 p-3 rounded-md hover:shadow-md">
+          className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xl px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
           Go back
         </Link>
       </center>

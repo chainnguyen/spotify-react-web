@@ -16,3 +16,18 @@ export interface IPagination {
   total: number
   current_page: number
 }
+
+export type Card = {
+  id: string
+  title: string
+  color: string
+  image: string
+  description: string
+}
+
+export type Playlist = {
+  id: string
+  type: string
+  title: string
+  card_data: Card[]
+}

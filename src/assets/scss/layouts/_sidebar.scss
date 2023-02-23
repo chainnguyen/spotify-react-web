@@ -121,6 +121,13 @@
   align-items: center;
   border-radius: 4px;
   cursor: pointer;
+
+  &:active {
+    @include css3-prefix('transform', scale(.98));
+    @include css3-prefix('transform-origin', 20%);
+    @include css3-prefix('transition', -webkit-transform .05s ease-out);
+    @include css3-prefix('transition', transform .05s ease-out);
+  }
 }
 
 .EY6S7vlkxB7SF_OjjF_Y, .LKgm9fCDTO7wqig_5U1q {
@@ -305,6 +312,10 @@
       align-items: center;
       -webkit-box-pack: center;
       justify-content: center;
+      &:hover {
+        transform: scale(1.04);
+        border-color: $essential-base;
+      }
       @media #{$min_info-ipad} {
         font-size: 0.875rem;
       }

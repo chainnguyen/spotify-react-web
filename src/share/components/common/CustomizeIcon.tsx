@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
 import { useMemo } from 'react'
 
-import { IconType } from '@/enums/sidebar.enum'
+import type { IconType } from '@/enums/sidebar.enum'
 
 type PropsIcon = {
   type: IconType

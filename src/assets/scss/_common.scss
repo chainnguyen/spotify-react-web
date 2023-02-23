@@ -2,7 +2,6 @@
 @import "@/assets/scss/helpers/variables";
 
 html, body {
-  line-height: 1.6;
   font-weight: 400;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -29,16 +28,14 @@ html {
 }
 
 body {
+  @include flex();
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-overflow-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
-  line-height: normal;
+  line-height: 1.6;
   min-height: 600px;
   min-width: 768px;
   scrollbar-width: none;
@@ -66,15 +63,6 @@ body, input {
   transition: none .5s cubic-bezier(.3,0,.4,1);
   -webkit-transition-property: background;
   transition-property: background;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-  &:hover {
-    color: #535bf2;
-  }
 }
 
 main {
@@ -131,6 +119,10 @@ main {
   width: 16px;
 }
 
+::-webkit-scrollbar-thumb {
+  background-color: hsla(0,0%,100%,.3);
+}
+
 .os-viewport-native-scrollbars-invisible {
   &#os-dummy-scrollbar-size::-webkit-scrollbar,
   &#os-dummy-scrollbar-size::-webkit-scrollbar-corner,
@@ -172,6 +164,43 @@ main {
   @media #{$min_info-ipad} {
     font-size: 0.875rem;
   }
+}
+
+.kWONUS {
+  @include flex();
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #1ed760;
+  color: #000000;
+  border-radius: 500px;
+  font-size: inherit;
+  min-block-size: 48px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  inline-size: 48px;
+  block-size: 48px;
+
+  .kTWyUj {
+    @include flex();
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+}
+
+.dQUHAb {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  border: 0;
+  border-block-start: 1px solid $decorative-subdued;
+}
+
+.fcgFin {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin-block-start: 0;
 }
 
 .contentSpacing {
