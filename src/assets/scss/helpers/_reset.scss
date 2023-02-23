@@ -1,3 +1,5 @@
+@import "@/assets/scss/helpers/variables";
+
 ol, ul {
   list-style: none;
 }
@@ -7,4 +9,14 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
   margin: 0;
   padding: 0;
   vertical-align: baseline;
+}
+
+a {
+  color: $text-base;
+  text-decoration: none;
+}
+
+a, button {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }

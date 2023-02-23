@@ -41,11 +41,12 @@ function GlobalSidebar() {
                 <Link
                   to={item.routePath}
                   draggable="false"
-                  aria-current={location.pathname === item.routePath ? 'page' : undefined}
-                  className={
-                    'link-subtle ATUzFKub89lzvkmvhpyE ' +
-                    (location.pathname === item.routePath ? 'moDRd9td0KtitPDzR7OJ' : '')
-                  }>
+                  aria-current={
+                    item.childrenRoutes.includes(location.pathname) ? 'page' : undefined
+                  }
+                  className={`link-subtle ATUzFKub89lzvkmvhpyE ${
+                    item.childrenRoutes.includes(location.pathname) ? 'moDRd9td0KtitPDzR7OJ' : ''
+                  }`}>
                   <CustomizeIcon type={item.icon} />
                   <span className="Type__TypeElement-sc-goli3j-0 jdSGNV ellipsis-one-line">
                     {item.content}

@@ -13,10 +13,15 @@ $left-sidebar-padding-right: 24px;
 $left-sidebar-item-pill-horizontal-padding: 7px;
 $left-sidebar-item-indentation-width: 16px;
 $left-sidebar-edit-input-height: 26px;
+$shelf-min-height: 300px;
+$scrollbar-vertical-size: 12px;
+$scrollbar-horizontal-size: 12px;
+$card-container-border-radius: clamp(4px,(190px - 32px) * 0.025,8px);
 $background-noise: url('@/assets/images/background-noise.svg');
 
 // Color
 $background-base: #121212;
+$background-active-card: #282828;
 $background-highlight: #1a1a1a;
 $background-press: #000;
 $background-elevated-base: #242424;
@@ -52,6 +57,7 @@ $info-laptop-normal: "only screen and (max-width: 1368px)";
 $info-laptop-small: "only screen and (max-width: 1280px)";
 $info-laptop-smallest: "only screen and (max-width: 1200px)";
 $min_info-ipad-pro: "only screen and (min-width: 1024px)";
+$min_info-ipad-2: "only screen and (min-width: 992px)";
 $min_info-ipad: "only screen and (min-width: 768px)";
 $info-phone-normal: "only screen and (max-width: 576px)";
 $info-phone-small: "only screen and (max-width: 341px)";
