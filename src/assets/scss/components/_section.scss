@@ -3,10 +3,9 @@
 
 .QyANtc_r7ff_tqrf5Bvc {
   position: relative;
-  @include flex();
+  @include common-flex();
   -webkit-box-flex: 1;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   contain-intrinsic-size: auto $shelf-min-height;
   content-visibility: auto;
   -ms-flex: 1 1 auto;
@@ -112,10 +111,10 @@
         .SKJSok3LfyedjZjujmFt,
         .UB3cP9wsqoAMAHaeBGDt {
           position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
           height: 100%;
-          left: 0;
-          top: 0;
         }
 
         .SKJSok3LfyedjZjujmFt {
@@ -138,27 +137,7 @@
       }
 
       .iPtRzt {
-        display: inline-block;
-        position: relative;
-        box-sizing: border-box;
-        -webkit-tap-highlight-color: transparent;
-        font-size: 1rem;
-        font-weight: 700;
-        background-color: transparent;
-        border: 0;
-        border-radius: 500px;
-        text-align: center;
-        text-decoration: none;
-        text-transform: none;
-        touch-action: manipulation;
-        transition-duration: 33ms;
-        transition-property: background-color, border-color, color, box-shadow, filter, transform;
-        user-select: none;
-        vertical-align: middle;
-        transform: translate3d(0px, 0px, 0px);
-        padding: 0;
-        min-inline-size: 0;
-        align-self: center;
+        @include signup-button();
       }
 
       .E1N1ByPFWo4AJLHovIBQ {
@@ -207,11 +186,7 @@
 
     .tsv7E_RBBw6v0XTQlcRo {
       content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      @include absolute();
       overflow: hidden;
       cursor: pointer;
       text-indent: 100%;

@@ -1,7 +1,7 @@
-type PermissionEnum = {
+interface IPermissionEnum {
   ADMIN: string | 'admin'
 }
 
-export const PERMISSION: PermissionEnum = {
+export const PERMISSION: IPermissionEnum = {
   ADMIN: 'admin',
 }

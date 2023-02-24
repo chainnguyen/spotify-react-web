@@ -2,17 +2,17 @@ import '@/assets/scss/pages/_home.scss'
 
 import { useEffect, useState } from 'react'
 
-import { PLAYLIST_DATA } from '@/enums/dummy-data.enum'
+import { PLAYLIST } from '@/enums/dummy-data.enum'
 import { SectionFooter, SectionPlaylist } from '@/share/components'
-import type { Playlist } from '@/types/global'
+import type { Playlist } from '@/types/playlist'
 
 function HomePage() {
   const [focusData, setFocusData] = useState<Playlist | null>(null)
   const [suggestData, setSuggestData] = useState<Playlist | null>(null)
 
   useEffect(() => {
-    setFocusData(PLAYLIST_DATA[0])
-    setSuggestData(PLAYLIST_DATA[1])
+    setFocusData(PLAYLIST[0])
+    setSuggestData(PLAYLIST[1])
     // Cleanup
     return () => {
       setFocusData(null)

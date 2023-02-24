@@ -3,12 +3,11 @@
 
 .Root__nav-bar {
   position: relative;
-  @include flex();
+  @include common-flex();
   -ms-flex-direction: column;
   flex-direction: column;
   grid-area: nav-bar;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   background-color: #000;
   min-height: 0;
   width: calc($nav-bar-width + 9px);
@@ -17,8 +16,7 @@
 
 .NyIynkmMpZXSoaE3XGhA,
 .tUwyjggD2n5KvEtP5z1B {
-  @include flex();
-  -webkit-box-direction: normal;
+  @include common-flex();
 }
 
 .tUwyjggD2n5KvEtP5z1B {

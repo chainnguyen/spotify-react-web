@@ -2,12 +2,11 @@
 @import "@/assets/scss/helpers/variables";
 
 .Root__main-view {
-  @include flex();
+  @include common-flex();
   position: relative;
   width: 100%;
   grid-area: main-view;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 0;
@@ -79,9 +78,8 @@
   box-sizing: border-box;
   padding: inherit;
   &.observed {
-    @include flex();
+    @include common-flex();
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     -webkit-box-align: start;
@@ -146,11 +144,7 @@
 }
 
 .os-padding {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  @include absolute();
   padding: 0;
   margin: 0;
   direction: inherit;
@@ -161,11 +155,7 @@
 }
 
 .os-viewport {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  @include absolute();
   margin: 0;
   padding: 0;
   -webkit-overflow-scrolling: touch;

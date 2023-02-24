@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom'
-
 function CardGenre() {
   return (
     <div className="LunqxlFIupJw_Dkx6mNx">

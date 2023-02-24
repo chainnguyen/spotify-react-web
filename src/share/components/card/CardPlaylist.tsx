@@ -1,13 +1,13 @@
 import type { CSSProperties } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import type { Card } from '@/types/global'
+import type { Card } from '@/types/playlist'
 
-type Props = {
+interface IProps {
   data: Card
 }
 
-function CardPlaylist({ data }: Props) {
+function CardPlaylist({ data }: IProps) {
   const navigate = useNavigate()
   const redirectPlaylist = (id: string): void => {
     navigate(`/playlist/${id}`)

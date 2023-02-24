@@ -28,9 +28,8 @@ html {
 }
 
 body {
-  @include flex();
+  @include common-flex();
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   -ms-overflow-style: none;
   -ms-flex-direction: column;
   flex-direction: column;

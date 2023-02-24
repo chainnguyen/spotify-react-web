@@ -3,12 +3,12 @@ import '@/assets/scss/pages/_home.scss'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { PLAYLIST_DATA } from '@/enums/dummy-data.enum'
+import { PLAYLIST } from '@/enums/dummy-data.enum'
 import { SectionFooter, SectionPlaylist } from '@/share/components'
-import type { Playlist } from '@/types/global'
+import type { Playlist } from '@/types/playlist'
 
 function Section() {
-  const { id: sectionId } = useParams()
+  const { sectionId } = useParams()
   const [sectionData, setSectionData] = useState<Playlist | null>(null)
 
   useEffect(() => {
@@ -20,7 +20,7 @@ function Section() {
   }, [sectionId])
 
   const getPlaylistById = (id: string | undefined) => {
-    const playlist: Playlist | undefined = PLAYLIST_DATA.find((list: Playlist) => list.id === id)
+    const playlist: Playlist | undefined = PLAYLIST.find((list: Playlist) => list.id === id)
     if (playlist && Object.keys(playlist).length) {
       setSectionData(playlist)
     }

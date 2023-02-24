@@ -1,6 +1,6 @@
-import type { Playlist } from '@/types/global'
+import type { Playlist, TrackDetail } from '@/types/playlist'
 
-export const PLAYLIST_DATA: Playlist[] = [
+export const PLAYLIST: Playlist[] = [
   {
     id: 'focus_123456789',
     type: 'focus',
@@ -144,3 +144,60 @@ export const PLAYLIST_DATA: Playlist[] = [
     ],
   },
 ]
+
+export const TRACK_DETAIL: TrackDetail = {
+  parent_id: 'deep_focus_12356',
+  data: [
+    {
+      name: 'So Far So Good',
+      track_file: '',
+      release_date: '2023-02-14',
+      track_duration: '2:31',
+      quantity_liked: 123,
+      album: {
+        id: 'album_silent_hills',
+        name: 'Silent Hills',
+      },
+      artist: {
+        id: 'artist_sun_of_they',
+        name: 'Sun Of They',
+      },
+    },
+    {
+      name: 'Apricity',
+      track_file: '',
+      release_date: '2023-02-14',
+      track_duration: '2:38',
+      quantity_liked: 23456,
+      album: {
+        id: 'album_apricity',
+        name: 'Apricity',
+      },
+      artist: {
+        id: 'artist_imala_zir',
+        name: 'Imala Zir',
+      },
+    },
+    {
+      name: 'Solatium',
+      track_file: '',
+      release_date: '2023-02-14',
+      track_duration: '2:06',
+      quantity_liked: 4567,
+      album: {
+        id: 'album_solatium',
+        name: 'Solatium',
+      },
+      artist: {
+        id: 'artist_imber_sun',
+        name: 'Imber Sun',
+      },
+    },
+  ],
+  pagination: {
+    total: 10,
+    total_track: 3,
+    per_page: 10,
+    current_page: 1,
+  },
+}

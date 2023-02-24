@@ -3,13 +3,14 @@ import '@/assets/scss/layouts/_main.scss'
 import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 
-import { GlobalSidebar, Header, Loading } from '@/share/components'
+import { GlobalSidebar, Header, Loading, PlayingBar } from '@/share/components'
 
 function DefaultLayout() {
   return (
     <div className="Root__top-container">
       <Header />
       <GlobalSidebar />
+      <PlayingBar />
 
       <div className="Root__main-view">
         <div className="main-view-container">

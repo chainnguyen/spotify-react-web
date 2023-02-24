@@ -1,0 +1,14 @@
+@import "@/assets/scss/helpers/mixins";
+@import "@/assets/scss/helpers/variables";
+
+
+.jsmWVV {
+  @include signup-button();
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  .kuwYvr {
+    @include signup-button-content()
+  }
+}
