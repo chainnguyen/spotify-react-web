@@ -10,20 +10,20 @@
 }
 
 .facDIsOQo9q7kiWc4jSg {
+  position: relative;
+  @include flex();
+  width: 100%;
+  height: 64px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   -webkit-padding-end: 16px;
   align-items: center;
-  @include flex();
-  gap: 16px;
-  height: 64px;
   justify-content: space-between;
+  gap: 16px;
   padding: 16px;
   padding-inline-end: 16px;
-  position: relative;
-  width: 100%;
   z-index: 10;
 
   > * {
@@ -62,21 +62,22 @@
   gap: 16px;
 
  .ql0zZd7giPXSnPg75NR0 {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: rgba(0,0,0,.7);
-    border: none;
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    @include flex-inline();
-    height: 32px;
-    justify-content: center;
-    position: relative;
-    width: 32px;
+   position: relative;
+   @include flex-inline();
+   width: 32px;
+   height: 32px;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   background-color: rgba(0,0,0,.7);
+   border: none;
+   border-radius: 50%;
+   cursor: pointer;
+
    &:disabled {
      cursor: not-allowed;
      opacity: .6;

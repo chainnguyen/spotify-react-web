@@ -3,12 +3,12 @@ import { useRoutes } from 'react-router-dom'
 
 import { Home, Library, NotFound, Playlist, Search, Section } from '@/pages'
 
-type PropsRoute = {
+interface IPropsRoute {
   path: string
   layout: ReactNode
 }
 
-function RouteList({ path, layout }: PropsRoute) {
+function RouteList({ path, layout }: IPropsRoute) {
   return useRoutes([
     {
       path: path,

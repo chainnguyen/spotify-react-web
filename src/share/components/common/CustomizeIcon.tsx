@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 
 import type { IconType } from '@/enums/sidebar.enum'
 
-type PropsIcon = {
+interface IPropsIcon {
   type: IconType
 }
 
@@ -91,7 +91,7 @@ const storageIcon: StorageIconType[] = [
     ),
   },
 ]
-function CustomizeIcon({ type }: PropsIcon) {
+function CustomizeIcon({ type }: IPropsIcon) {
   const iconData: StorageIconType | undefined = useMemo(() => {
     return storageIcon.find((item: StorageIconType) => item.type === type)
   }, [type])

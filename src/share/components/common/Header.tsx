@@ -5,10 +5,10 @@ import { useNavigate } from 'react-router-dom'
 
 function Header() {
   const navigate = useNavigate()
-  const transferRouteHistory = (command: 'back' | 'forward'): any => {
-    if (command === 'back') return navigate(-1)
-    return navigate(1)
-  }
+  const { state: currentRoute, length: historyLength } = window.history
+
+  const transferRouteHistory = (command: 'back' | 'forward'): any =>
+    navigate(command === 'back' ? -1 : 1)
 
   return (
     <div className="Root__top-bar">
@@ -24,6 +24,7 @@ function Header() {
             aria-label="Go back"
             className="ql0zZd7giPXSnPg75NR0"
             aria-expanded="false"
+            disabled={currentRoute.idx < 1}
             onClick={() => transferRouteHistory('back')}>
             <svg
               role="img"
@@ -39,6 +40,7 @@ function Header() {
           <button
             aria-label="Go forward"
             className="ql0zZd7giPXSnPg75NR0 pfMoD1MbelMuF1m8QeMc"
+            disabled={currentRoute.idx + 1 >= historyLength}
             onClick={() => transferRouteHistory('forward')}>
             <svg
               role="img"
@@ -57,6 +59,7 @@ function Header() {
 
         <div className="LKFFk88SIRC9QKKUWR5u">
           <button className="Button-sc-1dqy6lx-0 dZYxEP sibxBMlr_oxWTfBrEz2G">Sign up</button>
+
           <button className="Button-sc-qlcn5g-0 jsmWVV">
             <span className="ButtonInner-sc-14ud5tc-0 kuwYvr encore-inverted-light-set">
               Log in

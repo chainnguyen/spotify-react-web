@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom'
 import { CardPlaylist } from '@/share/components'
 import type { Card, Playlist } from '@/types/global'
 
-type Props = {
+interface IProps {
   data: Playlist
   defaultDisplay?: number
   hiddenTitle?: boolean
 }
 
-function SectionPlaylist({ data, defaultDisplay, hiddenTitle }: Props) {
+function SectionPlaylist({ data, defaultDisplay, hiddenTitle }: IProps) {
   const [limitCard, setLimitCard] = useState<Card[]>([])
 
   useEffect(() => {

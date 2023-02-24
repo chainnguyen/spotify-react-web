@@ -4,6 +4,10 @@ export type ResponseData = {
   message?: string
 }
 
+export interface IFreeObject {
+  [key: string]: any
+}
+
 export type ResponseSuccess = {}
 
 export type ResponseError = {
