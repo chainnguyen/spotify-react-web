@@ -10,12 +10,12 @@ function GlobalSidebar() {
 
   return (
     <nav
-      aria-label="Main"
+      aria-label="Navbar on the left"
       className="Root__nav-bar">
       <div className="tUwyjggD2n5KvEtP5z1B">
         <div
-          className="NyIynkmMpZXSoaE3XGhA"
-          role="banner">
+          role="banner"
+          className="NyIynkmMpZXSoaE3XGhA">
           <Link
             to="/"
             draggable="false"
@@ -55,6 +55,7 @@ function GlobalSidebar() {
               </li>
             ))}
         </ul>
+
         <div className="LKgm9fCDTO7wqig_5U1q">
           <div className="EY6S7vlkxB7SF_OjjF_Y">
             <div className="GlueDropTarget GlueDropTarget--albums GlueDropTarget--tracks GlueDropTarget--local-tracks GlueDropTarget--episodes">
@@ -74,16 +75,18 @@ function GlobalSidebar() {
                     </svg>
                   </div>
                 </div>
+
                 <span className="Type__TypeElement-sc-goli3j-0 jdSGNV J4xXuqyaJnnwS6s2p3ZB standalone-ellipsis-one-line">
                   Create Playlist
                 </span>
               </button>
             </div>
+
             <div className="GlueDropTarget GlueDropTarget--tracks">
-              <a
+              <Link
+                to="/collection/tracks"
                 draggable="false"
-                className="r9YzlaAPnM2LGK97GSfa"
-                href="/collection/tracks">
+                className="r9YzlaAPnM2LGK97GSfa">
                 <div className="bFQ9NOIn1bDs8tTH0ebQ">
                   <div className="Nd_DeCpszONzyaLe5Wd1">
                     <svg
@@ -97,14 +100,17 @@ function GlobalSidebar() {
                     </svg>
                   </div>
                 </div>
+
                 <span className="Type__TypeElement-sc-goli3j-0 jdSGNV standalone-ellipsis-one-line ot6VAZq1Xfbw2Vh8Qt_A">
                   Liked Songs
                 </span>
+
                 <div className="gtuJjD43VjwtP8ii3H3P"></div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
+
         <div className="Foyk_HJx16yh22JYmQ56">
           <div className="iYuun6jjV82lsYbccJVS">
             <a
@@ -116,6 +122,7 @@ function GlobalSidebar() {
               <span className="Type__TypeElement-sc-goli3j-0 fvwaKF">Cookies</span>
             </a>
           </div>
+
           <div className="Ka2HOvFsfXcLu7He0nTD">
             <button className="Button-sc-y0gtbx-0 eeRweB">
               <span

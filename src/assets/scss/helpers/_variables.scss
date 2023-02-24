@@ -17,6 +17,7 @@ $shelf-min-height: 300px;
 $scrollbar-vertical-size: 12px;
 $scrollbar-horizontal-size: 12px;
 $card-container-border-radius: clamp(4px,(190px - 32px) * 0.025,8px);
+$progress-bar-height: 4px;
 $background-noise: url('@/assets/images/background-noise.svg');
 
 // Color
@@ -49,6 +50,7 @@ $essential-positive: #1ed760;
 $essential-announcement: #0d72ea;
 $decorative-base: #fff;
 $decorative-subdued: #292929;
+$is-active-fg-color: #1db954;
 
 // Breakpoint responsive
 $info-desktop: "only screen and (max-width: 1919px)";

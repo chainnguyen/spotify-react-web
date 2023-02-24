@@ -1,21 +1,30 @@
+import '@/assets/scss/components/_button.scss'
 import '@/assets/scss/layouts/_header.scss'
 
+import { useNavigate } from 'react-router-dom'
+
 function Header() {
+  const navigate = useNavigate()
+  const transferRouteHistory = (command: 'back' | 'forward'): any => {
+    if (command === 'back') return navigate(-1)
+    return navigate(1)
+  }
+
   return (
     <div className="Root__top-bar">
       <header
         aria-label="Top bar and user menu"
         className="facDIsOQo9q7kiWc4jSg qxbaGYC8rgMLfyOuYRCM">
         <div className="T1xI1RTSFU7Wu94UuvE6">
-          <div className="EvIR4O7jOSbNmxtMdIQ0"></div>
+          <div className="EvIR4O7jOSbNmxtMdIQ0" />
         </div>
 
         <div className="VgSbatGBB9XwTH2_dsxg">
           <button
             aria-label="Go back"
             className="ql0zZd7giPXSnPg75NR0"
-            disabled
-            aria-expanded="false">
+            aria-expanded="false"
+            onClick={() => transferRouteHistory('back')}>
             <svg
               role="img"
               height="16"
@@ -29,7 +38,8 @@ function Header() {
 
           <button
             aria-label="Go forward"
-            className="ql0zZd7giPXSnPg75NR0 pfMoD1MbelMuF1m8QeMc">
+            className="ql0zZd7giPXSnPg75NR0 pfMoD1MbelMuF1m8QeMc"
+            onClick={() => transferRouteHistory('forward')}>
             <svg
               role="img"
               height="16"

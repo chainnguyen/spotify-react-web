@@ -8,7 +8,7 @@ import { SectionFooter, SectionPlaylist } from '@/share/components'
 import type { Playlist } from '@/types/global'
 
 function Section() {
-  const { id: sectionId } = useParams()
+  const { sectionId } = useParams()
   const [sectionData, setSectionData] = useState<Playlist | null>(null)
 
   useEffect(() => {

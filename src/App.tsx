@@ -8,7 +8,7 @@ function App() {
     <div className="Root">
       <Router>
         <RouteList
-          path="/"
+          path={import.meta.env.VITE_ROUTER_BASE as string}
           layout={<DefaultLayout />}
         />
       </Router>
