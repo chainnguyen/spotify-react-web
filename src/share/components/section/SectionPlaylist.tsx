@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { CardPlaylist } from '@/share/components'
-import type { Card, Playlist } from '@/types/global'
+import type { Card, Playlist } from '@/types/playlist'
 
 interface IProps {
   data: Playlist

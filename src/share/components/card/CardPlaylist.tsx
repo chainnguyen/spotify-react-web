@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import type { Card } from '@/types/global'
+import type { Card } from '@/types/playlist'
 
 interface IProps {
   data: Card
