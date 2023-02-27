@@ -27,7 +27,9 @@ function Section() {
   }
 
   return (
-    <>
+    <main
+      tabIndex={-1}
+      aria-label={`Spotify – ${sectionData ? sectionData.title : 'Web Player'}`}>
       <section aria-label="Section Page">
         <div className="uIJTvxFOg2izOY7aRRiU">
           <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
@@ -44,7 +46,7 @@ function Section() {
       </section>
 
       <SectionFooter />
-    </>
+    </main>
   )
 }
 

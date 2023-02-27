@@ -1,1 +1,7 @@
+export { default as useCopyToClipboard } from './useCopyToClipboard'
+export { default as useFetch } from './useFetch'
 export { default as useLazyLoad } from './useLazyLoad'
+export { default as useLocalStorage } from './useLocalStorage'
+export { default as usePortal } from './usePortal'
+export { default as useSessionStorage } from './useSessionStorage'
+export { default as useTrackStatistics } from './useTrackStatistics'

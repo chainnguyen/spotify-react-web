@@ -19,18 +19,20 @@ export type Playlist = {
   card_data: Card[]
 }
 
-interface Track {
+export interface ITrack {
+  id: string
   name: string
   track_file: string
   release_date: string
   track_duration: string
   quantity_liked: number
+  is_liked: boolean
   album: IProfile
   artist: IProfile
 }
 
 export type TrackDetail = {
   parent_id: string
-  data: Track[]
+  data: ITrack[]
   pagination: IPagination
 }

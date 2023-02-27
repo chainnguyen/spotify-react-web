@@ -30,9 +30,52 @@
   left: 0;
 }
 
+.MyW8tKEekj9lKQsviDdP {
+  height: 40vh;
+  min-height: 340px;
+  contain: strict;
+  content-visibility: auto;
+  background-attachment: scroll;
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .k2I8B0MzXkAJ6_s8okM7 {
+    @include css3-prefix('animation', background-animation 1s linear);
+    @include css3-prefix('animation-delay', calc(var(--scroll)*-1s));
+    @include css3-prefix('animation-fill-mode', both);
+    @include css3-prefix('animation-iteration-count', 1);
+    @include css3-prefix('animation-play-state', paused);
+    @include css3-prefix('transform', scale(1.1));
+    opacity: 1;
+  }
+}
+
+@keyframes background-animation {
+  80% {
+    @include css3-prefix('transform', scale(1));
+    transform: scale(1);
+  }
+  100% {
+    @include css3-prefix('transform', scale(1));
+  }
+}
+
 .xYgjMpAjE5XT05aRIezb {
   background: -webkit-gradient(linear,left top,left bottom,from(transparent),to(rgba(0,0,0,.5))), $background-noise;
   background: linear-gradient(transparent 0, rgba(0,0,0,.5) 100%), $background-noise;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 40vh;
+    min-height: 340px;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.6)),to(rgba(0,0,0,.6))),-webkit-gradient(linear,left top,left bottom,from(var(--bgColor)),to(var(--bgColor)));
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),linear-gradient(var(--bgColor),var(--bgColor));
+    opacity: 0;
+  }
 }
 
 .oq1ci28WPaRsWkvRiB_J {
@@ -149,6 +192,10 @@
       grid-gap: 4px;
       grid-auto-flow: column;
     }
+
+    .hGXzYa {
+      color: inherit;
+    }
   }
 }
 
@@ -157,4 +204,19 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+
+.rezqw3Q4OEPB1m4rmwfw {
+  background: $background-base;
+  isolation: isolate;
+
+  .CoLO4pdSl8LGWyVZA00t {
+    position: absolute;
+    width: 100%;
+    height: 232px;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.6)),to($background-base)), $background-noise;
+    background-image: linear-gradient(rgba(0,0,0,.6) 0,$background-base 100%),$background-noise;
+    z-index: -1;
+  }
 }

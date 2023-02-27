@@ -1,17 +1,32 @@
 import { TrackCard } from '@/share/components'
+import type { TrackDetail } from '@/types/playlist'
 
-function TrackList() {
+interface IProps {
+  data: TrackDetail
+}
+
+function TrackList({ data }: IProps) {
   return (
-    <div
-      role="grid"
-      aria-rowcount={231}
-      aria-colcount={5}
-      aria-label="Deep Focus"
-      tabIndex={0}
-      className="ShMHCGsT93epRGdxJp2w Ss6hr6HYpN4wjHJ9GHmi">
-      <h2>Tracks List nè</h2>
-      <TrackCard />
-    </div>
+    <>
+      {!data.data.length ? (
+        ''
+      ) : (
+        <div
+          role="grid"
+          aria-rowcount={data.data.length}
+          aria-colcount={5}
+          aria-label="Deep Focus"
+          tabIndex={0}
+          className="ShMHCGsT93epRGdxJp2w Ss6hr6HYpN4wjHJ9GHmi">
+          {data.data.map((track) => (
+            <TrackCard
+              key={track.id}
+              data={track}
+            />
+          ))}
+        </div>
+      )}
+    </>
   )
 }
 

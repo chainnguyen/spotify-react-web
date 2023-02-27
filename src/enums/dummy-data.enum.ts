@@ -221,11 +221,13 @@ export const TRACK_DETAIL: TrackDetail = {
   parent_id: 'deep_focus_12356',
   data: [
     {
+      id: 'so_far_so_good_12345',
       name: 'So Far So Good',
       track_file: '',
       release_date: '2023-02-14',
       track_duration: '2:31',
-      quantity_liked: 123,
+      quantity_liked: 1232900,
+      is_liked: false,
       album: {
         id: 'album_silent_hills',
         name: 'Silent Hills',
@@ -236,11 +238,13 @@ export const TRACK_DETAIL: TrackDetail = {
       },
     },
     {
+      id: 'apricity_12345',
       name: 'Apricity',
       track_file: '',
       release_date: '2023-02-14',
       track_duration: '2:38',
       quantity_liked: 23456,
+      is_liked: false,
       album: {
         id: 'album_apricity',
         name: 'Apricity',
@@ -251,11 +255,13 @@ export const TRACK_DETAIL: TrackDetail = {
       },
     },
     {
+      id: 'solatium_12345',
       name: 'Solatium',
       track_file: '',
       release_date: '2023-02-14',
       track_duration: '2:06',
-      quantity_liked: 4567,
+      quantity_liked: 456722,
+      is_liked: false,
       album: {
         id: 'album_solatium',
         name: 'Solatium',
@@ -263,6 +269,40 @@ export const TRACK_DETAIL: TrackDetail = {
       artist: {
         id: 'artist_imber_sun',
         name: 'Imber Sun',
+      },
+    },
+    {
+      id: 'morning_routine_12345',
+      name: 'Morning Routine',
+      track_file: '',
+      release_date: '2023-02-14',
+      track_duration: '2:06',
+      quantity_liked: 10000,
+      is_liked: false,
+      album: {
+        id: 'album_morning_routine',
+        name: 'Morning Routine',
+      },
+      artist: {
+        id: 'artist_guzimi',
+        name: 'Guzimi',
+      },
+    },
+    {
+      id: 'villa_12345',
+      name: 'Villa',
+      track_file: '',
+      release_date: '2023-02-14',
+      track_duration: '2:06',
+      quantity_liked: 567989,
+      is_liked: false,
+      album: {
+        id: 'album_villa',
+        name: 'Villa',
+      },
+      artist: {
+        id: 'artist_cap_kendricks',
+        name: 'Cap Kendricks',
       },
     },
   ],

@@ -1,13 +1,17 @@
 import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 
-import type { Card } from '@/types/playlist'
+import { useTrackStatistics } from '@/share/hooks'
+import type { Card, TrackDetail } from '@/types/playlist'
 
 interface IProps {
   data: Card
+  childrenData: TrackDetail
 }
 
-function PlaylistHeader({ data }: IProps) {
+function PlaylistHeader({ data, childrenData }: IProps) {
+  const { totalTrackLike, totalTrackTime } = useTrackStatistics(childrenData)
+
   return (
     <div className="contentSpacing NXiYChVp4Oydfxd7rT5r RMDSGDMFrx8eXHpFphqG">
       <div
@@ -85,11 +89,12 @@ function PlaylistHeader({ data }: IProps) {
           </div>
 
           <span className="Type__TypeElement-sc-goli3j-0 hGXzYa RANLXG3qKB61Bh33I0r2">
-            3,869,795 likes
+            {totalTrackLike} likes
           </span>
 
           <span className="Type__TypeElement-sc-goli3j-0 hGXzYa RANLXG3qKB61Bh33I0r2">
-            230 songs, <span className="poz9gZKE7xqFwgk231J4">about 9 hr 30 min</span>
+            {childrenData.data.length} songs,{' '}
+            <span className="poz9gZKE7xqFwgk231J4">about {totalTrackTime}</span>
           </span>
         </div>
       </div>

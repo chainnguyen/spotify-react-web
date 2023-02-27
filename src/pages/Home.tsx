@@ -21,7 +21,11 @@ function HomePage() {
   }, [])
 
   return (
-    <>
+    <main
+      tabIndex={-1}
+      aria-label="Spotify – Web Player">
+      <div className="HsbczDqu9qjcYr7EIdHR" />
+
       <section aria-label="Home Page">
         <div className="uIJTvxFOg2izOY7aRRiU">
           <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
@@ -46,7 +50,7 @@ function HomePage() {
       </section>
 
       <SectionFooter />
-    </>
+    </main>
   )
 }
 

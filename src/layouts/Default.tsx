@@ -26,15 +26,9 @@ function DefaultLayout() {
                 <div className="os-content">
                   <div className="main-view-container__scroll-node-child-spacer"></div>
                   <div className="main-view-container__scroll-node-child">
-                    <main
-                      tabIndex={-1}
-                      aria-label="Spotify – Web Player">
-                      <div className="HsbczDqu9qjcYr7EIdHR" />
-
-                      <Suspense fallback={<Loading />}>
-                        <Outlet />
-                      </Suspense>
-                    </main>
+                    <Suspense fallback={<Loading />}>
+                      <Outlet />
+                    </Suspense>
                   </div>
                 </div>
               </div>
