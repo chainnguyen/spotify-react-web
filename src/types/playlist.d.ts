@@ -3,8 +3,12 @@ import { IPagination, IProfile } from '@/types/global'
 export type Card = {
   id: string
   title: string
-  color: string
-  image: string
+  backup_color: {
+    thumbnail_color: string
+    background_color: string
+    background_image: string
+  }
+  thumbnail: string
   description: string
 }
 

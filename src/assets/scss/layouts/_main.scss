@@ -26,6 +26,9 @@
     isolation: isolate;
     padding-bottom: 32px;
     min-height: calc(((100vh - 64px) - 90px) - 519px);
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
   }
 }
 

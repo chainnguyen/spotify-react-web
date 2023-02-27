@@ -1,4 +1,4 @@
-import '@/assets/scss/pages/_home.scss'
+import '@/assets/scss/pages/home.scss'
 
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
