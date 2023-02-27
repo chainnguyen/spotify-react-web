@@ -21,13 +21,13 @@ function CardPlaylist({ data }: IProps) {
         <div className="xBV4XgMq0gC5lQICFWY_">
           <div
             className="g4PZpjkqEh5g7xDpCr2K"
-            style={{ '--card-color': data.color } as CSSProperties}>
+            style={{ '--card-color': data.backup_color.thumbnail_color } as CSSProperties}>
             <div>
               <img
                 aria-hidden="false"
                 draggable="false"
                 loading="lazy"
-                src={data.image}
+                src={data.thumbnail}
                 alt={data.description}
                 className="mMx2LUixlnN_Fu45JpFB SKJSok3LfyedjZjujmFt Yn2Ei5QZn19gria6LjZj"
               />

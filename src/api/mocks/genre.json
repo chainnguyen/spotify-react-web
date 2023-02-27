@@ -1,0 +1,58 @@
+[
+  {
+    "id": "podcast_web_12345",
+    "title": "Podcasts",
+    "is_concerts": false,
+    "card_color": "rgb(39, 133, 106)",
+    "thumbnail_image": "https://i.scdn.co/image/567158eb895ad26718a814345af0fc43ee785ec5"
+  },
+  {
+    "id": "made_for_you_12345",
+    "title": "Made For You",
+    "is_concerts": false,
+    "card_color": "rgb(30, 50, 100)",
+    "thumbnail_image": "https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe"
+  },
+  {
+    "id": "charts_12345",
+    "title": "Charts",
+    "is_concerts": false,
+    "card_color": "rgb(141, 103, 171)",
+    "thumbnail_image": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg"
+  },
+  {
+    "id": "new_releases_12345",
+    "title": "New Releases",
+    "is_concerts": false,
+    "card_color": "rgb(232, 17, 91)",
+    "thumbnail_image": "https://i.scdn.co/image/ab67706f000000027ea4d505212b9de1f72c5112"
+  },
+  {
+    "id": "discover_12345",
+    "title": "Discover",
+    "is_concerts": false,
+    "card_color": "rgb(141, 103, 171)",
+    "thumbnail_image": "https://t.scdn.co/images/d0fb2ab104dc4846bdc56d72b0b0d785.jpeg"
+  },
+  {
+    "id": "live_events_12345",
+    "title": "Live Events",
+    "is_concerts": true,
+    "card_color": "rgb(115, 88, 255)",
+    "thumbnail_image": "https://concerts.spotifycdn.com/images/live-events_category-image.jpg"
+  },
+  {
+    "id": "vietnamese_music_12345",
+    "title": "Vietnamese Music",
+    "is_concerts": false,
+    "card_color": "rgb(180, 155, 200)",
+    "thumbnail_image": "https://t.scdn.co/images/6e1202d14b1f400592532c10d10871ef.jpeg"
+  },
+  {
+    "id": "k_pop_12345",
+    "title": "K-Pop",
+    "is_concerts": false,
+    "card_color": "rgb(20, 138, 8)",
+    "thumbnail_image": "https://i.scdn.co/image/ab67706f00000002978b9f4a4f40b430fd0d837e"
+  }
+]

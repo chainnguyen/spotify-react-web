@@ -1,4 +1,4 @@
-import '@/assets/scss/pages/_error.scss'
+import '@/assets/scss/pages/error.scss'
 
 import { Link } from 'react-router-dom'
 

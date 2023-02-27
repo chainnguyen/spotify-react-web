@@ -169,7 +169,7 @@
   align-items: center;
   background: transparent;
   border: none;
-  color: hsla(0,0%,100%,.7);
+  color: $text-light-white;
   &[disabled] {
     color: hsla(0,0%,100%,.3);
   }

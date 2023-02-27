@@ -1,6 +1,39 @@
+@import "@/assets/scss/helpers/variables";
+
 .ellipsis-one-line,
 .standalone-ellipsis-one-line {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.UyzJidwrGk3awngSGIwv,
+.poz9gZKE7xqFwgk231J4,
+.xWm_uA0Co4SXVxaO7wlB {
+  color: $text-light-white;
+  white-space: nowrap;
+}
+
+.jdSGNV {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: inherit;
+  @media #{$min_info-ipad} {
+    font-size: 0.875rem;
+  }
+}
+
+.hGXzYa {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: inherit;
+  @media #{$min_info-ipad} {
+    font-size: 0.875rem;
+  }
 }

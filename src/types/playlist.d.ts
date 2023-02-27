@@ -3,8 +3,12 @@ import { IPagination, IProfile } from '@/types/global'
 export type Card = {
   id: string
   title: string
-  color: string
-  image: string
+  backup_color: {
+    thumbnail_color: string
+    background_color: string
+    background_image: string
+  }
+  thumbnail: string
   description: string
 }
 
@@ -15,18 +19,20 @@ export type Playlist = {
   card_data: Card[]
 }
 
-interface Track {
+export interface ITrack {
+  id: string
   name: string
   track_file: string
   release_date: string
   track_duration: string
   quantity_liked: number
+  is_liked: boolean
   album: IProfile
   artist: IProfile
 }
 
 export type TrackDetail = {
   parent_id: string
-  data: Track[]
+  data: ITrack[]
   pagination: IPagination
 }
