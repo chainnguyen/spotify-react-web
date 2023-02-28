@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { PlaylistService } from '@/services/playlist.service'
-import { CSectionFooter, CSectionPlaylist } from '@/shared/components'
+import { CLoading, CSectionFooter, CSectionPlaylist } from '@/shared/components'
 import type { Playlist } from '@/types/playlist'
 
 function Section() {
@@ -29,26 +29,28 @@ function Section() {
   }
 
   return (
-    <main
-      tabIndex={-1}
-      aria-label={`Spotify – ${sectionData ? sectionData.title : 'Web Player'}`}>
-      <section aria-label="Section Page">
-        <div className="uIJTvxFOg2izOY7aRRiU">
-          <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
-            {sectionData ? (
-              <CSectionPlaylist
-                data={sectionData}
-                hiddenTitle={true}
-              />
-            ) : (
-              ''
-            )}
-          </div>
-        </div>
-      </section>
+    <>
+      {!sectionData ? (
+        <CLoading />
+      ) : (
+        <main
+          tabIndex={-1}
+          aria-label={`Spotify – ${sectionData ? sectionData.title : 'Web Player'}`}>
+          <section aria-label="Section Page">
+            <div className="uIJTvxFOg2izOY7aRRiU">
+              <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
+                <CSectionPlaylist
+                  data={sectionData}
+                  hiddenTitle={true}
+                />
+              </div>
+            </div>
+          </section>
 
-      <CSectionFooter />
-    </main>
+          <CSectionFooter />
+        </main>
+      )}
+    </>
   )
 }
 

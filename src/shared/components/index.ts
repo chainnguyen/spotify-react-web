@@ -4,9 +4,15 @@ export { default as CGlobalSidebar } from './common/CGlobalSidebar'
 export { default as CHeader } from './common/CHeader'
 export { default as CLoading } from './common/CLoading'
 export { default as CPlayingBar } from './common/CPlayingBar'
+// Button
+export { default as CButtonMore } from './button/CButtonMore'
+export { default as CButtonPlay } from './button/CButtonPlay'
+export { default as CButtonSaveToLibrary } from './button/CButtonSaveToLibrary'
 // Card
 export { default as CCardGenre } from './card/CCardGenre'
 export { default as CCardPlaylist } from './card/CCardPlaylist'
+// Player bar
+export { default as CPlaylistBar } from './player-bar/CPlaylistBar'
 // Playlist
 export { default as CPlaylistHeader } from './playlist/CPlaylistHeader'
 // Section

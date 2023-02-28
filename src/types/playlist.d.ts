@@ -33,6 +33,7 @@ export interface ITrack {
 
 export type TrackList = {
   parent_id: string
+  parent_name: string
   data: ITrack[]
   pagination: IPagination
 }

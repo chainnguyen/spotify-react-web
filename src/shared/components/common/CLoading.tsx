@@ -1,10 +1,10 @@
 function CLoading() {
   return (
-    <div className="flex h-full items-center justify-center">
+    <div className="absolute top-1/2 left-1/2 h-auto">
       <div role="status">
         <svg
           aria-hidden="true"
-          className="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+          className="w-10 h-10 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
           viewBox="0 0 100 101"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">

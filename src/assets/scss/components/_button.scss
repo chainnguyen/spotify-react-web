@@ -3,12 +3,80 @@
 
 
 .jsmWVV {
-  @include signup-button();
+  @include common-button();
   &:hover {
     transform: scale(1.04);
   }
 
   .kuwYvr {
     @include signup-button-content()
+  }
+}
+
+.futnNt {
+  @include common-button();
+  font-size: 1.125rem;
+
+  &:hover .ButtonInner-sc-14ud5tc-0,
+  &:hover .ButtonFocus-sc-2hq6ey-0 {
+    transform: scale(1.04);
+  }
+
+  &:hover .ButtonInner-sc-14ud5tc-0 {
+    background-color: $main-color-highlight;
+  }
+
+  .dpREpp {
+    @include flex();
+    position: relative;
+    color: #000000;
+    font-size: inherit;
+    border-radius: 500px;
+    -webkit-tap-highlight-color: transparent;
+    background-color: $main-color;
+    min-block-size: 56px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    inline-size: 56px;
+    block-size: 56px;
+
+    .fSnHJ {
+      @include flex();
+      position: absolute;
+      top: 14px;
+      left: 14px;
+    }
+  }
+}
+
+.Fm7C3gdh5Lsc9qSXrQwO {
+  @include flex();
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $text-light-white;
+
+  &:focus, &:hover {
+    color: $text-base;
+  }
+}
+
+.T0anrkk_QA4IAQL29get {
+  @include flex();
+  padding: 0;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: hsla(0,0%,100%,.6);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+
+  &:active, &:focus, &:hover {
+    color: $text-base;
   }
 }

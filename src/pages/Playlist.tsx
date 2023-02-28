@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 
 import { PlaylistService } from '@/services/playlist.service'
 import { TrackService } from '@/services/track.service'
-import { CPlaylistHeader, CTrackList } from '@/shared/components'
+import { CLoading, CPlaylistBar, CPlaylistHeader, CTrackList } from '@/shared/components'
 import type { Card, TrackList } from '@/types/playlist'
 
 function Playlist() {
@@ -45,39 +45,43 @@ function Playlist() {
   }
 
   return (
-    <main
-      tabIndex={-1}
-      aria-label={`Spotify – ${playlistData ? playlistData.title : 'Web Player'}`}>
-      <div className="GlueDropTarget GlueDropTarget--tracks GlueDropTarget--local-tracks GlueDropTarget--episodes GlueDropTarget--albums">
-        <section
-          role="presentation"
-          className="dZ3U5sTGUTdanNamXe1z">
-          {playlistData && (
-            <CPlaylistHeader
-              data={playlistData}
-              childrenData={trackListData}
-            />
-          )}
-
-          {playlistData && (
-            <div className="rezqw3Q4OEPB1m4rmwfw">
-              <div
-                className="CoLO4pdSl8LGWyVZA00t"
-                style={
-                  {
-                    'background-color': playlistData.backup_color.background_color,
-                  } as CSSProperties
-                }
+    <>
+      {!playlistData ? (
+        <CLoading />
+      ) : (
+        <main
+          tabIndex={-1}
+          aria-label={`Spotify – ${playlistData ? playlistData.title : 'Web Player'}`}>
+          <div className="GlueDropTarget GlueDropTarget--tracks GlueDropTarget--local-tracks GlueDropTarget--episodes GlueDropTarget--albums">
+            <section
+              role="presentation"
+              className="dZ3U5sTGUTdanNamXe1z">
+              <CPlaylistHeader
+                data={playlistData}
+                childrenData={trackListData}
               />
 
-              <div className="contentSpacing">
-                {trackListData && <CTrackList data={trackListData} />}
+              <div className="rezqw3Q4OEPB1m4rmwfw">
+                <div
+                  className="CoLO4pdSl8LGWyVZA00t"
+                  style={
+                    {
+                      'background-color': playlistData.backup_color.background_color,
+                    } as CSSProperties
+                  }
+                />
+
+                <CPlaylistBar />
+
+                <div className="contentSpacing">
+                  {trackListData && <CTrackList data={trackListData} />}
+                </div>
               </div>
-            </div>
-          )}
-        </section>
-      </div>
-    </main>
+            </section>
+          </div>
+        </main>
+      )}
+    </>
   )
 }
 
