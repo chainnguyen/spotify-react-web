@@ -31,8 +31,9 @@ export interface ITrack {
   artist: IProfile
 }
 
-export type TrackDetail = {
+export type TrackList = {
   parent_id: string
+  parent_name: string
   data: ITrack[]
   pagination: IPagination
 }

@@ -3,14 +3,14 @@ import '@/assets/scss/layouts/_main.scss'
 import { Suspense } from 'react'
 import { Outlet } from 'react-router-dom'
 
-import { GlobalSidebar, Header, Loading, PlayingBar } from '@/share/components'
+import { CGlobalSidebar, CHeader, CLoading, CPlayingBar } from '@/shared/components'
 
 function DefaultLayout() {
   return (
     <div className="Root__top-container">
-      <Header />
-      <GlobalSidebar />
-      <PlayingBar />
+      <CHeader />
+      <CGlobalSidebar />
+      <CPlayingBar />
 
       <div className="Root__main-view">
         <div className="main-view-container">
@@ -26,7 +26,7 @@ function DefaultLayout() {
                 <div className="os-content">
                   <div className="main-view-container__scroll-node-child-spacer"></div>
                   <div className="main-view-container__scroll-node-child">
-                    <Suspense fallback={<Loading />}>
+                    <Suspense fallback={<CLoading />}>
                       <Outlet />
                     </Suspense>
                   </div>

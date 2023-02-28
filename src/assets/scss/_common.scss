@@ -151,6 +151,17 @@ main {
 
 .uPxdw, .kcBZLg {
   fill: currentcolor;
+
+  * {
+    vector-effect: non-scaling-stroke;
+  }
+}
+
+.iKwGKEfAfW7Rkx2_Ba4E {
+  grid-gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  min-width: 404px;
 }
 
 .kWONUS {

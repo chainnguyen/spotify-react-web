@@ -2,8 +2,8 @@ import '@/assets/scss/pages/home.scss'
 
 import { useEffect, useState } from 'react'
 
-import { PLAYLIST } from '@/enums/dummy-data.enum'
-import { SectionFooter, SectionPlaylist } from '@/share/components'
+import { PlaylistService } from '@/services/playlist.service'
+import { CSectionFooter, CSectionPlaylist } from '@/shared/components'
 import type { Playlist } from '@/types/playlist'
 
 function HomePage() {
@@ -11,14 +11,23 @@ function HomePage() {
   const [suggestData, setSuggestData] = useState<Playlist | null>(null)
 
   useEffect(() => {
-    setFocusData(PLAYLIST[0])
-    setSuggestData(PLAYLIST[1])
+    fetchPlaylist().then((r) => r)
     // Cleanup
     return () => {
       setFocusData(null)
       setSuggestData(null)
     }
   }, [])
+
+  const fetchPlaylist = async () => {
+    try {
+      const data = await PlaylistService.getList()
+      setFocusData(data[0])
+      setSuggestData(data[1])
+    } catch (err) {
+      return err
+    }
+  }
 
   return (
     <main
@@ -30,7 +39,7 @@ function HomePage() {
         <div className="uIJTvxFOg2izOY7aRRiU">
           <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
             {focusData ? (
-              <SectionPlaylist
+              <CSectionPlaylist
                 data={focusData}
                 defaultDisplay={5}
               />
@@ -38,7 +47,7 @@ function HomePage() {
               ''
             )}
             {suggestData ? (
-              <SectionPlaylist
+              <CSectionPlaylist
                 data={suggestData}
                 defaultDisplay={5}
               />
@@ -49,7 +58,7 @@ function HomePage() {
         </div>
       </section>
 
-      <SectionFooter />
+      <CSectionFooter />
     </main>
   )
 }
