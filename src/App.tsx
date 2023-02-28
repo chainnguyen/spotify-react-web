@@ -3,13 +3,15 @@ import { useEffect, useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import DefaultLayout from '@/layouts/Default'
-import RouteList from '@/share/router'
+import RouteList from '@/router'
 import type { IFreeObject } from '@/types/global'
 
 function App() {
   const [attributeInspect, setAttributeInspect] = useState<IFreeObject>({})
 
   useEffect(() => {
+    document.title = import.meta.env.VITE_DEFAULT_TITLE
+
     if (['production', 'staging'].includes(import.meta.env.MODE)) {
       setAttributeInspect({
         onKeyDown: (e: BaseSyntheticEvent) => preventInspectElement(e),

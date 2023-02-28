@@ -6,4 +6,4 @@ export { default as Section } from './Section'
 // Exceptions
 export { default as NotAuthenticated } from './exceptions/NotAuthenticated'
 export { default as NotFound } from './exceptions/NotFound'
-export { default as SeverError } from './exceptions/SeverError'
+export { default as ServerError } from './exceptions/ServerError'

@@ -1,0 +1,43 @@
+@import "@/assets/scss/helpers/mixins";
+@import "@/assets/scss/helpers/variables";
+
+
+.Em2LrSSfvrgXQoajs6cm {
+  position: relative;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .tV9cjMpTPaykKsn2OVsw {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100px;
+    @include css3-prefix('box-shadow', 0 2px 4px 0 rgb(0 0 0 / 20%));
+    @include css3-prefix('transform', rotate(25deg) translate(18%,-2%));
+  }
+
+  .i2yp6pOoZpYZLd5QWguN {
+    position: absolute;
+    padding: 16px;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .dXoLvE {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: inherit;
+  }
+}

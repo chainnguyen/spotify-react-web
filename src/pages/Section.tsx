@@ -3,8 +3,8 @@ import '@/assets/scss/pages/home.scss'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { PLAYLIST } from '@/enums/dummy-data.enum'
-import { SectionFooter, SectionPlaylist } from '@/share/components'
+import { PlaylistService } from '@/services/playlist.service'
+import { CSectionFooter, CSectionPlaylist } from '@/shared/components'
 import type { Playlist } from '@/types/playlist'
 
 function Section() {
@@ -12,17 +12,19 @@ function Section() {
   const [sectionData, setSectionData] = useState<Playlist | null>(null)
 
   useEffect(() => {
-    getPlaylistById(sectionId)
+    fetchSectionById(sectionId).then((r) => r)
     // Cleanup
     return () => {
       setSectionData(null)
     }
   }, [sectionId])
 
-  const getPlaylistById = (id: string | undefined) => {
-    const playlist: Playlist | undefined = PLAYLIST.find((list: Playlist) => list.id === id)
-    if (playlist && Object.keys(playlist).length) {
-      setSectionData(playlist)
+  const fetchSectionById = async (id: string | undefined) => {
+    try {
+      const data = await PlaylistService.getSectionDetail(id)
+      setSectionData(data)
+    } catch (err) {
+      return err
     }
   }
 
@@ -34,7 +36,7 @@ function Section() {
         <div className="uIJTvxFOg2izOY7aRRiU">
           <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
             {sectionData ? (
-              <SectionPlaylist
+              <CSectionPlaylist
                 data={sectionData}
                 hiddenTitle={true}
               />
@@ -45,7 +47,7 @@ function Section() {
         </div>
       </section>
 
-      <SectionFooter />
+      <CSectionFooter />
     </main>
   )
 }
