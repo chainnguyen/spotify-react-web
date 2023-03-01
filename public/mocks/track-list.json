@@ -6,7 +6,8 @@
       "id": "so_far_so_good_12345",
       "name": "So Far So Good",
       "track_file": "",
-      "release_date": "2023-02-14",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851ea00badac2d1d6af988f1d88",
+      "release_date": "2023-02-14 23:15:22",
       "track_duration": "2:31",
       "quantity_liked": 1232900,
       "is_liked": false,
@@ -23,7 +24,8 @@
       "id": "apricity_12345",
       "name": "Apricity",
       "track_file": "",
-      "release_date": "2023-02-14",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d000048515e8fc1e700a3b73bd1c79f60",
+      "release_date": "2023-02-27 20:00:00",
       "track_duration": "2:38",
       "quantity_liked": 23456,
       "is_liked": false,
@@ -40,8 +42,9 @@
       "id": "solatium_12345",
       "name": "Solatium",
       "track_file": "",
-      "release_date": "2023-02-14",
-      "track_duration": "2:06",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851eb79423c1221d8f82592b212",
+      "release_date": "2023-03-01 03:30:00",
+      "track_duration": "6:06",
       "quantity_liked": 456722,
       "is_liked": false,
       "album": {
@@ -57,8 +60,9 @@
       "id": "morning_routine_12345",
       "name": "Morning Routine",
       "track_file": "",
-      "release_date": "2023-02-14",
-      "track_duration": "2:06",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+      "release_date": "2023-02-15 19:15:00",
+      "track_duration": "12:59",
       "quantity_liked": 10000,
       "is_liked": false,
       "album": {
@@ -74,7 +78,188 @@
       "id": "villa_12345",
       "name": "Villa",
       "track_file": "",
-      "release_date": "2023-02-14",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
+      "release_date": "2023-01-20 17:25:00",
+      "track_duration": "22:06",
+      "quantity_liked": 567989,
+      "is_liked": false,
+      "album": {
+        "id": "album_villa",
+        "name": "Villa"
+      },
+      "artist": {
+        "id": "artist_cap_kendricks",
+        "name": "Cap Kendricks"
+      }
+    },
+    {
+      "id": "return_of_the_swans_12345",
+      "name": "Return of the swans",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+      "release_date": "2023-02-14 16:00:10",
+      "track_duration": "0:43",
+      "quantity_liked": 45673,
+      "is_liked": false,
+      "album": {
+        "id": "album_big_blue",
+        "name": "Big blue"
+      },
+      "artist": {
+        "id": "artist_genevieve_melton",
+        "name": "Genevieve Melton"
+      }
+    },
+    {
+      "id": "ménuet_belmonte_12345",
+      "name": "Ménuet Belmonte",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
+      "release_date": "2022-12-29 20:00:00",
+      "track_duration": "3:14",
+      "quantity_liked": 9000,
+      "is_liked": false,
+      "album": {
+        "id": "album_ménuet_belmonte",
+        "name": "Ménuet Belmonte"
+      },
+      "artist": {
+        "id": "artist_flavio_apicella",
+        "name": "Flavio Apicella"
+      }
+    },
+    {
+      "id": "riverlight_12345",
+      "name": "Riverlight",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d000048514e23aaef7cfc48746d7bde95",
+      "release_date": "2023-01-01 06:30:00",
+      "track_duration": "2:13",
+      "quantity_liked": 456722,
+      "is_liked": false,
+      "album": {
+        "id": "album_riverlight",
+        "name": "Riverlight"
+      },
+      "artist": {
+        "id": "artist_garreth_broke",
+        "name": "Garreth Broke"
+      }
+    },
+    {
+      "id": "himlen_12345",
+      "name": "Himlen",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
+      "release_date": "2023-02-15 19:15:00",
+      "track_duration": "2:01",
+      "quantity_liked": 15000,
+      "is_liked": false,
+      "album": {
+        "id": "album_himlen",
+        "name": "Himlen"
+      },
+      "artist": {
+        "id": "artist_andrea_azzola",
+        "name": "Andrea Azzola"
+      }
+    },
+    {
+      "id": "85mm_12345",
+      "name": "85mm",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d0000485140ef98d11641f4f3c1c13b1a",
+      "release_date": "2023-01-25 17:45:00",
+      "track_duration": "2:59",
+      "quantity_liked": 567989,
+      "is_liked": false,
+      "album": {
+        "id": "album_85mm",
+        "name": "85mm"
+      },
+      "artist": {
+        "id": "artist_ludovico_einaudi",
+        "name": "Ludovico Einaudi"
+      }
+    },
+    {
+      "id": "himlen_2_12345",
+      "name": "Himlen",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
+      "release_date": "2023-02-15 19:15:00",
+      "track_duration": "2:01",
+      "quantity_liked": 15000,
+      "is_liked": false,
+      "album": {
+        "id": "album_himlen",
+        "name": "Himlen"
+      },
+      "artist": {
+        "id": "artist_andrea_azzola",
+        "name": "Andrea Azzola"
+      }
+    },
+    {
+      "id": "85mm_2_12345",
+      "name": "85mm",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d0000485140ef98d11641f4f3c1c13b1a",
+      "release_date": "2023-01-25 17:45:00",
+      "track_duration": "2:59",
+      "quantity_liked": 567989,
+      "is_liked": false,
+      "album": {
+        "id": "album_85mm",
+        "name": "85mm"
+      },
+      "artist": {
+        "id": "artist_ludovico_einaudi",
+        "name": "Ludovico Einaudi"
+      }
+    },
+    {
+      "id": "solatium_2_12345",
+      "name": "Solatium",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851eb79423c1221d8f82592b212",
+      "release_date": "2023-03-01 03:30:00",
+      "track_duration": "2:06",
+      "quantity_liked": 456722,
+      "is_liked": false,
+      "album": {
+        "id": "album_solatium",
+        "name": "Solatium"
+      },
+      "artist": {
+        "id": "artist_imber_sun",
+        "name": "Imber Sun"
+      }
+    },
+    {
+      "id": "morning_routine_2_12345",
+      "name": "Morning Routine",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+      "release_date": "2023-02-15 19:15:00",
+      "track_duration": "2:06",
+      "quantity_liked": 10000,
+      "is_liked": false,
+      "album": {
+        "id": "album_morning_routine",
+        "name": "Morning Routine"
+      },
+      "artist": {
+        "id": "artist_guzimi",
+        "name": "Guzimi"
+      }
+    },
+    {
+      "id": "villa_2_12345",
+      "name": "Villa",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
+      "release_date": "2023-01-20 17:25:00",
       "track_duration": "2:06",
       "quantity_liked": 567989,
       "is_liked": false,
@@ -86,11 +271,245 @@
         "id": "artist_cap_kendricks",
         "name": "Cap Kendricks"
       }
+    },
+    {
+      "id": "return_of_the_swans_2_12345",
+      "name": "Return of the swans",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+      "release_date": "2023-02-14 16:00:10",
+      "track_duration": "1:43",
+      "quantity_liked": 45673,
+      "is_liked": false,
+      "album": {
+        "id": "album_big_blue",
+        "name": "Big blue"
+      },
+      "artist": {
+        "id": "artist_genevieve_melton",
+        "name": "Genevieve Melton"
+      }
+    },
+    {
+      "id": "ménuet_belmonte_2_12345",
+      "name": "Ménuet Belmonte",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
+      "release_date": "2022-12-29 20:00:00",
+      "track_duration": "3:14",
+      "quantity_liked": 9000,
+      "is_liked": false,
+      "album": {
+        "id": "album_ménuet_belmonte",
+        "name": "Ménuet Belmonte"
+      },
+      "artist": {
+        "id": "artist_flavio_apicella",
+        "name": "Flavio Apicella"
+      }
+    },
+    {
+      "id": "riverlight_2_12345",
+      "name": "Riverlight",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d000048514e23aaef7cfc48746d7bde95",
+      "release_date": "2023-01-01 06:30:00",
+      "track_duration": "2:13",
+      "quantity_liked": 456722,
+      "is_liked": false,
+      "album": {
+        "id": "album_riverlight",
+        "name": "Riverlight"
+      },
+      "artist": {
+        "id": "artist_garreth_broke",
+        "name": "Garreth Broke"
+      }
+    },
+    {
+      "id": "morning_routine_3_12345",
+      "name": "Morning Routine",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+      "release_date": "2023-02-15 19:15:00",
+      "track_duration": "2:06",
+      "quantity_liked": 10000,
+      "is_liked": false,
+      "album": {
+        "id": "album_morning_routine",
+        "name": "Morning Routine"
+      },
+      "artist": {
+        "id": "artist_guzimi",
+        "name": "Guzimi"
+      }
+    },
+    {
+      "id": "apricity_2_12345",
+      "name": "Apricity",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d000048515e8fc1e700a3b73bd1c79f60",
+      "release_date": "2023-02-27 20:00:00",
+      "track_duration": "2:38",
+      "quantity_liked": 23456,
+      "is_liked": false,
+      "album": {
+        "id": "album_apricity",
+        "name": "Apricity"
+      },
+      "artist": {
+        "id": "artist_imala_zir",
+        "name": "Imala Zir"
+      }
+    },
+    {
+      "id": "himlen_3_12345",
+      "name": "Himlen",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
+      "release_date": "2023-02-15 19:15:00",
+      "track_duration": "2:01",
+      "quantity_liked": 15000,
+      "is_liked": false,
+      "album": {
+        "id": "album_himlen",
+        "name": "Himlen"
+      },
+      "artist": {
+        "id": "artist_andrea_azzola",
+        "name": "Andrea Azzola"
+      }
+    },
+    {
+      "id": "85mm_3_12345",
+      "name": "85mm",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d0000485140ef98d11641f4f3c1c13b1a",
+      "release_date": "2023-01-25 17:45:00",
+      "track_duration": "2:59",
+      "quantity_liked": 567989,
+      "is_liked": false,
+      "album": {
+        "id": "album_85mm",
+        "name": "85mm"
+      },
+      "artist": {
+        "id": "artist_ludovico_einaudi",
+        "name": "Ludovico Einaudi"
+      }
+    },
+    {
+      "id": "solatium_3_12345",
+      "name": "Solatium",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851eb79423c1221d8f82592b212",
+      "release_date": "2023-03-01 03:30:00",
+      "track_duration": "6:06",
+      "quantity_liked": 456722,
+      "is_liked": false,
+      "album": {
+        "id": "album_solatium",
+        "name": "Solatium"
+      },
+      "artist": {
+        "id": "artist_imber_sun",
+        "name": "Imber Sun"
+      }
+    },
+    {
+      "id": "morning_routine_4_12345",
+      "name": "Morning Routine",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+      "release_date": "2023-02-15 19:15:00",
+      "track_duration": "12:59",
+      "quantity_liked": 10000,
+      "is_liked": false,
+      "album": {
+        "id": "album_morning_routine",
+        "name": "Morning Routine"
+      },
+      "artist": {
+        "id": "artist_guzimi",
+        "name": "Guzimi"
+      }
+    },
+    {
+      "id": "so_far_so_good_2_12345",
+      "name": "So Far So Good",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851ea00badac2d1d6af988f1d88",
+      "release_date": "2023-02-14 23:15:22",
+      "track_duration": "2:31",
+      "quantity_liked": 1232900,
+      "is_liked": false,
+      "album": {
+        "id": "album_silent_hills",
+        "name": "Silent Hills"
+      },
+      "artist": {
+        "id": "artist_sun_of_they",
+        "name": "Sun Of They"
+      }
+    },
+    {
+      "id": "himlen_4_12345",
+      "name": "Himlen",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
+      "release_date": "2023-02-15 19:15:00",
+      "track_duration": "2:01",
+      "quantity_liked": 15000,
+      "is_liked": false,
+      "album": {
+        "id": "album_himlen",
+        "name": "Himlen"
+      },
+      "artist": {
+        "id": "artist_andrea_azzola",
+        "name": "Andrea Azzola"
+      }
+    },
+    {
+      "id": "ménuet_belmonte_5_12345",
+      "name": "Ménuet Belmonte",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
+      "release_date": "2022-12-29 20:00:00",
+      "track_duration": "3:14",
+      "quantity_liked": 9000,
+      "is_liked": false,
+      "album": {
+        "id": "album_ménuet_belmonte",
+        "name": "Ménuet Belmonte"
+      },
+      "artist": {
+        "id": "artist_flavio_apicella",
+        "name": "Flavio Apicella"
+      }
+    },
+    {
+      "id": "riverlight_6_12345",
+      "name": "Riverlight",
+      "track_file": "",
+      "track_thumbnail": "https://i.scdn.co/image/ab67616d000048514e23aaef7cfc48746d7bde95",
+      "release_date": "2023-01-01 06:30:00",
+      "track_duration": "2:13",
+      "quantity_liked": 456722,
+      "is_liked": false,
+      "album": {
+        "id": "album_riverlight",
+        "name": "Riverlight"
+      },
+      "artist": {
+        "id": "artist_garreth_broke",
+        "name": "Garreth Broke"
+      }
     }
   ],
   "pagination": {
-    "total": 10,
-    "total_track": 3,
+    "total": 3,
+    "total_track": 28,
     "per_page": 10,
     "current_page": 1
   }

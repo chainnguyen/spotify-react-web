@@ -1,8 +1,6 @@
 <h1 align="center">
-  Spotify React Web<br/>
+  Spotify React Web
 </h1>
-
-<br/>
 
 ## Technologies
 Project is created with:

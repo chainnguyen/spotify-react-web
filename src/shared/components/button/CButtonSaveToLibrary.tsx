@@ -1,18 +1,38 @@
 import '@/assets/scss/components/_button.scss'
 
-function CButtonSaveToLibrary() {
+import type { MouseEvent } from 'react'
+
+interface IProps {
+  width: string | number
+  height: string | number
+  classButton?: string
+  ariaLabel?: string
+  tabIndex?: number
+  onClick?: (event: MouseEvent<HTMLElement>) => void
+}
+
+function CButtonSaveToLibrary({
+  width,
+  height,
+  classButton,
+  ariaLabel,
+  tabIndex,
+  onClick,
+}: IProps) {
   return (
     <button
       type="button"
       role="switch"
       aria-checked="false"
-      aria-label="Save to Your Library"
-      className="Fm7C3gdh5Lsc9qSXrQwO"
-      aria-expanded="false">
+      aria-expanded="false"
+      aria-label={ariaLabel || 'Save to Your Library'}
+      tabIndex={tabIndex || undefined}
+      className={`Fm7C3gdh5Lsc9qSXrQwO ${classButton || ''}`}
+      onClick={onClick}>
       <svg
         role="img"
-        height="32"
-        width="32"
+        width={width}
+        height={height}
         aria-hidden="true"
         viewBox="0 0 24 24"
         className="Svg-sc-ytk21e-0 uPxdw">

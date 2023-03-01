@@ -1,18 +1,31 @@
 import '@/assets/scss/components/_button.scss'
 
-function CButtonPlay() {
+import type { MouseEvent } from 'react'
+
+interface IProps {
+  width: string | number
+  height: string | number
+  classButton?: string
+  ariaLabel?: string
+  tabIndex?: number
+  onClick?: (event: MouseEvent<HTMLElement>) => void
+}
+
+function CButtonPlay({ width, height, classButton, ariaLabel, tabIndex, onClick }: IProps) {
   return (
     <button
-      aria-label={`Play Instrumental Study`}
-      className="Button-sc-qlcn5g-0 futnNt">
+      aria-label={ariaLabel}
+      tabIndex={tabIndex || undefined}
+      className={`Button-sc-qlcn5g-0 futnNt ${classButton || ''}`}
+      onClick={onClick}>
       <span className="ButtonInner-sc-14ud5tc-0 dpREpp encore-bright-accent-set">
         <span
           aria-hidden="true"
           className="IconWrapper__Wrapper-sc-1hf1hjl-0 fSnHJ">
           <svg
             role="img"
-            height="28"
-            width="28"
+            width={width}
+            height={height}
             aria-hidden="true"
             viewBox="0 0 24 24"
             className="Svg-sc-ytk21e-0 uPxdw">

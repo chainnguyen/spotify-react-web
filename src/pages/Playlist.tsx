@@ -6,7 +6,13 @@ import { useParams } from 'react-router-dom'
 
 import { PlaylistService } from '@/services/playlist.service'
 import { TrackService } from '@/services/track.service'
-import { CLoading, CPlaylistBar, CPlaylistHeader, CTrackList } from '@/shared/components'
+import {
+  CLoading,
+  CPlaylistBar,
+  CPlaylistHeader,
+  CSectionFooter,
+  CTrackList,
+} from '@/shared/components'
 import type { Card, TrackList } from '@/types/playlist'
 
 function Playlist() {
@@ -79,6 +85,8 @@ function Playlist() {
               </div>
             </section>
           </div>
+
+          <CSectionFooter />
         </main>
       )}
     </>

@@ -3,7 +3,7 @@ import '@/assets/scss/components/_track-list.scss'
 import { CSSProperties } from 'react'
 
 import { CLoading, CTrackCard } from '@/shared/components'
-import type { TrackList } from '@/types/playlist'
+import type { ITrack, TrackList } from '@/types/playlist'
 
 interface IProps {
   data: TrackList
@@ -23,8 +23,8 @@ function CTrackList({ data }: IProps) {
           tabIndex={0}
           className="ShMHCGsT93epRGdxJp2w Ss6hr6HYpN4wjHJ9GHmi">
           <div
-            className="koyeY6AgGRPmyPITi7yO"
             role="presentation"
+            className="koyeY6AgGRPmyPITi7yO"
             style={{ top: '64px' } as CSSProperties}>
             <div
               className="dZPmmYYhskhqHJCAruvI wTUruPetkKdWAR1dd6w4"
@@ -109,12 +109,44 @@ function CTrackList({ data }: IProps) {
             </div>
           </div>
 
-          {data.data.map((track) => (
-            <CTrackCard
-              key={track.id}
-              data={track}
-            />
-          ))}
+          <div
+            role="presentation"
+            className="JUa6JJNj7R_Y3i4P8YUX"
+            style={{ height: '18368px', '--row-height': '56px' } as CSSProperties}>
+            <div
+              role="presentation"
+              className="lyVkg68L7ycnwyOcO3vj"
+              style={{ height: '1008px' } as CSSProperties}>
+              <div
+                className="wTUruPetkKdWAR1dd6w4"
+                style={{ height: 'calc(100% - 1008px)' } as CSSProperties}>
+                <div className="Iy7vi9cVsy6pS6wF8Dud NZAU7CsuZsMeMQB8zYUu cF8vKdBGYRZs_SpaG0Yz" />
+                <div className="Iy7vi9cVsy6pS6wF8Dud gvLrgQXBFVW6m9MscfFA BciIfT5b6BSIPIr6feK4" />
+                <div className="Iy7vi9cVsy6pS6wF8Dud bfQ2S9bMXr_kJjqEfcwA noANc1fQSmaQNKYVDEDQ" />
+                <div className="Iy7vi9cVsy6pS6wF8Dud bfQ2S9bMXr_kJjqEfcwA noANc1fQSmaQNKYVDEDQ" />
+                <div className="Iy7vi9cVsy6pS6wF8Dud bfQ2S9bMXr_kJjqEfcwA noANc1fQSmaQNKYVDEDQ" />
+                <div className="Iy7vi9cVsy6pS6wF8Dud bfQ2S9bMXr_kJjqEfcwA noANc1fQSmaQNKYVDEDQ" />
+                <div className="Iy7vi9cVsy6pS6wF8Dud HcMOFLaukKJdK5LfdHh0 Dj9_CzXA7IbUFIz4wOsA" />
+              </div>
+
+              <div
+                role="presentation"
+                style={{ height: '1008px' } as CSSProperties}
+              />
+            </div>
+
+            <div
+              role="presentation"
+              style={{ transform: 'translateY(0px)' } as CSSProperties}>
+              {data.data.map((track: ITrack, index: number) => (
+                <CTrackCard
+                  key={track.id}
+                  data={track}
+                  order={index + 1}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </>

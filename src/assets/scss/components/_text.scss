@@ -37,3 +37,34 @@
     font-size: 0.875rem;
   }
 }
+
+.eRYMpa {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: inherit;
+}
+
+.dvSMET {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: $text-subdued;
+  @media #{$min_info-ipad} {
+    font-size: 0.875rem;
+  }
+}
+
+.VpYFchIiPg3tPhBGyynT {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  color: #b3b3b3;
+  display: inline-block;
+}

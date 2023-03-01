@@ -23,6 +23,7 @@ export interface ITrack {
   id: string
   name: string
   track_file: string
+  track_thumbnail: string
   release_date: string
   track_duration: string
   quantity_liked: number

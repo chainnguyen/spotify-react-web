@@ -1,12 +1,22 @@
+import moment from 'moment'
 import { useMemo } from 'react'
 
 import { formatNumberDecimal } from '@/shared/utils/helper'
-import type { TrackList } from '@/types/playlist'
+import type { ITrack, TrackList } from '@/types/playlist'
+
+type TotalDuration = {
+  hour: number
+  minute: number
+  second: number
+}
 
 function useTrackStatistics(tracksList: TrackList | null) {
   const totalTrackLike = useMemo<string | number>(() => {
     if (tracksList && tracksList.data.length) {
-      const total: number = tracksList.data.reduce((t, i) => (t += i.quantity_liked), 0)
+      const total: number = tracksList.data.reduce(
+        (t: number, i: ITrack) => (t += i.quantity_liked),
+        0
+      )
       return formatNumberDecimal(total, ',')
     }
     return 0
@@ -14,7 +24,25 @@ function useTrackStatistics(tracksList: TrackList | null) {
 
   const totalTrackTime = useMemo<string>(() => {
     if (tracksList && tracksList.data.length) {
-      return '9 hr 32 min'
+      const totalDuration: TotalDuration = {
+        hour: 0,
+        minute: 0,
+        second: 0,
+      }
+      for (let i = 0; i < tracksList.data.length; i++) {
+        totalDuration.minute += Number(tracksList.data[i].track_duration.split(':')[0])
+        totalDuration.second += Number(tracksList.data[i].track_duration.split(':')[1])
+      }
+      const formatted: string = moment
+        .utc((totalDuration.minute * 60 + totalDuration.second) * 1000)
+        .format('HH:mm:ss')
+      totalDuration.hour = moment(formatted, 'HH:mm:ss').hour()
+      totalDuration.minute = moment(formatted, 'HH:mm:ss').minute()
+      totalDuration.second = moment(formatted, 'HH:mm:ss').second()
+
+      return `${totalDuration.hour > 0 ? totalDuration.hour + ' hr' : ''} ${
+        totalDuration.minute > 0 ? totalDuration.minute + ' min' : ''
+      }`
     }
     return '0'
   }, [tracksList])
