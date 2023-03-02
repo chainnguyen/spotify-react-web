@@ -4,7 +4,11 @@ import Cookies from 'js-cookie'
 import { useNavigate } from 'react-router-dom'
 
 import { COOKIES_KEY } from '@/enums/cookie.enum'
+import { store } from '@/shared/store'
+import { SET_LOGOUT } from '@/shared/store/modules/auth'
 import type { IFreeObject } from '@/types/global'
+
+const { dispatch } = store
 
 const AcceptType: IFreeObject = {
   json: 'application/json;charset=UTF-8',
@@ -47,8 +51,11 @@ instance.interceptors.response.use(
 
     switch (status) {
       case 401:
-        // Handle logout
         navigate('/auth/login')
+        dispatch(SET_LOGOUT())
+        break
+      case 403:
+        navigate('/not-authenticated')
         break
       case 404:
         navigate('/not-found')

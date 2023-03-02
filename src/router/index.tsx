@@ -37,6 +37,7 @@ function RouteList({ path, layout }: IPropsRoute) {
           children: [{ path: ':playlistId', element: <Playlist /> }],
         },
         { path: '*', element: <NotFound /> },
+        { path: '/not-found', element: <NotFound /> },
         { path: '/not-authenticated', element: <NotAuthenticated /> },
         { path: '/server-error', element: <ServerError /> },
       ],
