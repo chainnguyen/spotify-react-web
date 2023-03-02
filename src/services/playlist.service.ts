@@ -1,4 +1,4 @@
-import { useAxios } from '@/shared/hooks/useAxios'
+import { useAxios } from '@/shared/hooks'
 import type { Card, Playlist } from '@/types/playlist'
 
 const { Get } = useAxios()

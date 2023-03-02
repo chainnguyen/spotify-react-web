@@ -41,7 +41,7 @@ function Section() {
               <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
                 <CSectionPlaylist
                   data={sectionData}
-                  hiddenTitle={true}
+                  hiddenTitle
                 />
               </div>
             </div>

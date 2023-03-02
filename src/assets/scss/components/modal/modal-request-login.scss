@@ -1,0 +1,168 @@
+@import "@/assets/scss/helpers/_mixins.scss";
+@import "@/assets/scss/helpers/_variables.scss";
+
+
+.YQRQdqiQ_iT0eo0owsJL, .anllJYN1jeYGGE1iAJUJ {
+  @include flex-align-center();
+  justify-content: center;
+}
+
+.YQRQdqiQ_iT0eo0owsJL {
+  width: 100%;
+  margin-top: 24px;
+  @media (min-width: 615px) {
+    position: absolute;
+    bottom: -56px;
+    left: 0;
+  }
+}
+
+.anllJYN1jeYGGE1iAJUJ {
+  @include absolute();
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  @include css3-prefix('animation', UpsellContainerAnimation .4s ease-in-out 1);
+  @include css3-prefix('animation-delay', .15s);
+  @include css3-prefix('animation-fill-mode', both);
+  -ms-flex-flow: column;
+  flex-flow: column;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.4)),to($background-active-card));
+  background-image: linear-gradient(-180deg,rgba(0,0,0,.4),$background-active-card);
+  @include css3-prefix('transition', background-color .5s ease);
+
+  @media (min-width: 615px) {
+    position: relative;
+    justify-content: space-between;
+    margin: auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    border-radius: 8px;
+  }
+}
+
+.SVnAziPF2z_cgAGrp6He, .miG_SXrw265mkozdEHrJ {
+  @include flex-align-center();
+  justify-content: center;
+}
+
+.UmY163JiUcgJt2MKNyGW.SVnAziPF2z_cgAGrp6He {
+  width: 810px;
+  padding: 64px;
+  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -ms-flex-flow: row;
+  flex-flow: row;
+  flex-grow: 0;
+}
+
+.VdyeU78LKQdX8Dclnfxr {
+  min-height: 168px;
+
+  img {
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+  }
+}
+
+.miG_SXrw265mkozdEHrJ {
+  margin: 0 auto;
+  color: $text-base;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  align-items: center;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  line-height: 32px;
+  max-width: 304px;
+
+  & a,
+  & button {
+    font-weight: 600;
+  }
+
+  .RWLySPhsOTyK2EsAGUgx {
+    font-size: 24px;
+    font-weight: 700;
+    color: $text-base;
+    margin: 32px 0 0;
+    letter-spacing: -.4px;
+    line-height: normal;
+  }
+
+  .cJdEzG {
+    @include signup-button-content();
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: $main-color;
+    color: $background-press;
+  }
+
+  .SYKOtPBDhPSs6zGwbk6A {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .CMgJZD0JMx_Yz1tlE7hd {
+    @include flex();
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 32px 0 0;
+    color: $text-light-white;
+    line-height: normal;
+
+    a {
+      color: $text-base;
+      font-size: 0.875rem;
+      padding: 0 8px;
+    }
+  }
+}
+
+.UmY163JiUcgJt2MKNyGW {
+  .VdyeU78LKQdX8Dclnfxr {
+    @include flex-align-center();
+    margin-left: 0;
+    margin-right: 64px;
+
+    img {
+      max-width: 300px;
+    }
+  }
+
+  .miG_SXrw265mkozdEHrJ {
+    flex: 0 0 45%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 45%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .RWLySPhsOTyK2EsAGUgx {
+    font-size: 32px;
+    margin: 8px 0 24px;
+  }
+}
+
+@keyframes UpsellContainerAnimation {
+  0% {
+    opacity: 0;
+    @include css3-prefix('transform', translateY(20px));
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: initial;
+    transform: none;
+  }
+}

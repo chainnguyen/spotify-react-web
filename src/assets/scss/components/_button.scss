@@ -13,6 +13,62 @@
   }
 }
 
+.iPtRzt {
+  @include common-button();
+
+  &:active .ButtonInner-sc-14ud5tc-0 {
+    background-color: #169c46;
+    box-shadow: none;
+    @include css3-prefix('transform', scale(1));
+  }
+
+  &:hover .ButtonInner-sc-14ud5tc-0,
+  &:hover .ButtonFocus-sc-2hq6ey-0 {
+    @include css3-prefix('transform', scale(1.04));
+  }
+}
+
+.hNxTPt {
+  @include flex-inline();
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid $essential-subdued;
+  color: $text-base;
+  background-color: transparent;
+  border-radius: 500px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  padding-block: 7px;
+  padding-inline: 31px;
+  min-block-size: 48px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  user-select: none;
+  transform: translate3d(0px, 0px, 0px);
+  transition-duration: 33ms;
+  transition-property: background-color, border-color, color, box-shadow, filter, transform;
+
+  &:hover {
+    border-color: $essential-base;
+    @include css3-prefix('transform', scale(1.04));
+  }
+
+  &:active {
+    opacity: 0.7;
+    outline: none;
+    border-color: $essential-subdued;
+    @include css3-prefix('transform', scale(1));
+  }
+}
+
 .futnNt {
   @include common-button();
   font-size: 1.125rem;

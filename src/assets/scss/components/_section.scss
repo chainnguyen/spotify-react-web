@@ -130,10 +130,6 @@
       @include css3-prefix('transition', all .3s ease);
     }
 
-    .iPtRzt {
-      @include common-button();
-    }
-
     .E1N1ByPFWo4AJLHovIBQ {
       min-height: 62px;
 
@@ -150,18 +146,6 @@
           font-weight: 700;
           padding-block-end: 4px;
           color: $text-base;
-        }
-      }
-
-      .dvSMET {
-        box-sizing: border-box;
-        -webkit-tap-highlight-color: transparent;
-        margin-block: 0;
-        font-size: 0.8125rem;
-        font-weight: 400;
-        color: $text-subdued;
-        @media #{$min_info-ipad} {
-          font-size: 0.875rem;
         }
       }
 

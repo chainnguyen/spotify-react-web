@@ -1,4 +1,4 @@
-import '@/assets/scss/layouts/_sidebar.scss'
+import '@/assets/scss/layouts/sidebar.scss'
 
 import { Link, useLocation } from 'react-router-dom'
 

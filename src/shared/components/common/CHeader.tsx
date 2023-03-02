@@ -1,5 +1,5 @@
+import '@/assets/scss/layouts/header.scss'
 import '@/assets/scss/components/_button.scss'
-import '@/assets/scss/layouts/_header.scss'
 
 import { useNavigate } from 'react-router-dom'
 

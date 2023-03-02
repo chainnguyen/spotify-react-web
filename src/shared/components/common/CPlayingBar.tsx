@@ -1,6 +1,6 @@
+import '@/assets/scss/layouts/playing-bar.scss'
 import '@/assets/scss/components/_button.scss'
 import '@/assets/scss/components/_progress-player.scss'
-import '@/assets/scss/layouts/_playing-bar.scss'
 
 import type { CSSProperties } from 'react'
 

@@ -1,17 +1,30 @@
 import '@/assets/scss/components/_button.scss'
 
-function CButtonMore() {
+import type { MouseEvent } from 'react'
+
+interface IProps {
+  width: string | number
+  height: string | number
+  classButton?: string
+  ariaLabel?: string
+  tabIndex?: number
+  onClick?: (event: MouseEvent<HTMLElement>) => void
+}
+
+function CButtonMore({ width, height, classButton, ariaLabel, tabIndex, onClick }: IProps) {
   return (
     <button
       type="button"
       aria-haspopup="menu"
-      aria-label={`More options for Instrumental Study`}
-      className="T0anrkk_QA4IAQL29get"
-      aria-expanded="false">
+      aria-expanded="false"
+      aria-label={ariaLabel}
+      tabIndex={tabIndex || undefined}
+      className={`T0anrkk_QA4IAQL29get ${classButton || ''}`}
+      onClick={onClick}>
       <svg
         role="img"
-        height="32"
-        width="32"
+        width={width}
+        height={height}
         aria-hidden="true"
         viewBox="0 0 24 24"
         className="Svg-sc-ytk21e-0 uPxdw">

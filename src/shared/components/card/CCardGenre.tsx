@@ -1,9 +1,9 @@
 import '@/assets/scss/components/_genre-card.scss'
 
-import { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 
-import { GenreItem } from '@/types/genre'
+import type { GenreItem } from '@/types/genre'
 
 interface IProps {
   data: GenreItem
@@ -15,7 +15,7 @@ function CCardGenre({ data }: IProps) {
       to={data.is_concerts ? '/concerts' : `/genre/${data.id}`}
       draggable="false"
       className="Em2LrSSfvrgXQoajs6cm"
-      style={{ 'background-color': data.card_color } as CSSProperties}>
+      style={{ backgroundColor: data.card_color } as CSSProperties}>
       <div>
         <img
           aria-hidden="false"

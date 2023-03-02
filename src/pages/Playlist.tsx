@@ -6,7 +6,13 @@ import { useParams } from 'react-router-dom'
 
 import { PlaylistService } from '@/services/playlist.service'
 import { TrackService } from '@/services/track.service'
-import { CLoading, CPlaylistBar, CPlaylistHeader, CTrackList } from '@/shared/components'
+import {
+  CLoading,
+  CPlaylistBar,
+  CPlaylistHeader,
+  CSectionFooter,
+  CTrackList,
+} from '@/shared/components'
 import type { Card, TrackList } from '@/types/playlist'
 
 function Playlist() {
@@ -66,12 +72,12 @@ function Playlist() {
                   className="CoLO4pdSl8LGWyVZA00t"
                   style={
                     {
-                      'background-color': playlistData.backup_color.background_color,
+                      backgroundColor: playlistData.backup_color.background_color,
                     } as CSSProperties
                   }
                 />
 
-                <CPlaylistBar />
+                <CPlaylistBar data={playlistData} />
 
                 <div className="contentSpacing">
                   {trackListData && <CTrackList data={trackListData} />}
@@ -79,6 +85,8 @@ function Playlist() {
               </div>
             </section>
           </div>
+
+          <CSectionFooter />
         </main>
       )}
     </>

@@ -16,7 +16,7 @@ function CPlaylistHeader({ data, childrenData }: IProps) {
     <div className="contentSpacing NXiYChVp4Oydfxd7rT5r RMDSGDMFrx8eXHpFphqG">
       <div
         className="gHImFiUWOg93pvTefeAD"
-        style={{ 'background-color': data.backup_color.background_color } as CSSProperties}
+        style={{ backgroundColor: data.backup_color.background_color } as CSSProperties}
       />
       <div className="gHImFiUWOg93pvTefeAD xYgjMpAjE5XT05aRIezb" />
       <div></div>
