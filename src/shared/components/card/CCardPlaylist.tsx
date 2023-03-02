@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
+import { useTrackController } from '@/shared/hooks'
 import type { Card } from '@/types/playlist'
 
 interface IProps {
@@ -9,6 +10,8 @@ interface IProps {
 
 function CCardPlaylist({ data }: IProps) {
   const navigate = useNavigate()
+  const { enforcePlayList } = useTrackController()
+
   const redirectPlaylist = (id: string): void => {
     navigate(`/playlist/${id}`)
   }
@@ -38,7 +41,8 @@ function CCardPlaylist({ data }: IProps) {
             <div className="PFgcCoJSWC3KjhZxHDYH">
               <button
                 aria-label={`Play ${data.title}`}
-                className="Button-sc-qlcn5g-0 iPtRzt">
+                className="Button-sc-qlcn5g-0 iPtRzt"
+                onClick={() => enforcePlayList(data)}>
                 <span className="ButtonInner-sc-14ud5tc-0 kWONUS encore-bright-accent-set">
                   <span
                     aria-hidden="true"

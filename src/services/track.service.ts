@@ -1,4 +1,4 @@
-import { useAxios } from '@/shared/hooks/useAxios'
+import { useAxios } from '@/shared/hooks'
 
 const { Get } = useAxios()
 

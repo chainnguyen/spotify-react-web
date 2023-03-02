@@ -1,8 +1,16 @@
 import '@/assets/scss/components/_playlist-bar.scss'
 
 import { CButtonMore, CButtonPlay, CButtonSaveToLibrary } from '@/shared/components'
+import { useTrackController } from '@/shared/hooks'
+import type { Card } from '@/types/playlist'
 
-function CPlaylistBar() {
+interface IProps {
+  data: Card
+}
+
+function CPlaylistBar({ data }: IProps) {
+  const { enforcePlayList } = useTrackController()
+
   return (
     <div className="E4q8ogfdWtye7YgotBlN contentSpacing">
       <div className="eSg4ntPU2KQLfpLGXAww">
@@ -10,6 +18,7 @@ function CPlaylistBar() {
           <CButtonPlay
             width={28}
             height={28}
+            onClick={() => enforcePlayList(data)}
           />
         </div>
 
@@ -21,7 +30,7 @@ function CPlaylistBar() {
         <CButtonMore
           width={32}
           height={32}
-          ariaLabel={`More options for`}
+          ariaLabel={`More options for ${data.title}`}
         />
       </div>
     </div>

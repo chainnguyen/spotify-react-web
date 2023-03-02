@@ -11,6 +11,9 @@ export { default as CButtonSaveToLibrary } from './button/CButtonSaveToLibrary'
 // Card
 export { default as CCardGenre } from './card/CCardGenre'
 export { default as CCardPlaylist } from './card/CCardPlaylist'
+// Modal
+export { default as CModalCurtain } from './modal/CModalCurtain'
+export { default as CModalRequestLogin } from './modal/CModalRequestLogin'
 // Player bar
 export { default as CPlaylistBar } from './player-bar/CPlaylistBar'
 // Playlist

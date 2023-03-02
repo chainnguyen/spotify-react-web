@@ -3,7 +3,7 @@ import '@/assets/scss/pages/home.scss'
 import { useEffect, useState } from 'react'
 
 import { PlaylistService } from '@/services/playlist.service'
-import { CSectionFooter, CSectionPlaylist } from '@/shared/components'
+import { CLoading, CSectionFooter, CSectionPlaylist } from '@/shared/components'
 import type { Playlist } from '@/types/playlist'
 
 function HomePage() {
@@ -30,36 +30,42 @@ function HomePage() {
   }
 
   return (
-    <main
-      tabIndex={-1}
-      aria-label="Spotify – Web Player">
-      <div className="HsbczDqu9qjcYr7EIdHR" />
+    <>
+      {!focusData && !suggestData ? (
+        <CLoading />
+      ) : (
+        <main
+          tabIndex={-1}
+          aria-label="Spotify – Web Player">
+          <div className="HsbczDqu9qjcYr7EIdHR" />
 
-      <section aria-label="Home Page">
-        <div className="uIJTvxFOg2izOY7aRRiU">
-          <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
-            {focusData ? (
-              <CSectionPlaylist
-                data={focusData}
-                defaultDisplay={5}
-              />
-            ) : (
-              ''
-            )}
-            {suggestData ? (
-              <CSectionPlaylist
-                data={suggestData}
-                defaultDisplay={5}
-              />
-            ) : (
-              ''
-            )}
-          </div>
-        </div>
-      </section>
+          <section aria-label="Home Page">
+            <div className="uIJTvxFOg2izOY7aRRiU">
+              <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
+                {focusData ? (
+                  <CSectionPlaylist
+                    data={focusData}
+                    defaultDisplay={5}
+                  />
+                ) : (
+                  ''
+                )}
+                {suggestData ? (
+                  <CSectionPlaylist
+                    data={suggestData}
+                    defaultDisplay={5}
+                  />
+                ) : (
+                  ''
+                )}
+              </div>
+            </div>
+          </section>
 
-      <CSectionFooter />
-    </main>
+          <CSectionFooter />
+        </main>
+      )}
+    </>
   )
 }
 

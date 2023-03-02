@@ -72,12 +72,12 @@ function Playlist() {
                   className="CoLO4pdSl8LGWyVZA00t"
                   style={
                     {
-                      'background-color': playlistData.backup_color.background_color,
+                      backgroundColor: playlistData.backup_color.background_color,
                     } as CSSProperties
                   }
                 />
 
-                <CPlaylistBar />
+                <CPlaylistBar data={playlistData} />
 
                 <div className="contentSpacing">
                   {trackListData && <CTrackList data={trackListData} />}

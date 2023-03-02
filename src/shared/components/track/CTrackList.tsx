@@ -1,7 +1,8 @@
 import '@/assets/scss/components/_track-list.scss'
 
-import { CSSProperties } from 'react'
+import type { CSSProperties } from 'react'
 
+import { PAGINATION } from '@/enums/pagination.enum'
 import { CLoading, CTrackCard } from '@/shared/components'
 import type { ITrack, TrackList } from '@/types/playlist'
 
@@ -46,9 +47,7 @@ function CTrackList({ data }: IProps) {
                 aria-sort="none"
                 tabIndex={-1}>
                 <div className="ASYv4mEu1lXEHVa04HqY">
-                  <span
-                    className="Type__TypeElement-sc-goli3j-0 hGXzYa standalone-ellipsis-one-line"
-                    data-encore-id="type">
+                  <span className="Type__TypeElement-sc-goli3j-0 hGXzYa standalone-ellipsis-one-line">
                     Title
                   </span>
                 </div>
@@ -61,9 +60,7 @@ function CTrackList({ data }: IProps) {
                 aria-sort="none"
                 tabIndex={-1}>
                 <div className="ASYv4mEu1lXEHVa04HqY">
-                  <span
-                    className="Type__TypeElement-sc-goli3j-0 hGXzYa standalone-ellipsis-one-line"
-                    data-encore-id="type">
+                  <span className="Type__TypeElement-sc-goli3j-0 hGXzYa standalone-ellipsis-one-line">
                     Album
                   </span>
                 </div>
@@ -76,9 +73,7 @@ function CTrackList({ data }: IProps) {
                 aria-sort="none"
                 tabIndex={-1}>
                 <div className="ASYv4mEu1lXEHVa04HqY">
-                  <span
-                    className="Type__TypeElement-sc-goli3j-0 hGXzYa standalone-ellipsis-one-line"
-                    data-encore-id="type">
+                  <span className="Type__TypeElement-sc-goli3j-0 hGXzYa standalone-ellipsis-one-line">
                     Date added
                   </span>
                 </div>
@@ -99,7 +94,6 @@ function CTrackList({ data }: IProps) {
                     width="16"
                     aria-hidden="true"
                     viewBox="0 0 16 16"
-                    data-encore-id="icon"
                     className="Svg-sc-ytk21e-0 uPxdw">
                     <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"></path>
                     <path d="M8 3.25a.75.75 0 0 1 .75.75v3.25H11a.75.75 0 0 1 0 1.5H7.25V4A.75.75 0 0 1 8 3.25z"></path>
@@ -112,14 +106,16 @@ function CTrackList({ data }: IProps) {
           <div
             role="presentation"
             className="JUa6JJNj7R_Y3i4P8YUX"
-            style={{ height: '18368px', '--row-height': '56px' } as CSSProperties}>
+            style={
+              { height: `${56 * data.data.length}px`, '--row-height': '56px' } as CSSProperties
+            }>
             <div
               role="presentation"
               className="lyVkg68L7ycnwyOcO3vj"
-              style={{ height: '1008px' } as CSSProperties}>
+              style={{ height: `${56 * PAGINATION.TRACK_LIST}px` } as CSSProperties}>
               <div
                 className="wTUruPetkKdWAR1dd6w4"
-                style={{ height: 'calc(100% - 1008px)' } as CSSProperties}>
+                style={{ height: `calc(100% - ${56 * PAGINATION.TRACK_LIST}px)` } as CSSProperties}>
                 <div className="Iy7vi9cVsy6pS6wF8Dud NZAU7CsuZsMeMQB8zYUu cF8vKdBGYRZs_SpaG0Yz" />
                 <div className="Iy7vi9cVsy6pS6wF8Dud gvLrgQXBFVW6m9MscfFA BciIfT5b6BSIPIr6feK4" />
                 <div className="Iy7vi9cVsy6pS6wF8Dud bfQ2S9bMXr_kJjqEfcwA noANc1fQSmaQNKYVDEDQ" />
@@ -131,7 +127,7 @@ function CTrackList({ data }: IProps) {
 
               <div
                 role="presentation"
-                style={{ height: '1008px' } as CSSProperties}
+                style={{ height: `${56 * PAGINATION.TRACK_LIST}px` } as CSSProperties}
               />
             </div>
 

@@ -2,7 +2,7 @@ import type { AxiosResponse } from 'axios'
 
 import axiosInstance from '@/configs/axios'
 
-export const useAxios = () => {
+function useAxios() {
   const Get = (url: string, params?: any): Promise<AxiosResponse<any>> => {
     return axiosInstance.get(`${url}`, { params })
   }
@@ -21,3 +21,5 @@ export const useAxios = () => {
 
   return { Get, Post, Put, Delete }
 }
+
+export default useAxios
