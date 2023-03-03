@@ -1,8 +1,9 @@
 import type { CSSProperties } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
+import type { Card, TrackList } from '@/@types/playlist'
 import { useTrackStatistics } from '@/shared/hooks'
-import type { Card, TrackList } from '@/types/playlist'
 
 interface IProps {
   data: Card
@@ -10,13 +11,15 @@ interface IProps {
 }
 
 function CPlaylistHeader({ data, childrenData }: IProps) {
+  const { t } = useTranslation()
+
   const { totalTrackLike, totalTrackTime } = useTrackStatistics(childrenData)
 
   return (
     <div className="contentSpacing NXiYChVp4Oydfxd7rT5r RMDSGDMFrx8eXHpFphqG">
       <div
         className="gHImFiUWOg93pvTefeAD"
-        style={{ backgroundColor: data.backup_color.background_color } as CSSProperties}
+        style={{ backgroundColor: data.backup.background_color } as CSSProperties}
       />
       <div className="gHImFiUWOg93pvTefeAD xYgjMpAjE5XT05aRIezb" />
       <div></div>
@@ -32,7 +35,7 @@ function CPlaylistHeader({ data, childrenData }: IProps) {
               aria-hidden="false"
               draggable="false"
               loading="eager"
-              src={data.thumbnail}
+              src={data.backup.thumbnail}
               alt={data.title}
               className="mMx2LUixlnN_Fu45JpFB CmkY1Ag0tJDfnFXbGgju _EShSNaBK1wUIaZQFJJQ Yn2Ei5QZn19gria6LjZj"
               sizes="(min-width: 1280px) 232px, 192px"
@@ -89,12 +92,12 @@ function CPlaylistHeader({ data, childrenData }: IProps) {
           </div>
 
           <span className="Type__TypeElement-sc-goli3j-0 hGXzYa RANLXG3qKB61Bh33I0r2">
-            {totalTrackLike} likes
+            {totalTrackLike + ' ' + t('quantity_liked')}
           </span>
 
           <span className="Type__TypeElement-sc-goli3j-0 hGXzYa RANLXG3qKB61Bh33I0r2">
-            {childrenData && childrenData.data.length} songs,{' '}
-            <span className="poz9gZKE7xqFwgk231J4">about {totalTrackTime}</span>
+            {childrenData && childrenData.data.length + ' ' + t('song')},{' '}
+            <span className="poz9gZKE7xqFwgk231J4">{t('about') + ' ' + totalTrackTime}</span>
           </span>
         </div>
       </div>

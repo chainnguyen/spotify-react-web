@@ -1,8 +1,8 @@
 import '@/assets/scss/components/_playlist-bar.scss'
 
+import type { Card } from '@/@types/playlist'
 import { CButtonMore, CButtonPlay, CButtonSaveToLibrary } from '@/shared/components'
 import { useTrackController } from '@/shared/hooks'
-import type { Card } from '@/types/playlist'
 
 interface IProps {
   data: Card

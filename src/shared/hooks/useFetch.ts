@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import type { IFreeObject } from '@/types/global'
+import type { IFreeObject } from '@/@types/global'
 
 function useFetch<T>(url: string, options: IFreeObject) {
   const [response, setResponse] = useState<T | null>(null)

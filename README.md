@@ -56,11 +56,9 @@ yarn lint | npm run lint
 ```
 
 ## Commit guide and changelog
-
 See more [COMMIT_GUIDE.md](COMMIT_GUIDE.md) and [CHANGELOG.md](CHANGELOG.md).
 
 ### Show your support
-
 Give a ⭐ if you like this website!
 
 ## License

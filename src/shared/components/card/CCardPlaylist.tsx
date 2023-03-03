@@ -1,8 +1,8 @@
 import type { CSSProperties } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
+import type { Card } from '@/@types/playlist'
 import { useTrackController } from '@/shared/hooks'
-import type { Card } from '@/types/playlist'
 
 interface IProps {
   data: Card
@@ -24,14 +24,14 @@ function CCardPlaylist({ data }: IProps) {
         <div className="xBV4XgMq0gC5lQICFWY_">
           <div
             className="g4PZpjkqEh5g7xDpCr2K"
-            style={{ '--card-color': data.backup_color.thumbnail_color } as CSSProperties}>
+            style={{ '--card-color': data.backup.thumbnail_color } as CSSProperties}>
             <div>
               <img
                 aria-hidden="false"
                 draggable="false"
                 loading="lazy"
-                src={data.thumbnail}
-                alt={data.description}
+                src={data.backup.thumbnail}
+                alt={data.title}
                 className="mMx2LUixlnN_Fu45JpFB SKJSok3LfyedjZjujmFt Yn2Ei5QZn19gria6LjZj"
               />
             </div>

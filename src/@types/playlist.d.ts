@@ -1,14 +1,17 @@
-import { IPagination, IProfile } from '@/types/global'
+import { IPagination, IProfile } from '@/@types/global'
+
+type Backup = {
+  thumbnail: string
+  thumbnail_large: string
+  thumbnail_color: string
+  background_color: string
+  background_image: string
+}
 
 export type Card = {
   id: string
   title: string
-  backup_color: {
-    thumbnail_color: string
-    background_color: string
-    background_image: string
-  }
-  thumbnail: string
+  backup: Backup
   description: string
 }
 
@@ -21,13 +24,13 @@ export type Playlist = {
 
 export interface ITrack {
   id: string
-  name: string
+  title: string
   track_file: string
-  track_thumbnail: string
   release_date: string
   track_duration: string
   quantity_liked: number
   is_liked: boolean
+  backup: Backup
   album: IProfile
   artist: IProfile
 }

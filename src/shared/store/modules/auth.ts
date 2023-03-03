@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import Cookies from 'js-cookie'
 
 import { COOKIES_KEY } from '@/enums/cookie.enum'
+import { LANG_STORAGE_KEY } from '@/enums/locales.enum'
 
 export interface IAuthState {
   token: string | null
@@ -36,6 +37,7 @@ const reducers = {
     state.token = initialState.token
     state.profile = initialState.profile
     Cookies.remove(COOKIES_KEY.token)
+    localStorage.removeItem(LANG_STORAGE_KEY)
   },
   SET_PROFILE: (state: IAuthState, { payload }: PayloadAction<any>) => {
     state.profile = payload

@@ -2,9 +2,9 @@ import type { BaseSyntheticEvent } from 'react'
 import { useEffect, useState } from 'react'
 import { BrowserRouter as Router } from 'react-router-dom'
 
+import type { IFreeObject } from '@/@types/global'
 import DefaultLayout from '@/layouts/Default'
 import RouteList from '@/router'
-import type { IFreeObject } from '@/types/global'
 
 function App() {
   const [attributeInspect, setAttributeInspect] = useState<IFreeObject>({})

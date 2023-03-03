@@ -1,12 +1,26 @@
 import '@/assets/scss/layouts/sidebar.scss'
 
+import { useTranslation } from 'react-i18next'
+import { useDispatch, useSelector } from 'react-redux'
 import { Link, useLocation } from 'react-router-dom'
 
+import { LOCALES } from '@/enums/locales.enum'
 import { SIDEBAR } from '@/enums/sidebar.enum'
 import { CCustomizeIcon } from '@/shared/components'
+import type { AppDispatch } from '@/shared/store'
+import type { RootState } from '@/shared/store'
+import { SET_LANGUAGE_SELECTION } from '@/shared/store/modules/locales'
 
 function CGlobalSidebar() {
   const location = useLocation()
+  const { t } = useTranslation()
+  const dispatch = useDispatch<AppDispatch>()
+
+  const currentLocale = useSelector((state: RootState) => state['locales'].currentLocale)
+
+  const changeLanguage = () => {
+    dispatch(SET_LANGUAGE_SELECTION(true))
+  }
 
   return (
     <nav
@@ -49,7 +63,7 @@ function CGlobalSidebar() {
                   }`}>
                   <CCustomizeIcon type={item.icon} />
                   <span className="Type__TypeElement-sc-goli3j-0 jdSGNV ellipsis-one-line">
-                    {item.content}
+                    {t(item.content)}
                   </span>
                 </Link>
               </li>
@@ -77,7 +91,7 @@ function CGlobalSidebar() {
                 </div>
 
                 <span className="Type__TypeElement-sc-goli3j-0 jdSGNV J4xXuqyaJnnwS6s2p3ZB standalone-ellipsis-one-line">
-                  Create Playlist
+                  {t('sidebar.create_playlist')}
                 </span>
               </button>
             </div>
@@ -102,7 +116,7 @@ function CGlobalSidebar() {
                 </div>
 
                 <span className="Type__TypeElement-sc-goli3j-0 jdSGNV standalone-ellipsis-one-line ot6VAZq1Xfbw2Vh8Qt_A">
-                  Liked Songs
+                  {t('sidebar.liked_songs')}
                 </span>
 
                 <div className="gtuJjD43VjwtP8ii3H3P"></div>
@@ -124,7 +138,9 @@ function CGlobalSidebar() {
           </div>
 
           <div className="Ka2HOvFsfXcLu7He0nTD">
-            <button className="Button-sc-y0gtbx-0 eeRweB">
+            <button
+              className="Button-sc-y0gtbx-0 eeRweB"
+              onClick={changeLanguage}>
               <span
                 aria-hidden="true"
                 className="IconWrapper__Wrapper-sc-ihacte-0 jrJfVw">
@@ -138,7 +154,7 @@ function CGlobalSidebar() {
                   <path d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h3.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h3.031z"></path>
                 </svg>
               </span>
-              English
+              {LOCALES.find((i) => i.code === currentLocale)?.content || LOCALES[0].content}
             </button>
           </div>
         </div>

@@ -16,7 +16,7 @@ export const SIDEBAR: Sidebar[] = [
   {
     id: 'home',
     icon: 'home',
-    content: 'Home',
+    content: 'sidebar.home',
     routePath: '/',
     childrenRoutes: ['/'],
     role: [PERMISSION.ADMIN],
@@ -25,7 +25,7 @@ export const SIDEBAR: Sidebar[] = [
   {
     id: 'search',
     icon: 'search',
-    content: 'Search',
+    content: 'sidebar.search',
     routePath: '/search',
     childrenRoutes: ['/search', '/genre', '/concerts'],
     role: [PERMISSION.ADMIN],
@@ -34,7 +34,7 @@ export const SIDEBAR: Sidebar[] = [
   {
     id: 'library',
     icon: 'library',
-    content: 'Your Library',
+    content: 'sidebar.library',
     routePath: '/library',
     childrenRoutes: ['/library'],
     role: [PERMISSION.ADMIN],

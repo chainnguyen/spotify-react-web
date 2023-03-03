@@ -1,10 +1,12 @@
 import '@/assets/scss/layouts/header.scss'
 import '@/assets/scss/components/_button.scss'
 
+import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
 function CHeader() {
   const navigate = useNavigate()
+  const { t } = useTranslation()
   const { state: currentRoute, length: historyLength } = window.history
 
   const transferRouteHistory = (command: 'back' | 'forward'): any =>
@@ -58,11 +60,11 @@ function CHeader() {
         <div className="GTAFfOA_w5vh_bDaGJAG" />
 
         <div className="LKFFk88SIRC9QKKUWR5u">
-          <button className="Button-sc-1dqy6lx-0 dZYxEP sibxBMlr_oxWTfBrEz2G">Sign up</button>
+          <button className="Button-sc-1dqy6lx-0 dZYxEP sibxBMlr_oxWTfBrEz2G">{t('signup')}</button>
 
           <button className="Button-sc-qlcn5g-0 jsmWVV">
             <span className="ButtonInner-sc-14ud5tc-0 kuwYvr encore-inverted-light-set">
-              Log in
+              {t('login')}
             </span>
           </button>
         </div>

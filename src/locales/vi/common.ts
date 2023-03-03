@@ -1,0 +1,30 @@
+export default {
+  sidebar: {
+    home: 'Trang chủ',
+    search: 'Tìm kiếm',
+    library: 'Thư viện',
+    create_playlist: 'Tạo playlist',
+    liked_songs: 'Bài hát đã thích',
+  },
+  show_all: 'Hiện tất cả',
+  close: 'Đóng',
+  login: 'Đăng nhập',
+  signup: 'Đăng ký',
+  signup_free: 'Đăng ký miễn phí',
+  download_app: 'Tải ứng dụng',
+  quantity_liked: 'lượt thích',
+  song: 'bài hát',
+  about: 'khoảng',
+  relative_time: {
+    second: 'giây',
+    minute: 'phút',
+    hour: 'giờ',
+    day: 'ngày',
+    week: 'tuần',
+    month: 'tháng',
+    year: 'năm',
+  },
+  preview_of_spotify: 'Xem trước Spotify',
+  des_preview_of_spotify:
+    'Đăng ký để nghe không giới hạn các bài hát và podcast với quảng cáo không thường xuyên. Không cần thẻ tín dụng.',
+}

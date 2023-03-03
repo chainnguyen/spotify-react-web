@@ -4,6 +4,7 @@ import type { CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
+import type { Card, TrackList } from '@/@types/playlist'
 import { PlaylistService } from '@/services/playlist.service'
 import { TrackService } from '@/services/track.service'
 import {
@@ -13,7 +14,6 @@ import {
   CSectionFooter,
   CTrackList,
 } from '@/shared/components'
-import type { Card, TrackList } from '@/types/playlist'
 
 function Playlist() {
   const { playlistId } = useParams()
@@ -72,7 +72,7 @@ function Playlist() {
                   className="CoLO4pdSl8LGWyVZA00t"
                   style={
                     {
-                      backgroundColor: playlistData.backup_color.background_color,
+                      backgroundColor: playlistData.backup.background_color,
                     } as CSSProperties
                   }
                 />

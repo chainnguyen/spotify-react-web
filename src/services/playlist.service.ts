@@ -1,5 +1,5 @@
+import type { Card, Playlist } from '@/@types/playlist'
 import { useAxios } from '@/shared/hooks'
-import type { Card, Playlist } from '@/types/playlist'
 
 const { Get } = useAxios()
 
