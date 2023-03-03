@@ -3,22 +3,22 @@ import '@/assets/scss/components/_button.scss'
 import '@/assets/scss/components/_progress-player.scss'
 
 import type { CSSProperties } from 'react'
+import { useTranslation } from 'react-i18next'
 
 function CPlayingBar() {
+  const { t } = useTranslation()
+
   return (
     <div className="Root__now-playing-bar">
       <footer className="GD2gbRtcs5dOjMGAM_Y4">
         <div className="dz_h98rH9nZCwfPdnKgr">
           <div className="rAfV2jB_HMM9Xtr0Rqvn">
-            <p className="Type__TypeElement-sc-goli3j-0 dIXVLA">Preview of Spotify</p>
-            <p className="Type__TypeElement-sc-goli3j-0 eRYMpa">
-              Sign up to get unlimited songs and podcasts with occasional ads. No credit card
-              needed.
-            </p>
+            <p className="Type__TypeElement-sc-goli3j-0 dIXVLA">{t('preview_of_spotify')}</p>
+            <p className="Type__TypeElement-sc-goli3j-0 eRYMpa">{t('des_preview_of_spotify')}</p>
           </div>
           <button className="Button-sc-qlcn5g-0 jsmWVV">
             <span className="ButtonInner-sc-14ud5tc-0 kuwYvr encore-inverted-light-set XkXPpDRWozMF6G8_GlLQ">
-              Sign up free
+              {t('signup_free')}
             </span>
           </button>
         </div>

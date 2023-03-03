@@ -4,19 +4,19 @@ import type { CSSProperties } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 
+import type { Card, ITrack } from '@/@types/playlist'
 import { CModalCurtain } from '@/shared/components'
 import type { AppDispatch } from '@/shared/store'
 import { SET_MODAL_REQUEST_LOGIN } from '@/shared/store/modules/auth'
-import type { Card } from '@/types/playlist'
 
 interface IProps {
   isOpen: boolean
-  data: Card | null
+  data: Card | ITrack | null
 }
 
 function CModalRequestLogin({ isOpen, data }: IProps) {
   const navigate = useNavigate()
-  const dispatch: AppDispatch = useDispatch()
+  const dispatch = useDispatch<AppDispatch>()
 
   const redirectSignup = () => {
     navigate('/auth/signup')
@@ -37,7 +37,7 @@ function CModalRequestLogin({ isOpen, data }: IProps) {
             className="anllJYN1jeYGGE1iAJUJ"
             style={
               {
-                backgroundColor: data ? data.backup_color.background_color : '#282828',
+                backgroundColor: data ? data.backup.background_color : '#282828',
               } as CSSProperties
             }>
             <div className="SVnAziPF2z_cgAGrp6He UmY163JiUcgJt2MKNyGW">
@@ -49,7 +49,7 @@ function CModalRequestLogin({ isOpen, data }: IProps) {
                     aria-hidden="false"
                     draggable="false"
                     loading="lazy"
-                    src={data.thumbnail}
+                    src={data.backup.thumbnail_large}
                     alt={data.title}
                     className="mMx2LUixlnN_Fu45JpFB Yn2Ei5QZn19gria6LjZj"
                   />

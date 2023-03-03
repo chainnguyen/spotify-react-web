@@ -4,13 +4,19 @@
   "data": [
     {
       "id": "so_far_so_good_12345",
-      "name": "So Far So Good",
+      "title": "So Far So Good",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851ea00badac2d1d6af988f1d88",
       "release_date": "2023-02-14 23:15:22",
       "track_duration": "2:31",
       "quantity_liked": 1232900,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851ea00badac2d1d6af988f1d88",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_silent_hills",
         "name": "Silent Hills"
@@ -22,13 +28,19 @@
     },
     {
       "id": "apricity_12345",
-      "name": "Apricity",
+      "title": "Apricity",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d000048515e8fc1e700a3b73bd1c79f60",
       "release_date": "2023-02-27 20:00:00",
       "track_duration": "2:38",
       "quantity_liked": 23456,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d000048515e8fc1e700a3b73bd1c79f60",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_apricity",
         "name": "Apricity"
@@ -40,13 +52,19 @@
     },
     {
       "id": "solatium_12345",
-      "name": "Solatium",
+      "title": "Solatium",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851eb79423c1221d8f82592b212",
       "release_date": "2023-03-01 03:30:00",
       "track_duration": "6:06",
       "quantity_liked": 456722,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851eb79423c1221d8f82592b212",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_solatium",
         "name": "Solatium"
@@ -58,13 +76,19 @@
     },
     {
       "id": "morning_routine_12345",
-      "name": "Morning Routine",
+      "title": "Morning Routine",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
       "release_date": "2023-02-15 19:15:00",
       "track_duration": "12:59",
       "quantity_liked": 10000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_morning_routine",
         "name": "Morning Routine"
@@ -76,13 +100,19 @@
     },
     {
       "id": "villa_12345",
-      "name": "Villa",
+      "title": "Villa",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
       "release_date": "2023-01-20 17:25:00",
       "track_duration": "22:06",
       "quantity_liked": 567989,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_villa",
         "name": "Villa"
@@ -94,13 +124,19 @@
     },
     {
       "id": "return_of_the_swans_12345",
-      "name": "Return of the swans",
+      "title": "Return of the swans",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
       "release_date": "2023-02-14 16:00:10",
       "track_duration": "0:43",
       "quantity_liked": 45673,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_big_blue",
         "name": "Big blue"
@@ -112,13 +148,19 @@
     },
     {
       "id": "ménuet_belmonte_12345",
-      "name": "Ménuet Belmonte",
+      "title": "Ménuet Belmonte",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
       "release_date": "2022-12-29 20:00:00",
       "track_duration": "3:14",
       "quantity_liked": 9000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_ménuet_belmonte",
         "name": "Ménuet Belmonte"
@@ -130,13 +172,19 @@
     },
     {
       "id": "riverlight_12345",
-      "name": "Riverlight",
+      "title": "Riverlight",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d000048514e23aaef7cfc48746d7bde95",
       "release_date": "2023-01-01 06:30:00",
       "track_duration": "2:13",
       "quantity_liked": 456722,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d000048514e23aaef7cfc48746d7bde95",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_riverlight",
         "name": "Riverlight"
@@ -148,13 +196,19 @@
     },
     {
       "id": "himlen_12345",
-      "name": "Himlen",
+      "title": "Himlen",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
       "release_date": "2023-02-15 19:15:00",
       "track_duration": "2:01",
       "quantity_liked": 15000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_himlen",
         "name": "Himlen"
@@ -166,13 +220,19 @@
     },
     {
       "id": "85mm_12345",
-      "name": "85mm",
+      "title": "85mm",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d0000485140ef98d11641f4f3c1c13b1a",
       "release_date": "2023-01-25 17:45:00",
       "track_duration": "2:59",
       "quantity_liked": 567989,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d0000485140ef98d11641f4f3c1c13b1a",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_85mm",
         "name": "85mm"
@@ -184,13 +244,19 @@
     },
     {
       "id": "himlen_2_12345",
-      "name": "Himlen",
+      "title": "Himlen",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
       "release_date": "2023-02-15 19:15:00",
       "track_duration": "2:01",
       "quantity_liked": 15000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_himlen",
         "name": "Himlen"
@@ -202,13 +268,19 @@
     },
     {
       "id": "85mm_2_12345",
-      "name": "85mm",
+      "title": "85mm",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d0000485140ef98d11641f4f3c1c13b1a",
       "release_date": "2023-01-25 17:45:00",
       "track_duration": "2:59",
       "quantity_liked": 567989,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d0000485140ef98d11641f4f3c1c13b1a",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_85mm",
         "name": "85mm"
@@ -220,13 +292,19 @@
     },
     {
       "id": "solatium_2_12345",
-      "name": "Solatium",
+      "title": "Solatium",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851eb79423c1221d8f82592b212",
       "release_date": "2023-03-01 03:30:00",
       "track_duration": "2:06",
       "quantity_liked": 456722,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851eb79423c1221d8f82592b212",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_solatium",
         "name": "Solatium"
@@ -238,13 +316,19 @@
     },
     {
       "id": "morning_routine_2_12345",
-      "name": "Morning Routine",
+      "title": "Morning Routine",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
       "release_date": "2023-02-15 19:15:00",
       "track_duration": "2:06",
       "quantity_liked": 10000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_morning_routine",
         "name": "Morning Routine"
@@ -256,13 +340,19 @@
     },
     {
       "id": "villa_2_12345",
-      "name": "Villa",
+      "title": "Villa",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
       "release_date": "2023-01-20 17:25:00",
       "track_duration": "2:06",
       "quantity_liked": 567989,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_villa",
         "name": "Villa"
@@ -274,13 +364,19 @@
     },
     {
       "id": "return_of_the_swans_2_12345",
-      "name": "Return of the swans",
+      "title": "Return of the swans",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
       "release_date": "2023-02-14 16:00:10",
       "track_duration": "1:43",
       "quantity_liked": 45673,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_big_blue",
         "name": "Big blue"
@@ -292,13 +388,19 @@
     },
     {
       "id": "ménuet_belmonte_2_12345",
-      "name": "Ménuet Belmonte",
+      "title": "Ménuet Belmonte",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
       "release_date": "2022-12-29 20:00:00",
       "track_duration": "3:14",
       "quantity_liked": 9000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_ménuet_belmonte",
         "name": "Ménuet Belmonte"
@@ -310,13 +412,19 @@
     },
     {
       "id": "riverlight_2_12345",
-      "name": "Riverlight",
+      "title": "Riverlight",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d000048514e23aaef7cfc48746d7bde95",
       "release_date": "2023-01-01 06:30:00",
       "track_duration": "2:13",
       "quantity_liked": 456722,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d000048514e23aaef7cfc48746d7bde95",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_riverlight",
         "name": "Riverlight"
@@ -328,13 +436,19 @@
     },
     {
       "id": "morning_routine_3_12345",
-      "name": "Morning Routine",
+      "title": "Morning Routine",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
       "release_date": "2023-02-15 19:15:00",
       "track_duration": "2:06",
       "quantity_liked": 10000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_morning_routine",
         "name": "Morning Routine"
@@ -346,13 +460,19 @@
     },
     {
       "id": "apricity_2_12345",
-      "name": "Apricity",
+      "title": "Apricity",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d000048515e8fc1e700a3b73bd1c79f60",
       "release_date": "2023-02-27 20:00:00",
       "track_duration": "2:38",
       "quantity_liked": 23456,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d000048515e8fc1e700a3b73bd1c79f60",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_apricity",
         "name": "Apricity"
@@ -364,13 +484,19 @@
     },
     {
       "id": "himlen_3_12345",
-      "name": "Himlen",
+      "title": "Himlen",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
       "release_date": "2023-02-15 19:15:00",
       "track_duration": "2:01",
       "quantity_liked": 15000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_himlen",
         "name": "Himlen"
@@ -382,13 +508,19 @@
     },
     {
       "id": "85mm_3_12345",
-      "name": "85mm",
+      "title": "85mm",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d0000485140ef98d11641f4f3c1c13b1a",
       "release_date": "2023-01-25 17:45:00",
       "track_duration": "2:59",
       "quantity_liked": 567989,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d0000485140ef98d11641f4f3c1c13b1a",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_85mm",
         "name": "85mm"
@@ -400,13 +532,19 @@
     },
     {
       "id": "solatium_3_12345",
-      "name": "Solatium",
+      "title": "Solatium",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851eb79423c1221d8f82592b212",
       "release_date": "2023-03-01 03:30:00",
       "track_duration": "6:06",
       "quantity_liked": 456722,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851eb79423c1221d8f82592b212",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_solatium",
         "name": "Solatium"
@@ -418,13 +556,19 @@
     },
     {
       "id": "morning_routine_4_12345",
-      "name": "Morning Routine",
+      "title": "Morning Routine",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
       "release_date": "2023-02-15 19:15:00",
       "track_duration": "12:59",
       "quantity_liked": 10000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851849dda36f27b3fd1fc9b95d2",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_morning_routine",
         "name": "Morning Routine"
@@ -436,13 +580,19 @@
     },
     {
       "id": "so_far_so_good_2_12345",
-      "name": "So Far So Good",
+      "title": "So Far So Good",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851ea00badac2d1d6af988f1d88",
       "release_date": "2023-02-14 23:15:22",
       "track_duration": "2:31",
       "quantity_liked": 1232900,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851ea00badac2d1d6af988f1d88",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_silent_hills",
         "name": "Silent Hills"
@@ -454,13 +604,19 @@
     },
     {
       "id": "himlen_4_12345",
-      "name": "Himlen",
+      "title": "Himlen",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
       "release_date": "2023-02-15 19:15:00",
       "track_duration": "2:01",
       "quantity_liked": 15000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851c61eda5e39b6069dddc7eb5d",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_himlen",
         "name": "Himlen"
@@ -472,13 +628,19 @@
     },
     {
       "id": "ménuet_belmonte_5_12345",
-      "name": "Ménuet Belmonte",
+      "title": "Ménuet Belmonte",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
       "release_date": "2022-12-29 20:00:00",
       "track_duration": "3:14",
       "quantity_liked": 9000,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d00004851237d5c0d7d84c0146e59eed3",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_ménuet_belmonte",
         "name": "Ménuet Belmonte"
@@ -490,13 +652,19 @@
     },
     {
       "id": "riverlight_6_12345",
-      "name": "Riverlight",
+      "title": "Riverlight",
       "track_file": "",
-      "track_thumbnail": "https://i.scdn.co/image/ab67616d000048514e23aaef7cfc48746d7bde95",
       "release_date": "2023-01-01 06:30:00",
       "track_duration": "2:13",
       "quantity_liked": 456722,
       "is_liked": false,
+      "backup": {
+        "thumbnail": "https://i.scdn.co/image/ab67616d000048514e23aaef7cfc48746d7bde95",
+        "thumbnail_large": "https://i.scdn.co/image/ab67616d0000b273671195ac699b5a8c8ee45c33",
+        "thumbnail_color": "",
+        "background_color": "rgb(0, 80, 176)",
+        "background_image": ""
+      },
       "album": {
         "id": "album_riverlight",
         "name": "Riverlight"

@@ -1,10 +1,11 @@
 import '@/assets/scss/components/_section.scss'
 
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
+import type { Card, Playlist } from '@/@types/playlist'
 import { CCardPlaylist } from '@/shared/components'
-import type { Card, Playlist } from '@/types/playlist'
 
 interface IProps {
   data: Playlist
@@ -13,6 +14,8 @@ interface IProps {
 }
 
 function CSectionPlaylist({ data, defaultDisplay, hiddenTitle }: IProps) {
+  const { t } = useTranslation()
+
   const [limitCard, setLimitCard] = useState<Card[]>([])
 
   useEffect(() => {
@@ -59,7 +62,7 @@ function CSectionPlaylist({ data, defaultDisplay, hiddenTitle }: IProps) {
               to={`/section/${data.id}`}
               draggable="false"
               className="a7lvtXATo3HALtrsOHtO HOgue4Eg4UdBR58M0633">
-              <span className="Type__TypeElement-sc-goli3j-0 jdSGNV">Show all</span>
+              <span className="Type__TypeElement-sc-goli3j-0 jdSGNV">{t('show_all')}</span>
             </Link>
           ) : (
             ''

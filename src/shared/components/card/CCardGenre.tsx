@@ -3,7 +3,7 @@ import '@/assets/scss/components/_genre-card.scss'
 import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 
-import type { GenreItem } from '@/types/genre'
+import type { GenreItem } from '@/@types/genre'
 
 interface IProps {
   data: GenreItem

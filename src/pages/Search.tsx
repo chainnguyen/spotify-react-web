@@ -3,9 +3,9 @@ import '@/assets/scss/pages/search.scss'
 
 import { useEffect, useState } from 'react'
 
+import type { GenreItem } from '@/@types/genre'
 import { GenreService } from '@/services/genre.service'
 import { CCardGenre, CLoading, CSectionFooter } from '@/shared/components'
-import type { GenreItem } from '@/types/genre'
 
 function SearchPage() {
   const [genreData, setGenreData] = useState<GenreItem[] | null>(null)

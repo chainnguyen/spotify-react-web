@@ -3,10 +3,10 @@ import axios, { AxiosError } from 'axios'
 import Cookies from 'js-cookie'
 import { useNavigate } from 'react-router-dom'
 
+import type { IFreeObject } from '@/@types/global'
 import { COOKIES_KEY } from '@/enums/cookie.enum'
 import { store } from '@/shared/store'
 import { SET_LOGOUT } from '@/shared/store/modules/auth'
-import type { IFreeObject } from '@/types/global'
 
 const { dispatch } = store
 

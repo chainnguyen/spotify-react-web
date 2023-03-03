@@ -3,10 +3,12 @@ import packageJson from 'package.json'
 
 // Modules
 import authReducer from './modules/auth'
+import localesReducer from './modules/locales'
 import playerMusicReducer from './modules/player-music'
 
 const reducer = {
   auth: authReducer,
+  locales: localesReducer,
   playerMusic: playerMusicReducer,
 }
 

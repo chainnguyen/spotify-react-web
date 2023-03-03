@@ -3,9 +3,9 @@ import '@/assets/scss/pages/home.scss'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
+import type { Playlist } from '@/@types/playlist'
 import { PlaylistService } from '@/services/playlist.service'
 import { CLoading, CSectionFooter, CSectionPlaylist } from '@/shared/components'
-import type { Playlist } from '@/types/playlist'
 
 function Section() {
   const { sectionId } = useParams()

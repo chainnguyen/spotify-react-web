@@ -1,16 +1,19 @@
 import '@/assets/scss/components/_track-list.scss'
 
 import type { CSSProperties } from 'react'
+import { useTranslation } from 'react-i18next'
 
+import type { ITrack, TrackList } from '@/@types/playlist'
 import { PAGINATION } from '@/enums/pagination.enum'
 import { CLoading, CTrackCard } from '@/shared/components'
-import type { ITrack, TrackList } from '@/types/playlist'
 
 interface IProps {
   data: TrackList
 }
 
 function CTrackList({ data }: IProps) {
+  const { t } = useTranslation()
+
   return (
     <>
       {!data.data.length ? (
@@ -48,7 +51,7 @@ function CTrackList({ data }: IProps) {
                 tabIndex={-1}>
                 <div className="ASYv4mEu1lXEHVa04HqY">
                   <span className="Type__TypeElement-sc-goli3j-0 hGXzYa standalone-ellipsis-one-line">
-                    Title
+                    {t('playlist.table_list.title')}
                   </span>
                 </div>
               </div>
@@ -61,7 +64,7 @@ function CTrackList({ data }: IProps) {
                 tabIndex={-1}>
                 <div className="ASYv4mEu1lXEHVa04HqY">
                   <span className="Type__TypeElement-sc-goli3j-0 hGXzYa standalone-ellipsis-one-line">
-                    Album
+                    {t('playlist.table_list.album')}
                   </span>
                 </div>
               </div>
@@ -74,7 +77,7 @@ function CTrackList({ data }: IProps) {
                 tabIndex={-1}>
                 <div className="ASYv4mEu1lXEHVa04HqY">
                   <span className="Type__TypeElement-sc-goli3j-0 hGXzYa standalone-ellipsis-one-line">
-                    Date added
+                    {t('playlist.table_list.date_added')}
                   </span>
                 </div>
               </div>

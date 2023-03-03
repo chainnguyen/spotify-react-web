@@ -2,9 +2,9 @@ import '@/assets/scss/pages/home.scss'
 
 import { useEffect, useState } from 'react'
 
+import type { Playlist } from '@/@types/playlist'
 import { PlaylistService } from '@/services/playlist.service'
 import { CLoading, CSectionFooter, CSectionPlaylist } from '@/shared/components'
-import type { Playlist } from '@/types/playlist'
 
 function HomePage() {
   const [focusData, setFocusData] = useState<Playlist | null>(null)

@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 
+import type { ITrack } from '@/@types/playlist'
 import { CButtonMore, CButtonSaveToLibrary } from '@/shared/components'
+import { useTrackController } from '@/shared/hooks'
 import { getRelativeTimeString } from '@/shared/utils/helper'
-import type { ITrack } from '@/types/playlist'
 
 interface IProps {
   data: ITrack
@@ -10,6 +11,8 @@ interface IProps {
 }
 
 function CTrackCard({ data, order }: IProps) {
+  const { enforceTrack } = useTrackController()
+
   return (
     <div
       role="row"
@@ -28,11 +31,13 @@ function CTrackCard({ data, order }: IProps) {
             <span className="Type__TypeElement-sc-goli3j-0 eRYMpa VrRwdIZO0sRX1lsWxJBe">
               {order}
             </span>
+
             <button
               className="RfidWIoz8FON2WhFoItU"
-              aria-label={`Play ${data.name} by ${data.artist.name}`}
+              aria-label={`Play ${data.title} by ${data.artist.name}`}
               tabIndex={0}
-              aria-expanded="false">
+              aria-expanded="false"
+              onClick={() => enforceTrack(data)}>
               <svg
                 role="img"
                 height="24"
@@ -55,7 +60,7 @@ function CTrackCard({ data, order }: IProps) {
             aria-hidden="false"
             draggable="false"
             loading="eager"
-            src={data.track_thumbnail}
+            src={data.backup.thumbnail}
             alt=""
             className="mMx2LUixlnN_Fu45JpFB rkw8BWQi3miXqtlJhKg0 Yn2Ei5QZn19gria6LjZj"
             width="40"
@@ -72,7 +77,7 @@ function CTrackCard({ data, order }: IProps) {
                 dir="auto"
                 className="Type__TypeElement-sc-goli3j-0 kHHFyx t_yrXoUO3qGsJS4Y6iXX standalone-ellipsis-one-line"
                 aria-expanded="false">
-                {data.name}
+                {data.title}
               </div>
             </Link>
 
@@ -135,7 +140,7 @@ function CTrackCard({ data, order }: IProps) {
             height={16}
             tabIndex={-1}
             classButton={'mYN_ST1TsDdC6q1k1_xs'}
-            ariaLabel={`More options for ${data.name} by ${data.artist.name}`}
+            ariaLabel={`More options for ${data.title} by ${data.artist.name}`}
           />
         </div>
       </div>

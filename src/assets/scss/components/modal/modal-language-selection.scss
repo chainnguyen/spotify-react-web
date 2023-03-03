@@ -1,0 +1,103 @@
+@import "@/assets/scss/helpers/_mixins.scss";
+@import "@/assets/scss/helpers/_variables.scss";
+
+
+.dialog.zR8QNf_xkSN8l2nrr7qn {
+  @include flex();
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+.zR8QNf_xkSN8l2nrr7qn {
+  .VdanMHKK5Onw77cpKNJo {
+    position: relative;
+    height: 588px;
+    background-color: $background-active-card;
+    border-radius: 8px;
+    inline-size: calc(100vw - 64px);
+    margin-block: 32px;
+    margin-inline: 32px;
+    max-inline-size: 978px;
+    overflow: hidden;
+  }
+
+  .biCYmK3d8L8l7A_xC_Ge {
+    @include flex();
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-padding-before: 16px;
+    justify-content: space-between;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+    padding-block-start: 16px;
+    padding-inline: 24px;
+
+    .uzrPPSY_Qq9u4Yos40TQ {
+      @include flex();
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+    }
+  }
+}
+
+.VtOVn196CnZ8321SwK5W {
+  @include flex();
+  grid-area: close-button;
+  width: 32px;
+  height: 32px;
+  color: $text-light-white;
+  background-color: rgba(0,0,0,.7);
+  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  align-self: flex-start;
+  border: 0;
+  border-radius: 32px;
+}
+
+.QN6q7D8yep8_vpem9h9t {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: calc(100% - 104.984px);
+  overflow-y: scroll;
+  padding-block: 16px;
+  padding-inline: 24px;
+
+  .Gf_hXbIvfUvlnE_jnkw8 {
+    @include flex-inline();
+    padding: 16px;
+    border: 0;
+    color: inherit;
+    background-color: transparent;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    align-items: flex-start;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    &:hover {
+      text-decoration: none;
+      background-color: hsla(0,0%,100%,.1);
+    }
+
+    .dBuVac {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: $text-base;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      margin-block: 0;
+    }
+  }
+}

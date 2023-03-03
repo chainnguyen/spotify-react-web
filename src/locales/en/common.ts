@@ -1,0 +1,30 @@
+export default {
+  sidebar: {
+    home: 'Home',
+    search: 'Search',
+    library: 'Your Library',
+    create_playlist: 'Create playlist',
+    liked_songs: 'Liked songs',
+  },
+  show_all: 'Show all',
+  close: 'Close',
+  login: 'Log in',
+  signup: 'Sign up',
+  signup_free: 'Sign up free',
+  download_app: 'Download app',
+  quantity_liked: 'likes',
+  song: 'song',
+  about: 'about',
+  relative_time: {
+    second: 'second',
+    minute: 'minute',
+    hour: 'hour',
+    day: 'day',
+    week: 'week',
+    month: 'month',
+    year: 'year',
+  },
+  preview_of_spotify: 'Preview of Spotify',
+  des_preview_of_spotify:
+    'Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.',
+}
