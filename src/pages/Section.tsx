@@ -7,8 +7,8 @@ import { useParams } from 'react-router-dom'
 import type { Playlist } from '@/@types/playlist'
 import { PlaylistService } from '@/services/playlist.service'
 import { CLoading, CSectionFooter, CSectionPlaylist } from '@/shared/components'
-import type { AppDispatch, RootState } from '@/shared/store'
-import { SET_PLAYLIST_DETAIL } from '@/shared/store/modules/pages/playlist'
+import type { AppDispatch } from '@/shared/store'
+import { PLAYLIST_GETTER, SET_PLAYLIST_DETAIL } from '@/shared/store/modules/pages/playlist'
 
 function Section() {
   const { sectionId } = useParams()
@@ -16,7 +16,7 @@ function Section() {
 
   const [sectionData, setSectionData] = useState<Playlist | null>(null)
 
-  const $detailSection = useSelector((state: RootState) => state['playlist'].detail)
+  const $detailSection = useSelector(PLAYLIST_GETTER.detail)
 
   useEffect(() => {
     fetchSectionById(sectionId).then((r) => r)

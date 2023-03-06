@@ -2,6 +2,7 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 
 import type { IPagination } from '@/@types/global'
+import type { RootState } from '@/shared/store'
 
 export interface IGenreState {
   list: null
@@ -13,6 +14,12 @@ const initialState: IGenreState = {
   list: null,
   detail: null,
   pagination: null,
+}
+
+export const GETTER = {
+  list: (state: RootState) => state['genre'].list,
+  detail: (state: RootState) => state['genre'].detail,
+  pagination: (state: RootState) => state['genre'].pagination,
 }
 
 const reducers = {

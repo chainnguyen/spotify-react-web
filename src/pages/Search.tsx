@@ -7,15 +7,15 @@ import { useDispatch, useSelector } from 'react-redux'
 import type { GenreItem } from '@/@types/genre'
 import { GenreService } from '@/services/genre.service'
 import { CCardGenre, CLoading, CSectionFooter } from '@/shared/components'
-import type { AppDispatch, RootState } from '@/shared/store'
-import { SET_GENRE_LIST } from '@/shared/store/modules/pages/genre'
+import type { AppDispatch } from '@/shared/store'
+import { GETTER, SET_GENRE_LIST } from '@/shared/store/modules/pages/genre'
 
 function SearchPage() {
   const dispatch = useDispatch<AppDispatch>()
 
   const [genreData, setGenreData] = useState<GenreItem[] | null>(null)
 
-  const $genreList = useSelector((state: RootState) => state['genre'].list)
+  const $genreList = useSelector(GETTER.list)
 
   useEffect(() => {
     fetchList().then((r) => r)

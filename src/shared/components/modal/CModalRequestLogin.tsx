@@ -8,7 +8,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import type { Card, ITrack } from '@/@types/playlist'
 import { CModalCurtain } from '@/shared/components'
 import type { AppDispatch } from '@/shared/store'
-import { SET_MODAL_REQUEST_LOGIN } from '@/shared/store/modules/auth'
+import { SET_DATA_MODAL_REQUEST_LOGIN, SET_MODAL_REQUEST_LOGIN } from '@/shared/store/modules/auth'
 
 interface IProps {
   isOpen: boolean
@@ -27,6 +27,7 @@ function CModalRequestLogin({ isOpen, data }: IProps) {
 
   const closeModal = () => {
     dispatch(SET_MODAL_REQUEST_LOGIN(false))
+    dispatch(SET_DATA_MODAL_REQUEST_LOGIN(null))
   }
 
   return (

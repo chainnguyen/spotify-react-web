@@ -7,15 +7,15 @@ import { Link, useLocation } from 'react-router-dom'
 import { LOCALES } from '@/enums/locales.enum'
 import { SIDEBAR } from '@/enums/sidebar.enum'
 import { CCustomizeIcon } from '@/shared/components'
-import type { AppDispatch, RootState } from '@/shared/store'
-import { SET_LANGUAGE_SELECTION } from '@/shared/store/modules/locales'
+import type { AppDispatch } from '@/shared/store'
+import { LOCALES_GETTER, SET_LANGUAGE_SELECTION } from '@/shared/store/modules/locales'
 
 function CGlobalSidebar() {
   const location = useLocation()
   const { t } = useTranslation()
   const dispatch = useDispatch<AppDispatch>()
 
-  const $currentLocale = useSelector((state: RootState) => state['locales'].currentLocale)
+  const $currentLocale = useSelector(LOCALES_GETTER.currentLocale)
 
   const changeLanguage = () => {
     dispatch(SET_LANGUAGE_SELECTION(true))

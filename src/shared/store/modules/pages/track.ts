@@ -2,6 +2,7 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 
 import type { IPagination } from '@/@types/global'
+import type { RootState } from '@/shared/store'
 
 export interface ITrackState {
   list: null
@@ -13,6 +14,12 @@ const initialState: ITrackState = {
   list: null,
   detail: null,
   pagination: null,
+}
+
+export const TRACK_GETTER = {
+  list: (state: RootState) => state['track'].list,
+  detail: (state: RootState) => state['track'].detail,
+  pagination: (state: RootState) => state['track'].pagination,
 }
 
 const reducers = {

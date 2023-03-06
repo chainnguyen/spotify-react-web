@@ -14,7 +14,7 @@ export default {
   download_app: 'Tải ứng dụng',
   quantity_liked: 'lượt thích',
   song: {
-    one: 'bài hát',
+    single: 'bài hát',
     multiple: 'bài hát',
   },
   about: 'khoảng',

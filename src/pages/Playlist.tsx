@@ -15,9 +15,9 @@ import {
   CSectionFooter,
   CTrackList,
 } from '@/shared/components'
-import type { AppDispatch, RootState } from '@/shared/store'
-import { SET_PLAYLIST_DETAIL } from '@/shared/store/modules/pages/playlist'
-import { SET_TRACK_LIST } from '@/shared/store/modules/pages/track'
+import type { AppDispatch } from '@/shared/store'
+import { PLAYLIST_GETTER, SET_PLAYLIST_DETAIL } from '@/shared/store/modules/pages/playlist'
+import { SET_TRACK_LIST, TRACK_GETTER } from '@/shared/store/modules/pages/track'
 
 function Playlist() {
   const { playlistId } = useParams()
@@ -26,8 +26,8 @@ function Playlist() {
   const [playlistData, setPlaylistData] = useState<Card | null>(null)
   const [trackListData, setTrackListData] = useState<TrackList | null>(null)
 
-  const $detailSection = useSelector((state: RootState) => state['playlist'].detail)
-  const $trackList = useSelector((state: RootState) => state['track'].list)
+  const $detailSection = useSelector(PLAYLIST_GETTER.detail)
+  const $trackList = useSelector(TRACK_GETTER.list)
 
   useEffect(() => {
     fetchPlaylistDetail(playlistId).then((r) => r)

@@ -6,14 +6,18 @@ import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
-import type { RootState } from '@/shared/store'
+import { PLAYLIST_GETTER } from '@/shared/store/modules/pages/playlist'
 
 function CHeader() {
   const navigate = useNavigate()
   const { t } = useTranslation()
   const { state: currentRoute, length: historyLength } = window.history
 
-  const $detailSection = useSelector((state: RootState) => state['playlist'].detail)
+  const $detailSection = useSelector(PLAYLIST_GETTER.detail)
+
+  const redirectAuthentication = (page: 'signup' | 'login') => {
+    navigate(`/auth/${page}`)
+  }
 
   const transferRouteHistory = (command: 'back' | 'forward'): any =>
     navigate(command === 'back' ? -1 : 1)
@@ -74,9 +78,15 @@ function CHeader() {
         <div className="GTAFfOA_w5vh_bDaGJAG" />
 
         <div className="LKFFk88SIRC9QKKUWR5u">
-          <button className="Button-sc-1dqy6lx-0 dZYxEP sibxBMlr_oxWTfBrEz2G">{t('signup')}</button>
+          <button
+            className="Button-sc-1dqy6lx-0 dZYxEP sibxBMlr_oxWTfBrEz2G"
+            onClick={() => redirectAuthentication('signup')}>
+            {t('signup')}
+          </button>
 
-          <button className="Button-sc-qlcn5g-0 jsmWVV">
+          <button
+            className="Button-sc-qlcn5g-0 jsmWVV"
+            onClick={() => redirectAuthentication('login')}>
             <span className="ButtonInner-sc-14ud5tc-0 kuwYvr encore-inverted-light-set">
               {t('login')}
             </span>

@@ -4,6 +4,7 @@ import Cookies from 'js-cookie'
 
 import { COOKIES_KEY } from '@/enums/cookie.enum'
 import { LANG_STORAGE_KEY } from '@/enums/locales.enum'
+import type { RootState } from '@/shared/store'
 
 export interface IAuthState {
   token: string | null
@@ -17,6 +18,13 @@ const initialState: IAuthState = {
   profile: null,
   dataRequestLogin: null,
   isRequestLogin: false,
+}
+
+export const AUTH_GETTER = {
+  token: (state: RootState) => state['auth'].token,
+  profile: (state: RootState) => state['auth'].profile,
+  dataRequestLogin: (state: RootState) => state['auth'].dataRequestLogin,
+  isRequestLogin: (state: RootState) => state['auth'].isRequestLogin,
 }
 
 const reducers = {

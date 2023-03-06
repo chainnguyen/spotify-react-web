@@ -6,8 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import type { Playlist } from '@/@types/playlist'
 import { PlaylistService } from '@/services/playlist.service'
 import { CLoading, CSectionFooter, CSectionPlaylist } from '@/shared/components'
-import type { AppDispatch, RootState } from '@/shared/store'
-import { SET_PLAYLIST_LIST } from '@/shared/store/modules/pages/playlist'
+import type { AppDispatch } from '@/shared/store'
+import { PLAYLIST_GETTER, SET_PLAYLIST_LIST } from '@/shared/store/modules/pages/playlist'
 
 function HomePage() {
   const dispatch = useDispatch<AppDispatch>()
@@ -15,7 +15,7 @@ function HomePage() {
   const [focusData, setFocusData] = useState<Playlist | null>(null)
   const [suggestData, setSuggestData] = useState<Playlist | null>(null)
 
-  const $listOfPlaylist = useSelector((state: RootState) => state['playlist'].list)
+  const $listOfPlaylist = useSelector(PLAYLIST_GETTER.list)
 
   useEffect(() => {
     fetchPlaylist().then((r) => r)
@@ -23,6 +23,7 @@ function HomePage() {
     return () => {
       setFocusData(null)
       setSuggestData(null)
+      dispatch(SET_PLAYLIST_LIST(null))
     }
   }, [])
 

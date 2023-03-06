@@ -4,12 +4,20 @@ import '@/assets/scss/components/_progress-player.scss'
 
 import type { CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
 
 function CPlayingBar() {
+  const navigate = useNavigate()
   const { t } = useTranslation()
 
+  const redirectSignup = () => {
+    navigate('/auth/signup')
+  }
+
   return (
-    <div className="Root__now-playing-bar">
+    <div
+      className="Root__now-playing-bar"
+      onClick={redirectSignup}>
       <footer className="GD2gbRtcs5dOjMGAM_Y4">
         <div className="dz_h98rH9nZCwfPdnKgr">
           <div className="rAfV2jB_HMM9Xtr0Rqvn">
