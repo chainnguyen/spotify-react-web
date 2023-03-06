@@ -1,13 +1,19 @@
 import '@/assets/scss/layouts/header.scss'
 import '@/assets/scss/components/_button.scss'
 
+import type { CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+
+import type { RootState } from '@/shared/store'
 
 function CHeader() {
   const navigate = useNavigate()
   const { t } = useTranslation()
   const { state: currentRoute, length: historyLength } = window.history
+
+  const $detailSection = useSelector((state: RootState) => state['playlist'].detail)
 
   const transferRouteHistory = (command: 'back' | 'forward'): any =>
     navigate(command === 'back' ? -1 : 1)
@@ -17,7 +23,15 @@ function CHeader() {
       <header
         aria-label="Top bar and user menu"
         className="facDIsOQo9q7kiWc4jSg qxbaGYC8rgMLfyOuYRCM">
-        <div className="T1xI1RTSFU7Wu94UuvE6">
+        <div
+          className="T1xI1RTSFU7Wu94UuvE6"
+          style={
+            {
+              // @ts-ignore
+              backgroundColor: $detailSection?.backup?.background_color,
+              opacity: 0,
+            } as CSSProperties
+          }>
           <div className="EvIR4O7jOSbNmxtMdIQ0" />
         </div>
 

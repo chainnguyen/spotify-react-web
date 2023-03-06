@@ -15,11 +15,11 @@ import {
 import type { RootState } from '@/shared/store'
 
 function DefaultLayout() {
-  const isRequestLogin = useSelector((state: RootState) => state['auth'].isRequestLogin)
-  const isLanguageSelection = useSelector(
+  const $isRequestLogin = useSelector((state: RootState) => state['auth'].isRequestLogin)
+  const $isLanguageSelection = useSelector(
     (state: RootState) => state['locales'].isLanguageSelection
   )
-  const dataRequestLogin = useSelector((state: RootState) => state['auth'].dataRequestLogin)
+  const $dataRequestLogin = useSelector((state: RootState) => state['auth'].dataRequestLogin)
 
   return (
     <>
@@ -71,11 +71,11 @@ function DefaultLayout() {
       </div>
 
       <CModalRequestLogin
-        isOpen={isRequestLogin}
-        data={dataRequestLogin}
+        isOpen={$isRequestLogin}
+        data={$dataRequestLogin}
       />
 
-      <CModalLanguageSelection isOpen={isLanguageSelection} />
+      <CModalLanguageSelection isOpen={$isLanguageSelection} />
     </>
   )
 }

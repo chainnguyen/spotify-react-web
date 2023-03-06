@@ -26,6 +26,8 @@ const reducers = {
     state.currentLocale = payload
     i18next.changeLanguage(payload).then((r) => r)
     localStorage.setItem(LANG_STORAGE_KEY, payload)
+    // @ts-ignore
+    document && document.querySelector('html').setAttribute('lang', payload)
   },
 }
 

@@ -1,6 +1,7 @@
 import '@/assets/scss/components/modal/modal-request-login.scss'
 
 import type { CSSProperties } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -16,6 +17,7 @@ interface IProps {
 
 function CModalRequestLogin({ isOpen, data }: IProps) {
   const navigate = useNavigate()
+  const { t } = useTranslation()
   const dispatch = useDispatch<AppDispatch>()
 
   const redirectSignup = () => {
@@ -57,31 +59,29 @@ function CModalRequestLogin({ isOpen, data }: IProps) {
               )}
 
               <div className="miG_SXrw265mkozdEHrJ">
-                <h2 className="RWLySPhsOTyK2EsAGUgx">
-                  Start listening with a free Spotify account
-                </h2>
+                <h2 className="RWLySPhsOTyK2EsAGUgx">{t('start_listen_with_a_free_account')}</h2>
                 <button className="Button-sc-qlcn5g-0 iPtRzt">
                   <span
                     className="ButtonInner-sc-14ud5tc-0 cJdEzG encore-bright-accent-set"
                     onClick={redirectSignup}>
-                    Sign up free
+                    {t('signup_free')}
                   </span>
                 </button>
 
                 <div className="SYKOtPBDhPSs6zGwbk6A">
-                  <button className="Button-sc-y0gtbx-0 hNxTPt">Download app</button>
+                  <button className="Button-sc-y0gtbx-0 hNxTPt">{t('download_app')}</button>
                 </div>
 
                 <p
                   className="CMgJZD0JMx_Yz1tlE7hd"
                   role="presentation">
                   <span className="Type__TypeElement-sc-goli3j-0 hGXzYa">
-                    Already have an account?
+                    {t('already_have_an_account')}
                   </span>
                   <Link
                     to="/auth/login"
                     className="Type__TypeElement-sc-goli3j-0 gkqrGP">
-                    Log in
+                    {t('login')}
                   </Link>
                 </p>
               </div>
@@ -91,7 +91,7 @@ function CModalRequestLogin({ isOpen, data }: IProps) {
               <button
                 className="Button-sc-1dqy6lx-0 dZYxEP"
                 onClick={closeModal}>
-                Close
+                {t('close')}
               </button>
             </div>
           </div>

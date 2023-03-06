@@ -13,7 +13,10 @@ export default {
   signup_free: 'Đăng ký miễn phí',
   download_app: 'Tải ứng dụng',
   quantity_liked: 'lượt thích',
-  song: 'bài hát',
+  song: {
+    one: 'bài hát',
+    multiple: 'bài hát',
+  },
   about: 'khoảng',
   relative_time: {
     second: 'giây',
@@ -27,4 +30,6 @@ export default {
   preview_of_spotify: 'Xem trước Spotify',
   des_preview_of_spotify:
     'Đăng ký để nghe không giới hạn các bài hát và podcast với quảng cáo không thường xuyên. Không cần thẻ tín dụng.',
+  start_listen_with_a_free_account: 'Bắt đầu nghe bằng tài khoản Spotify Free',
+  already_have_an_account: 'Bạn đã có tài khoản?',
 }

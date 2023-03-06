@@ -13,7 +13,10 @@ export default {
   signup_free: 'Sign up free',
   download_app: 'Download app',
   quantity_liked: 'likes',
-  song: 'song',
+  song: {
+    single: 'song',
+    multiple: 'songs',
+  },
   about: 'about',
   relative_time: {
     second: 'second',
@@ -27,4 +30,6 @@ export default {
   preview_of_spotify: 'Preview of Spotify',
   des_preview_of_spotify:
     'Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.',
+  start_listen_with_a_free_account: 'Start listening with a free Spotify account',
+  already_have_an_account: 'Already have an account?',
 }

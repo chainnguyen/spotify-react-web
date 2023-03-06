@@ -96,8 +96,11 @@ function CPlaylistHeader({ data, childrenData }: IProps) {
           </span>
 
           <span className="Type__TypeElement-sc-goli3j-0 hGXzYa RANLXG3qKB61Bh33I0r2">
-            {childrenData && childrenData.data.length + ' ' + t('song')},{' '}
-            <span className="poz9gZKE7xqFwgk231J4">{t('about') + ' ' + totalTrackTime}</span>
+            {childrenData &&
+              childrenData.data.length +
+                ' ' +
+                t(childrenData.data.length <= 1 ? 'song.single' : 'song.multiple')}
+            , <span className="poz9gZKE7xqFwgk231J4">{t('about') + ' ' + totalTrackTime}</span>
           </span>
         </div>
       </div>
