@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 
-import type { Card, ITrack } from '@/@types/playlist'
+import type { Card, ITrack } from '@/@types/views/playlist'
 import type { AppDispatch } from '@/shared/store'
 import {
   AUTH_GETTER,

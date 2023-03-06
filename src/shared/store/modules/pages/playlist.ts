@@ -2,11 +2,12 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 
 import type { IPagination } from '@/@types/global'
+import type { Card, Playlist } from '@/@types/views/playlist'
 import type { RootState } from '@/shared/store'
 
 export interface IPlayListState {
-  list: null
-  detail: null
+  list: Playlist | null
+  detail: Card | null
   pagination: IPagination | null
 }
 
@@ -23,13 +24,16 @@ export const PLAYLIST_GETTER = {
 }
 
 const reducers = {
-  SET_PLAYLIST_LIST: (state: IPlayListState, { payload }: PayloadAction<any>) => {
+  SET_PLAYLIST_LIST: (state: IPlayListState, { payload }: PayloadAction<Playlist | null>) => {
     state.list = payload
   },
-  SET_PLAYLIST_DETAIL: (state: IPlayListState, { payload }: PayloadAction<any>) => {
+  SET_PLAYLIST_DETAIL: (state: IPlayListState, { payload }: PayloadAction<Card | null>) => {
     state.detail = payload
   },
-  SET_PLAYLIST_PAGINATION: (state: IPlayListState, { payload }: PayloadAction<any>) => {
+  SET_PLAYLIST_PAGINATION: (
+    state: IPlayListState,
+    { payload }: PayloadAction<IPagination | null>
+  ) => {
     state.pagination = payload
   },
 }

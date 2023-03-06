@@ -3,7 +3,7 @@ import '@/assets/scss/pages/home.scss'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import type { Playlist } from '@/@types/playlist'
+import type { Playlist } from '@/@types/views/playlist'
 import { PlaylistService } from '@/services/playlist.service'
 import { CLoading, CSectionFooter, CSectionPlaylist } from '@/shared/components'
 import type { AppDispatch } from '@/shared/store'

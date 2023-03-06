@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import type { Card, Playlist } from '@/@types/playlist'
+import type { Card, Playlist } from '@/@types/views/playlist'
 import { CCardPlaylist } from '@/shared/components'
 
 interface IProps {

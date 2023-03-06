@@ -46,7 +46,7 @@ instance.interceptors.response.use(
 
     // Catch err CORS with case type script inside (input, textarea)
     if (error.toString().includes('Network Error')) {
-      // alert('Network Error - Please try again')
+      alert('Network Error - Please try again')
     }
 
     switch (status) {

@@ -1,7 +1,7 @@
 import moment from 'moment'
 import { useMemo } from 'react'
 
-import type { ITrack, TrackList } from '@/@types/playlist'
+import type { ITrack, TrackList } from '@/@types/views/playlist'
 import { formatNumberDecimal } from '@/shared/utils/helper'
 
 type TotalDuration = {

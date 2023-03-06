@@ -53,7 +53,7 @@ const reducers = {
   SET_DATA_MODAL_REQUEST_LOGIN: (state: IAuthState, { payload }: PayloadAction<any>) => {
     state.dataRequestLogin = payload
   },
-  SET_MODAL_REQUEST_LOGIN: (state: IAuthState, { payload }: PayloadAction<any>) => {
+  SET_MODAL_REQUEST_LOGIN: (state: IAuthState, { payload }: PayloadAction<boolean>) => {
     state.isRequestLogin = payload
   },
 }

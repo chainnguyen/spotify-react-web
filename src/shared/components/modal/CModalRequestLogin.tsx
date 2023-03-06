@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 
-import type { Card, ITrack } from '@/@types/playlist'
+import type { Card, ITrack } from '@/@types/views/playlist'
 import { CModalCurtain } from '@/shared/components'
 import type { AppDispatch } from '@/shared/store'
 import { SET_DATA_MODAL_REQUEST_LOGIN, SET_MODAL_REQUEST_LOGIN } from '@/shared/store/modules/auth'

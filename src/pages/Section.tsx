@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
-import type { Playlist } from '@/@types/playlist'
+import type { Playlist } from '@/@types/views/playlist'
 import { PlaylistService } from '@/services/playlist.service'
 import { CLoading, CSectionFooter, CSectionPlaylist } from '@/shared/components'
 import type { AppDispatch } from '@/shared/store'

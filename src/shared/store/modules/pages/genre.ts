@@ -2,11 +2,12 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 
 import type { IPagination } from '@/@types/global'
+import type { GenreItem } from '@/@types/views/genre'
 import type { RootState } from '@/shared/store'
 
 export interface IGenreState {
-  list: null
-  detail: null
+  list: GenreItem[] | null
+  detail: GenreItem | null
   pagination: IPagination | null
 }
 
@@ -23,13 +24,13 @@ export const GETTER = {
 }
 
 const reducers = {
-  SET_GENRE_LIST: (state: IGenreState, { payload }: PayloadAction<any>) => {
+  SET_GENRE_LIST: (state: IGenreState, { payload }: PayloadAction<GenreItem[] | null>) => {
     state.list = payload
   },
-  SET_GENRE_DETAIL: (state: IGenreState, { payload }: PayloadAction<any>) => {
+  SET_GENRE_DETAIL: (state: IGenreState, { payload }: PayloadAction<GenreItem | null>) => {
     state.detail = payload
   },
-  SET_GENRE_PAGINATION: (state: IGenreState, { payload }: PayloadAction<any>) => {
+  SET_GENRE_PAGINATION: (state: IGenreState, { payload }: PayloadAction<IPagination | null>) => {
     state.pagination = payload
   },
 }

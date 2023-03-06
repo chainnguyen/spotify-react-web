@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
-import type { Card, TrackList } from '@/@types/playlist'
+import type { Card, TrackList } from '@/@types/views/playlist'
 import { PlaylistService } from '@/services/playlist.service'
 import { TrackService } from '@/services/track.service'
 import {

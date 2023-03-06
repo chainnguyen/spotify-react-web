@@ -4,7 +4,7 @@ import '@/assets/scss/pages/search.scss'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import type { GenreItem } from '@/@types/genre'
+import type { GenreItem } from '@/@types/views/genre'
 import { GenreService } from '@/services/genre.service'
 import { CCardGenre, CLoading, CSectionFooter } from '@/shared/components'
 import type { AppDispatch } from '@/shared/store'
