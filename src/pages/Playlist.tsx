@@ -2,6 +2,7 @@ import '@/assets/scss/pages/playlist.scss'
 
 import type { CSSProperties } from 'react'
 import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
 import type { Card, TrackList } from '@/@types/playlist'
@@ -14,11 +15,19 @@ import {
   CSectionFooter,
   CTrackList,
 } from '@/shared/components'
+import type { AppDispatch } from '@/shared/store'
+import { PLAYLIST_GETTER, SET_PLAYLIST_DETAIL } from '@/shared/store/modules/pages/playlist'
+import { SET_TRACK_LIST, TRACK_GETTER } from '@/shared/store/modules/pages/track'
 
 function Playlist() {
   const { playlistId } = useParams()
+  const dispatch = useDispatch<AppDispatch>()
+
   const [playlistData, setPlaylistData] = useState<Card | null>(null)
   const [trackListData, setTrackListData] = useState<TrackList | null>(null)
+
+  const $detailSection = useSelector(PLAYLIST_GETTER.detail)
+  const $trackList = useSelector(TRACK_GETTER.list)
 
   useEffect(() => {
     fetchPlaylistDetail(playlistId).then((r) => r)
@@ -26,6 +35,8 @@ function Playlist() {
     return () => {
       setPlaylistData(null)
       setTrackListData(null)
+      dispatch(SET_PLAYLIST_DETAIL(null))
+      dispatch(SET_TRACK_LIST(null))
     }
   }, [playlistId])
 
@@ -40,13 +51,19 @@ function Playlist() {
     }
   }, [playlistData])
 
+  useEffect(() => {
+    setPlaylistData($detailSection)
+    setTrackListData($trackList)
+  }, [$detailSection, $trackList])
+
   const fetchPlaylistDetail = async (id: string | undefined) => {
     try {
       const res = await Promise.all([PlaylistService.getPlaylistDetail(id), TrackService.getList()])
-      setPlaylistData(res[0] ? res[0] : null)
-      setTrackListData(res[1])
+
+      dispatch(SET_PLAYLIST_DETAIL(res[0] ? res[0] : null))
+      dispatch(SET_TRACK_LIST(res[1]))
     } catch (err) {
-      return err
+      // handle err
     }
   }
 

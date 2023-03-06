@@ -2,28 +2,41 @@ import '@/assets/scss/components/_section.scss'
 import '@/assets/scss/pages/search.scss'
 
 import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 import type { GenreItem } from '@/@types/genre'
 import { GenreService } from '@/services/genre.service'
 import { CCardGenre, CLoading, CSectionFooter } from '@/shared/components'
+import type { AppDispatch } from '@/shared/store'
+import { GETTER, SET_GENRE_LIST } from '@/shared/store/modules/pages/genre'
 
 function SearchPage() {
+  const dispatch = useDispatch<AppDispatch>()
+
   const [genreData, setGenreData] = useState<GenreItem[] | null>(null)
+
+  const $genreList = useSelector(GETTER.list)
 
   useEffect(() => {
     fetchList().then((r) => r)
     // Cleanup
     return () => {
       setGenreData(null)
+      dispatch(SET_GENRE_LIST(null))
     }
   }, [])
 
+  useEffect(() => {
+    $genreList && setGenreData($genreList)
+  }, [$genreList])
+
   const fetchList = async () => {
     try {
-      const data = await GenreService.getList()
-      setGenreData(data)
+      await GenreService.getList().then((res) => {
+        dispatch(SET_GENRE_LIST(res))
+      })
     } catch (err) {
-      return err
+      // handle err
     }
   }
 

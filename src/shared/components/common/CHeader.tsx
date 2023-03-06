@@ -1,13 +1,23 @@
 import '@/assets/scss/layouts/header.scss'
 import '@/assets/scss/components/_button.scss'
 
+import type { CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+
+import { PLAYLIST_GETTER } from '@/shared/store/modules/pages/playlist'
 
 function CHeader() {
   const navigate = useNavigate()
   const { t } = useTranslation()
   const { state: currentRoute, length: historyLength } = window.history
+
+  const $detailSection = useSelector(PLAYLIST_GETTER.detail)
+
+  const redirectAuthentication = (page: 'signup' | 'login') => {
+    navigate(`/auth/${page}`)
+  }
 
   const transferRouteHistory = (command: 'back' | 'forward'): any =>
     navigate(command === 'back' ? -1 : 1)
@@ -17,7 +27,15 @@ function CHeader() {
       <header
         aria-label="Top bar and user menu"
         className="facDIsOQo9q7kiWc4jSg qxbaGYC8rgMLfyOuYRCM">
-        <div className="T1xI1RTSFU7Wu94UuvE6">
+        <div
+          className="T1xI1RTSFU7Wu94UuvE6"
+          style={
+            {
+              // @ts-ignore
+              backgroundColor: $detailSection?.backup?.background_color,
+              opacity: 0,
+            } as CSSProperties
+          }>
           <div className="EvIR4O7jOSbNmxtMdIQ0" />
         </div>
 
@@ -60,9 +78,15 @@ function CHeader() {
         <div className="GTAFfOA_w5vh_bDaGJAG" />
 
         <div className="LKFFk88SIRC9QKKUWR5u">
-          <button className="Button-sc-1dqy6lx-0 dZYxEP sibxBMlr_oxWTfBrEz2G">{t('signup')}</button>
+          <button
+            className="Button-sc-1dqy6lx-0 dZYxEP sibxBMlr_oxWTfBrEz2G"
+            onClick={() => redirectAuthentication('signup')}>
+            {t('signup')}
+          </button>
 
-          <button className="Button-sc-qlcn5g-0 jsmWVV">
+          <button
+            className="Button-sc-qlcn5g-0 jsmWVV"
+            onClick={() => redirectAuthentication('login')}>
             <span className="ButtonInner-sc-14ud5tc-0 kuwYvr encore-inverted-light-set">
               {t('login')}
             </span>

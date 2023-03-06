@@ -12,14 +12,13 @@ import {
   CModalRequestLogin,
   CPlayingBar,
 } from '@/shared/components'
-import type { RootState } from '@/shared/store'
+import { AUTH_GETTER } from '@/shared/store/modules/auth'
+import { LOCALES_GETTER } from '@/shared/store/modules/locales'
 
 function DefaultLayout() {
-  const isRequestLogin = useSelector((state: RootState) => state['auth'].isRequestLogin)
-  const isLanguageSelection = useSelector(
-    (state: RootState) => state['locales'].isLanguageSelection
-  )
-  const dataRequestLogin = useSelector((state: RootState) => state['auth'].dataRequestLogin)
+  const $isRequestLogin = useSelector(AUTH_GETTER.isRequestLogin)
+  const $isLanguageSelection = useSelector(LOCALES_GETTER.isLanguageSelection)
+  const $dataRequestLogin = useSelector(AUTH_GETTER.dataRequestLogin)
 
   return (
     <>
@@ -71,11 +70,11 @@ function DefaultLayout() {
       </div>
 
       <CModalRequestLogin
-        isOpen={isRequestLogin}
-        data={dataRequestLogin}
+        isOpen={$isRequestLogin}
+        data={$dataRequestLogin}
       />
 
-      <CModalLanguageSelection isOpen={isLanguageSelection} />
+      <CModalLanguageSelection isOpen={$isLanguageSelection} />
     </>
   )
 }

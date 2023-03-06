@@ -1,14 +1,21 @@
 import '@/assets/scss/pages/home.scss'
 
 import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 
 import type { Playlist } from '@/@types/playlist'
 import { PlaylistService } from '@/services/playlist.service'
 import { CLoading, CSectionFooter, CSectionPlaylist } from '@/shared/components'
+import type { AppDispatch } from '@/shared/store'
+import { PLAYLIST_GETTER, SET_PLAYLIST_LIST } from '@/shared/store/modules/pages/playlist'
 
 function HomePage() {
+  const dispatch = useDispatch<AppDispatch>()
+
   const [focusData, setFocusData] = useState<Playlist | null>(null)
   const [suggestData, setSuggestData] = useState<Playlist | null>(null)
+
+  const $listOfPlaylist = useSelector(PLAYLIST_GETTER.list)
 
   useEffect(() => {
     fetchPlaylist().then((r) => r)
@@ -16,16 +23,23 @@ function HomePage() {
     return () => {
       setFocusData(null)
       setSuggestData(null)
+      dispatch(SET_PLAYLIST_LIST(null))
     }
   }, [])
 
+  useEffect(() => {
+    if (!$listOfPlaylist) return
+    setFocusData($listOfPlaylist[0])
+    setSuggestData($listOfPlaylist[1])
+  }, [$listOfPlaylist])
+
   const fetchPlaylist = async () => {
     try {
-      const data = await PlaylistService.getList()
-      setFocusData(data[0])
-      setSuggestData(data[1])
+      await PlaylistService.getList().then((res) => {
+        dispatch(SET_PLAYLIST_LIST(res))
+      })
     } catch (err) {
-      return err
+      // handle err
     }
   }
 

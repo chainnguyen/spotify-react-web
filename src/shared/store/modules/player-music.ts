@@ -1,6 +1,8 @@
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 
+import type { RootState } from '@/shared/store'
+
 export interface IPlayerMusicState {
   playingData: null
   isPlayingMusic: boolean
@@ -9,6 +11,11 @@ export interface IPlayerMusicState {
 const initialState: IPlayerMusicState = {
   playingData: null,
   isPlayingMusic: false,
+}
+
+export const PLAYER_MUSIC_GETTER = {
+  playingData: (state: RootState) => state['playerMusic'].playingData,
+  isPlayingMusic: (state: RootState) => state['playerMusic'].isPlayingMusic,
 }
 
 const reducers = {
