@@ -13,9 +13,9 @@ import { GETTER, SET_GENRE_LIST } from '@/shared/store/modules/pages/genre'
 function SearchPage() {
   const dispatch = useDispatch<AppDispatch>()
 
-  const [genreData, setGenreData] = useState<GenreItem[] | null>(null)
-
   const $genreList = useSelector(GETTER.list)
+
+  const [genreData, setGenreData] = useState<GenreItem[] | null>(null)
 
   useEffect(() => {
     fetchList().then((r) => r)

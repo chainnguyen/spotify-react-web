@@ -1,20 +1,27 @@
 import type { BaseSyntheticEvent } from 'react'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { BrowserRouter as Router } from 'react-router-dom'
 
 import type { IFreeObject } from '@/@types/global'
+import AuthLayout from '@/layouts/Auth'
 import DefaultLayout from '@/layouts/Default'
-import RouteList from '@/router'
+import RenderRoutes from '@/router'
 import type { AppDispatch } from '@/shared/store'
+import { COMMON_GETTER } from '@/shared/store/common'
 import { LOCALES_GETTER, SET_LANGUAGE } from '@/shared/store/modules/locales'
 
 function App() {
   const dispatch = useDispatch<AppDispatch>()
 
+  const $currentLocale = useSelector(LOCALES_GETTER.currentLocale)
+  const $globalLayout = useSelector(COMMON_GETTER.layout)
+
   const [attributeInspect, setAttributeInspect] = useState<IFreeObject>({})
 
-  const $currentLocale = useSelector(LOCALES_GETTER.currentLocale)
+  const displayLayout = {
+    auth: <AuthLayout />,
+    default: <DefaultLayout />,
+  }
 
   useEffect(() => {
     // Set default app title
@@ -43,12 +50,10 @@ function App() {
     <div
       className="Root"
       {...attributeInspect}>
-      <Router>
-        <RouteList
-          path={import.meta.env.VITE_ROUTER_BASE as string}
-          layout={<DefaultLayout />}
-        />
-      </Router>
+      <RenderRoutes
+        path={import.meta.env.VITE_ROUTER_BASE as string}
+        layout={$globalLayout ? displayLayout[$globalLayout] : displayLayout['default']}
+      />
     </div>
   )
 }

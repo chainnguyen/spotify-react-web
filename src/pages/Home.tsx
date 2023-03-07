@@ -12,25 +12,21 @@ import { PLAYLIST_GETTER, SET_PLAYLIST_LIST } from '@/shared/store/modules/pages
 function HomePage() {
   const dispatch = useDispatch<AppDispatch>()
 
-  const [focusData, setFocusData] = useState<Playlist | null>(null)
-  const [suggestData, setSuggestData] = useState<Playlist | null>(null)
-
   const $listOfPlaylist = useSelector(PLAYLIST_GETTER.list)
+
+  const [sectionPlayListData, setSectionPlayListData] = useState<Playlist[] | null>(null)
 
   useEffect(() => {
     fetchPlaylist().then((r) => r)
     // Cleanup
     return () => {
-      setFocusData(null)
-      setSuggestData(null)
+      setSectionPlayListData(null)
       dispatch(SET_PLAYLIST_LIST(null))
     }
   }, [])
 
   useEffect(() => {
-    if (!$listOfPlaylist) return
-    setFocusData($listOfPlaylist[0])
-    setSuggestData($listOfPlaylist[1])
+    $listOfPlaylist && setSectionPlayListData($listOfPlaylist)
   }, [$listOfPlaylist])
 
   const fetchPlaylist = async () => {
@@ -45,7 +41,7 @@ function HomePage() {
 
   return (
     <>
-      {!focusData && !suggestData ? (
+      {!sectionPlayListData ? (
         <CLoading />
       ) : (
         <main
@@ -56,22 +52,13 @@ function HomePage() {
           <section aria-label="Home Page">
             <div className="uIJTvxFOg2izOY7aRRiU">
               <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
-                {focusData ? (
+                {sectionPlayListData.map((item) => (
                   <CSectionPlaylist
-                    data={focusData}
+                    key={item.id}
+                    data={item}
                     defaultDisplay={5}
                   />
-                ) : (
-                  ''
-                )}
-                {suggestData ? (
-                  <CSectionPlaylist
-                    data={suggestData}
-                    defaultDisplay={5}
-                  />
-                ) : (
-                  ''
-                )}
+                ))}
               </div>
             </div>
           </section>

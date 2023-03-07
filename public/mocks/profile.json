@@ -1,0 +1,15 @@
+{
+  "status": 200,
+  "success": true,
+  "data": {
+    "id": "825fb95b-e0aa-4aa2-bd29-ad97c41e6cdb",
+    "role": "admin",
+    "name": "Admin",
+    "login_id": "admin",
+    "password": "",
+    "password_confirmation": "",
+    "avatar": "https://img.freepik.com/premium-vector/cute-white-cat-cartoon-vector-illustration_42750-808.jpg?w=2000",
+    "created_at": "2022-06-21 16:59:22",
+    "updated_at": "2022-06-21 16:59:22"
+  }
+}

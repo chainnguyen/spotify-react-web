@@ -39,7 +39,6 @@ const reducers = {
       // allowing to control whether the browser is sending a cookie along with cross-site requests
       sameSite: 'lax',
     })
-    Cookies.set(COOKIES_KEY.token, payload)
   },
   SET_LOGOUT: (state: IAuthState) => {
     state.token = initialState.token

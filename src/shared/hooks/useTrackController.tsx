@@ -11,6 +11,7 @@ import { REQUEST_PLAY_TRACK } from '@/shared/store/modules/player-music'
 
 function useTrackController() {
   const dispatch = useDispatch<AppDispatch>()
+
   const $token = useSelector(AUTH_GETTER.token)
 
   const enforcePlayList = (data: Card) => {

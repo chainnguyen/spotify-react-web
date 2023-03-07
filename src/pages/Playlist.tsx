@@ -23,11 +23,11 @@ function Playlist() {
   const { playlistId } = useParams()
   const dispatch = useDispatch<AppDispatch>()
 
-  const [playlistData, setPlaylistData] = useState<Card | null>(null)
-  const [trackListData, setTrackListData] = useState<TrackList | null>(null)
-
   const $detailSection = useSelector(PLAYLIST_GETTER.detail)
   const $trackList = useSelector(TRACK_GETTER.list)
+
+  const [playlistData, setPlaylistData] = useState<Card | null>(null)
+  const [trackListData, setTrackListData] = useState<TrackList | null>(null)
 
   useEffect(() => {
     fetchPlaylistDetail(playlistId).then((r) => r)

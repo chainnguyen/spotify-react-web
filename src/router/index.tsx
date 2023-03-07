@@ -1,48 +1,46 @@
 import type { ReactNode } from 'react'
 import { useRoutes } from 'react-router-dom'
 
-import {
-  Home,
-  Library,
-  NotAuthenticated,
-  NotFound,
-  Playlist,
-  Search,
-  Section,
-  ServerError,
-} from '@/pages'
+import { Home } from '@/pages'
+import { WrapperResolveGuard } from '@/router/guards'
+// Modules
+import AuthRoute from '@/router/modules/auth'
+import ExceptionsRoute from '@/router/modules/exceptions'
+import LibraryRoute from '@/router/modules/library'
+import PlaylistRoute from '@/router/modules/playlist'
+import SearchRoute from '@/router/modules/search'
+import SectionRoute from '@/router/modules/section'
 
 interface IPropsRoute {
   path: string
   layout: ReactNode
 }
 
-function RouteList({ path, layout }: IPropsRoute) {
+function RenderRoutes({ path, layout }: IPropsRoute) {
   return useRoutes([
     {
       path: path,
       element: layout,
       children: [
-        { path: '/', element: <Home /> },
-        { path: 'search', element: <Search /> },
-        { path: 'library', element: <Library /> },
         {
-          path: 'section',
-          element: <Section />,
-          children: [{ path: ':sectionId', element: <Section /> }],
+          path: '/',
+          element: (
+            <WrapperResolveGuard
+              isPublic
+              guard="auth">
+              <Home />
+            </WrapperResolveGuard>
+          ),
         },
-        {
-          path: 'playlist',
-          element: <Playlist />,
-          children: [{ path: ':playlistId', element: <Playlist /> }],
-        },
-        { path: '*', element: <NotFound /> },
-        { path: '/not-found', element: <NotFound /> },
-        { path: '/not-authenticated', element: <NotAuthenticated /> },
-        { path: '/server-error', element: <ServerError /> },
+        ...AuthRoute,
+        ...SearchRoute,
+        ...LibraryRoute,
+        ...SectionRoute,
+        ...PlaylistRoute,
+        ...ExceptionsRoute,
       ],
     },
   ])
 }
 
-export default RouteList
+export default RenderRoutes

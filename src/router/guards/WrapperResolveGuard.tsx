@@ -1,33 +1,24 @@
-import type { ReactElement } from 'react'
-import { useTranslation } from 'react-i18next'
 import type { RouteProps } from 'react-router-dom'
 
+import type { GuardTypes } from '@/@types/global'
 import { AuthGuard, LoginGuard } from '@/router/guards'
 
 export type WrapperRouteProps = RouteProps & {
-  // Document page title
-  title?: string
-  // Set authenticated
-  auth?: boolean
+  // Public route without login
+  isPublic?: boolean
   // Component need to guard
-  guard?: string
+  guard?: GuardTypes
 }
 
 function WrapperResolveGuard(props: WrapperRouteProps) {
-  const { t } = useTranslation()
+  const { isPublic, guard } = props
 
-  const { title, auth, guard } = props
-
-  const component = {
+  const protector = {
     login: <LoginGuard {...props} />,
     auth: <AuthGuard {...props} />,
   }
 
-  if (title) {
-    document.title = t(title)
-  }
-
-  return auth ? component[guard as keyof typeof component] : (props.element as ReactElement)
+  return guard ? protector[guard as keyof typeof protector] : protector['auth']
 }
 
 export default WrapperResolveGuard
