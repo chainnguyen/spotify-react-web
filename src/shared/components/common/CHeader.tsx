@@ -1,26 +1,86 @@
 import '@/assets/scss/layouts/header.scss'
 import '@/assets/scss/components/_button.scss'
 
-import type { CSSProperties } from 'react'
+import type { CSSProperties, ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
+import { AuthService } from '@/services/auth.service'
+import type { AppDispatch } from '@/shared/store'
+import { AUTH_GETTER, SET_LOGOUT } from '@/shared/store/modules/auth'
 import { PLAYLIST_GETTER } from '@/shared/store/modules/pages/playlist'
 
 function CHeader() {
   const navigate = useNavigate()
   const { t } = useTranslation()
+  const dispatch = useDispatch<AppDispatch>()
   const { state: currentRoute, length: historyLength } = window.history
 
+  const $token = useSelector(AUTH_GETTER.token)
+  const $profile = useSelector(AUTH_GETTER.profile)
   const $detailSection = useSelector(PLAYLIST_GETTER.detail)
 
   const redirectAuthentication = (page: 'signup' | 'login') => {
     navigate(`/auth/${page}`)
   }
 
+  const handleLogout = async () => {
+    try {
+      await AuthService.logout().then(() => {
+        dispatch(SET_LOGOUT())
+      })
+    } catch (err) {
+      // handle err
+    }
+  }
+
   const transferRouteHistory = (command: 'back' | 'forward'): any =>
     navigate(command === 'back' ? -1 : 1)
+
+  const renderPersonalButton = (): ReactNode => {
+    return !$profile || !Object.keys($profile).length ? (
+      ''
+    ) : (
+      <button
+        className="odcjv30UQnjaTv4sylc0 RfdRTSGwulyQdDepLUTT"
+        type="button"
+        aria-expanded="false"
+        onClick={handleLogout}>
+        <figure
+          className="tp8rO9vtqBGPLOhwcdYv"
+          title={$profile.name}>
+          <div
+            className="w-fit h-fit"
+            style={{ insetInlineStart: '0px' } as CSSProperties}>
+            <img
+              aria-hidden="false"
+              draggable="false"
+              loading="eager"
+              src={$profile.avatar}
+              alt={$profile.name}
+              className="mMx2LUixlnN_Fu45JpFB Xz3tlahv16UpqKBW5HdK Yn2Ei5QZn19gria6LjZj"
+            />
+          </div>
+        </figure>
+
+        <span
+          dir="auto"
+          className="Type__TypeElement-sc-goli3j-0 jdSGNV EeWTFG_vxLI5QJc1TH4F">
+          {$profile.name}
+        </span>
+        <svg
+          role="img"
+          height="16"
+          width="16"
+          aria-hidden="true"
+          className="Svg-sc-ytk21e-0 uPxdw eAXFT6yvz37fvS1lmt6k"
+          viewBox="0 0 16 16">
+          <path d="m14 6-6 6-6-6h12z"></path>
+        </svg>
+      </button>
+    )
+  }
 
   return (
     <div className="Root__top-bar">
@@ -77,21 +137,25 @@ function CHeader() {
         <div className="rovbQsmAS_mwvpKHaVhQ" />
         <div className="GTAFfOA_w5vh_bDaGJAG" />
 
-        <div className="LKFFk88SIRC9QKKUWR5u">
-          <button
-            className="Button-sc-1dqy6lx-0 dZYxEP sibxBMlr_oxWTfBrEz2G"
-            onClick={() => redirectAuthentication('signup')}>
-            {t('signup')}
-          </button>
+        {$token ? (
+          renderPersonalButton()
+        ) : (
+          <div className="LKFFk88SIRC9QKKUWR5u">
+            <button
+              className="Button-sc-1dqy6lx-0 dZYxEP sibxBMlr_oxWTfBrEz2G"
+              onClick={() => redirectAuthentication('signup')}>
+              {t('signup')}
+            </button>
 
-          <button
-            className="Button-sc-qlcn5g-0 jsmWVV"
-            onClick={() => redirectAuthentication('login')}>
-            <span className="ButtonInner-sc-14ud5tc-0 kuwYvr encore-inverted-light-set">
-              {t('login')}
-            </span>
-          </button>
-        </div>
+            <button
+              className="Button-sc-qlcn5g-0 jsmWVV"
+              onClick={() => redirectAuthentication('login')}>
+              <span className="ButtonInner-sc-14ud5tc-0 kuwYvr encore-inverted-light-set">
+                {t('login')}
+              </span>
+            </button>
+          </div>
+        )}
       </header>
     </div>
   )

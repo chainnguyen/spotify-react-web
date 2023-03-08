@@ -25,7 +25,7 @@ export const LOCALES_GETTER = {
 }
 
 const reducers = {
-  SET_LANGUAGE_SELECTION: (state: ILocalesState, { payload }: PayloadAction<any>) => {
+  SET_LANGUAGE_SELECTION: (state: ILocalesState, { payload }: PayloadAction<boolean>) => {
     state.isLanguageSelection = payload
   },
   SET_LANGUAGE: (state: ILocalesState, { payload }: PayloadAction<any>) => {

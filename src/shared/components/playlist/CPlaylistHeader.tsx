@@ -2,7 +2,7 @@ import type { CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import type { Card, TrackList } from '@/@types/playlist'
+import type { Card, TrackList } from '@/@types/views/playlist'
 import { useTrackStatistics } from '@/shared/hooks'
 
 interface IProps {

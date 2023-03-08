@@ -3,8 +3,8 @@
   "parent_name": "Deep Focus",
   "data": [
     {
-      "id": "so_far_so_good_12345",
-      "title": "So Far So Good",
+      "id": "sol_far_sol_good_12345",
+      "title": "Sol Far Sol Good",
       "track_file": "",
       "release_date": "2023-02-14 23:15:22",
       "track_duration": "2:31",
@@ -18,12 +18,12 @@
         "background_image": ""
       },
       "album": {
-        "id": "album_silent_hills",
-        "name": "Silent Hills"
+        "id": "album_love",
+        "name": "Love"
       },
       "artist": {
-        "id": "artist_sun_of_they",
-        "name": "Sun Of They"
+        "id": "artist_sol_chain",
+        "name": "Sol-Chain"
       }
     },
     {
@@ -579,8 +579,8 @@
       }
     },
     {
-      "id": "so_far_so_good_2_12345",
-      "title": "So Far So Good",
+      "id": "sol_far_sol_good_2_12345",
+      "title": "Sol Far Sol Good",
       "track_file": "",
       "release_date": "2023-02-14 23:15:22",
       "track_duration": "2:31",
@@ -594,12 +594,12 @@
         "background_image": ""
       },
       "album": {
-        "id": "album_silent_hills",
-        "name": "Silent Hills"
+        "id": "album_love",
+        "name": "Love"
       },
       "artist": {
-        "id": "artist_sun_of_they",
-        "name": "Sun Of They"
+        "id": "artist_sol_chain",
+        "name": "Sol-Chain"
       }
     },
     {

@@ -19,7 +19,7 @@ export const PLAYER_MUSIC_GETTER = {
 }
 
 const reducers = {
-  SET_PLAYING_MUSIC: (state: IPlayerMusicState, { payload }: PayloadAction<any>) => {
+  SET_PLAYING_MUSIC: (state: IPlayerMusicState, { payload }: PayloadAction<boolean>) => {
     state.isPlayingMusic = payload
   },
   REQUEST_PLAY_TRACK: (state: IPlayerMusicState, { payload }: PayloadAction<any>) => {

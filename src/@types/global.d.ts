@@ -2,6 +2,9 @@ export interface IFreeObject {
   [key: string]: any
 }
 
+export type LayoutTypes = 'default' | 'auth' | null
+export type GuardTypes = 'auth' | 'login' | null
+
 export interface IProfile {
   id: string
   name: string

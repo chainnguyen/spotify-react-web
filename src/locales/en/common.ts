@@ -27,6 +27,7 @@ export default {
     month: 'month',
     year: 'year',
   },
+  choose_language: 'Choose a language',
   preview_of_spotify: 'Preview of Spotify',
   des_preview_of_spotify:
     'Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.',

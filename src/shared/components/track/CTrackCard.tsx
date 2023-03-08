@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-import type { ITrack } from '@/@types/playlist'
+import type { ITrack } from '@/@types/views/playlist'
 import { CButtonMore, CButtonSaveToLibrary } from '@/shared/components'
 import { useTrackController } from '@/shared/hooks'
 import { getRelativeTimeString } from '@/shared/utils/helper'

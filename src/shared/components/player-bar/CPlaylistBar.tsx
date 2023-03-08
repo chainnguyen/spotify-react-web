@@ -1,6 +1,6 @@
 import '@/assets/scss/components/_playlist-bar.scss'
 
-import type { Card } from '@/@types/playlist'
+import type { Card } from '@/@types/views/playlist'
 import { CButtonMore, CButtonPlay, CButtonSaveToLibrary } from '@/shared/components'
 import { useTrackController } from '@/shared/hooks'
 

@@ -4,26 +4,26 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
-import type { Playlist } from '@/@types/playlist'
+import type { Playlist } from '@/@types/views/playlist'
 import { PlaylistService } from '@/services/playlist.service'
 import { CLoading, CSectionFooter, CSectionPlaylist } from '@/shared/components'
 import type { AppDispatch } from '@/shared/store'
-import { PLAYLIST_GETTER, SET_PLAYLIST_DETAIL } from '@/shared/store/modules/pages/playlist'
+import { PLAYLIST_GETTER, SET_SECTION_DETAIL } from '@/shared/store/modules/pages/playlist'
 
 function Section() {
   const { sectionId } = useParams()
   const dispatch = useDispatch<AppDispatch>()
 
-  const [sectionData, setSectionData] = useState<Playlist | null>(null)
+  const $detailSection = useSelector(PLAYLIST_GETTER.section_detail)
 
-  const $detailSection = useSelector(PLAYLIST_GETTER.detail)
+  const [sectionData, setSectionData] = useState<Playlist | null>(null)
 
   useEffect(() => {
     fetchSectionById(sectionId).then((r) => r)
     // Cleanup
     return () => {
       setSectionData(null)
-      dispatch(SET_PLAYLIST_DETAIL(null))
+      dispatch(SET_SECTION_DETAIL(null))
     }
   }, [sectionId])
 
@@ -34,7 +34,7 @@ function Section() {
   const fetchSectionById = async (id: string | undefined) => {
     try {
       await PlaylistService.getSectionDetail(id).then((res) => {
-        dispatch(SET_PLAYLIST_DETAIL(res))
+        dispatch(SET_SECTION_DETAIL(res))
       })
     } catch (err) {
       // handle err

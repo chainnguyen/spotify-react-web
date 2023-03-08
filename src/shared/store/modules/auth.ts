@@ -2,13 +2,13 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 import Cookies from 'js-cookie'
 
+import type { IProfile } from '@/@types/views/auth'
 import { COOKIES_KEY } from '@/enums/cookie.enum'
-import { LANG_STORAGE_KEY } from '@/enums/locales.enum'
 import type { RootState } from '@/shared/store'
 
 export interface IAuthState {
   token: string | null
-  profile: null
+  profile: IProfile | null
   dataRequestLogin: null
   isRequestLogin: boolean
 }
@@ -39,21 +39,19 @@ const reducers = {
       // allowing to control whether the browser is sending a cookie along with cross-site requests
       sameSite: 'lax',
     })
-    Cookies.set(COOKIES_KEY.token, payload)
   },
   SET_LOGOUT: (state: IAuthState) => {
-    state.token = initialState.token
+    state.token = null
     state.profile = initialState.profile
     Cookies.remove(COOKIES_KEY.token)
-    localStorage.removeItem(LANG_STORAGE_KEY)
   },
-  SET_PROFILE: (state: IAuthState, { payload }: PayloadAction<any>) => {
+  SET_PROFILE: (state: IAuthState, { payload }: PayloadAction<IProfile | null>) => {
     state.profile = payload
   },
   SET_DATA_MODAL_REQUEST_LOGIN: (state: IAuthState, { payload }: PayloadAction<any>) => {
     state.dataRequestLogin = payload
   },
-  SET_MODAL_REQUEST_LOGIN: (state: IAuthState, { payload }: PayloadAction<any>) => {
+  SET_MODAL_REQUEST_LOGIN: (state: IAuthState, { payload }: PayloadAction<boolean>) => {
     state.isRequestLogin = payload
   },
 }

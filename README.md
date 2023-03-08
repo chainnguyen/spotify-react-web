@@ -1,5 +1,5 @@
 <h1 align="center">
-  Spotify React Web
+  Spotify React Web (Clone)
 </h1>
 
 ## Technologies
@@ -63,3 +63,5 @@ Give a ⭐ if you like this website!
 
 ## License
 Copyright by [Chain Nguyễn](https://chainnguyen.github.io/chain-curriculum-vitae/).
+
+Shout-out to Spotify's team [Spotify](https://open.spotify.com/)

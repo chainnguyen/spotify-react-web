@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-import type { Card, Playlist } from '@/@types/playlist'
+import type { Card, Playlist } from '@/@types/views/playlist'
 import { CCardPlaylist } from '@/shared/components'
 
 interface IProps {
@@ -16,7 +16,7 @@ interface IProps {
 function CSectionPlaylist({ data, defaultDisplay, hiddenTitle }: IProps) {
   const { t } = useTranslation()
 
-  const [limitCard, setLimitCard] = useState<Card[]>([])
+  const [limitCard, setLimitCard] = useState<Card[] | null>(null)
 
   useEffect(() => {
     // Set default value if defaultDisplay prop isn't specified
@@ -31,7 +31,7 @@ function CSectionPlaylist({ data, defaultDisplay, hiddenTitle }: IProps) {
     }
     // Cleanup
     return () => {
-      setLimitCard([])
+      setLimitCard(null)
     }
   }, [defaultDisplay])
 
@@ -74,7 +74,7 @@ function CSectionPlaylist({ data, defaultDisplay, hiddenTitle }: IProps) {
         className={`iKwGKEfAfW7Rkx2_Ba4E Z4InHgCs2uhk0MU93y_a ${
           !defaultDisplay ? 'BtbiwMynlB4flsYu_hA2' : ''
         }`}>
-        {limitCard.length &&
+        {limitCard &&
           limitCard.map((card) => (
             <CCardPlaylist
               key={card.id}

@@ -2,11 +2,12 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 
 import type { IPagination } from '@/@types/global'
+import type { ITrack, TrackList } from '@/@types/views/playlist'
 import type { RootState } from '@/shared/store'
 
 export interface ITrackState {
-  list: null
-  detail: null
+  list: TrackList | null
+  detail: ITrack | null
   pagination: IPagination | null
 }
 
@@ -23,13 +24,13 @@ export const TRACK_GETTER = {
 }
 
 const reducers = {
-  SET_TRACK_LIST: (state: ITrackState, { payload }: PayloadAction<any>) => {
+  SET_TRACK_LIST: (state: ITrackState, { payload }: PayloadAction<TrackList | null>) => {
     state.list = payload
   },
-  SET_TRACK_DETAIL: (state: ITrackState, { payload }: PayloadAction<any>) => {
+  SET_TRACK_DETAIL: (state: ITrackState, { payload }: PayloadAction<ITrack | null>) => {
     state.detail = payload
   },
-  SET_TRACK_PAGINATION: (state: ITrackState, { payload }: PayloadAction<any>) => {
+  SET_TRACK_PAGINATION: (state: ITrackState, { payload }: PayloadAction<IPagination | null>) => {
     state.pagination = payload
   },
 }

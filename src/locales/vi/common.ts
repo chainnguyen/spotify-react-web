@@ -27,6 +27,7 @@ export default {
     month: 'tháng',
     year: 'năm',
   },
+  choose_language: 'Hãy chọn ngôn ngữ',
   preview_of_spotify: 'Xem trước Spotify',
   des_preview_of_spotify:
     'Đăng ký để nghe không giới hạn các bài hát và podcast với quảng cáo không thường xuyên. Không cần thẻ tín dụng.',

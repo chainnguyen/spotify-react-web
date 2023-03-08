@@ -1,7 +1,7 @@
 import type { CSSProperties } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import type { Card } from '@/@types/playlist'
+import type { Card } from '@/@types/views/playlist'
 import { useTrackController } from '@/shared/hooks'
 
 interface IProps {

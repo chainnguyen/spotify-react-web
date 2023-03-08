@@ -3,7 +3,7 @@ import '@/assets/scss/components/_track-list.scss'
 import type { CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import type { ITrack, TrackList } from '@/@types/playlist'
+import type { ITrack, TrackList } from '@/@types/views/playlist'
 import { PAGINATION } from '@/enums/pagination.enum'
 import { CLoading, CTrackCard } from '@/shared/components'
 
