@@ -1,5 +1,6 @@
 <h1 align="center">
   Spotify React Web (Clone)
+  <img alt="Read me" src="https://iili.io/HXJEfiG.md.png" />
 </h1>
 
 ## Technologies
