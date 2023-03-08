@@ -86,7 +86,7 @@ function CHeader() {
     <div className="Root__top-bar">
       <header
         aria-label="Top bar and user menu"
-        className="facDIsOQo9q7kiWc4jSg qxbaGYC8rgMLfyOuYRCM">
+        className={`facDIsOQo9q7kiWc4jSg ${!$token ? 'qxbaGYC8rgMLfyOuYRCM' : ''}`}>
         <div
           className="T1xI1RTSFU7Wu94UuvE6"
           style={

@@ -70,7 +70,14 @@ function CModalRequestLogin({ isOpen, data }: IProps) {
                 </button>
 
                 <div className="SYKOtPBDhPSs6zGwbk6A">
-                  <button className="Button-sc-y0gtbx-0 hNxTPt">{t('download_app')}</button>
+                  <a
+                    draggable="false"
+                    href="https://www.spotify.com/vn-vi/download/mac/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="Button-sc-y0gtbx-0 hNxTPt">
+                    {t('download_app')}
+                  </a>
                 </div>
 
                 <p
@@ -81,7 +88,7 @@ function CModalRequestLogin({ isOpen, data }: IProps) {
                   </span>
 
                   <button
-                    className="Type__TypeElement-sc-goli3j-0 gkqrGP"
+                    className="Type__TypeElement-sc-goli3j-0 gkqrGP ml-1"
                     onClick={() => redirectAuthentication('login')}>
                     {t('login')}
                   </button>

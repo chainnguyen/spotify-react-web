@@ -172,7 +172,7 @@ body, input {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   background-color: #1ed760;
-  color: #000000;
+  color: $text-black;
   border-radius: 500px;
   font-size: inherit;
   min-block-size: 48px;
@@ -225,4 +225,10 @@ body, input {
 .mMx2LUixlnN_Fu45JpFB {
   @include css3-prefix('object-fit', cover);
   @include css3-prefix('object-position', center center);
+}
+
+.VNbQX {
+  margin: 12px 0px 20px;
+  flex: 1 1 0%;
+  border-top: 1px solid rgb(217, 218, 220);
 }
