@@ -15,6 +15,18 @@ function CPlaylistHeader({ data, childrenData }: IProps) {
 
   const { totalTrackLike, totalTrackTime } = useTrackStatistics(childrenData)
 
+  const renderTotalTrackTime = () => {
+    return (
+      (totalTrackTime.hour > 0
+        ? `${totalTrackTime.hour + ' ' + t('relative_time.symbol.hour')} `
+        : '') +
+      ' ' +
+      (totalTrackTime.minute > 0
+        ? `${totalTrackTime.minute + ' ' + t('relative_time.symbol.minute')} `
+        : '')
+    )
+  }
+
   return (
     <div className="contentSpacing NXiYChVp4Oydfxd7rT5r RMDSGDMFrx8eXHpFphqG">
       <div
@@ -100,7 +112,10 @@ function CPlaylistHeader({ data, childrenData }: IProps) {
               childrenData.data.length +
                 ' ' +
                 t(childrenData.data.length <= 1 ? 'song.single' : 'song.multiple')}
-            , <span className="poz9gZKE7xqFwgk231J4">{t('about') + ' ' + totalTrackTime}</span>
+            ,{' '}
+            <span className="poz9gZKE7xqFwgk231J4">
+              {t('about') + ' ' + renderTotalTrackTime()}
+            </span>
           </span>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import moment from 'moment'
 import { useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import type { ITrack, TrackList } from '@/@types/views/playlist'
 import { formatNumberDecimal } from '@/shared/utils/helper'
@@ -11,6 +12,8 @@ type TotalDuration = {
 }
 
 function useTrackStatistics(tracksList: TrackList | null) {
+  const { t } = useTranslation()
+
   const totalTrackLike = useMemo<string | number>(() => {
     if (tracksList && tracksList.data.length) {
       const total: number = tracksList.data.reduce(
@@ -22,13 +25,14 @@ function useTrackStatistics(tracksList: TrackList | null) {
     return 0
   }, [tracksList])
 
-  const totalTrackTime = useMemo<string>(() => {
+  const totalTrackTime = useMemo<TotalDuration>(() => {
+    const totalDuration: TotalDuration = {
+      hour: 0,
+      minute: 0,
+      second: 0,
+    }
+
     if (tracksList && tracksList.data.length) {
-      const totalDuration: TotalDuration = {
-        hour: 0,
-        minute: 0,
-        second: 0,
-      }
       for (let i = 0; i < tracksList.data.length; i++) {
         totalDuration.minute += Number(tracksList.data[i].track_duration.split(':')[0])
         totalDuration.second += Number(tracksList.data[i].track_duration.split(':')[1])
@@ -40,11 +44,9 @@ function useTrackStatistics(tracksList: TrackList | null) {
       totalDuration.minute = moment(formatted, 'HH:mm:ss').minute()
       totalDuration.second = moment(formatted, 'HH:mm:ss').second()
 
-      return `${totalDuration.hour > 0 ? totalDuration.hour + ' hr' : ''} ${
-        totalDuration.minute > 0 ? totalDuration.minute + ' min' : ''
-      }`
+      return totalDuration
     }
-    return '0'
+    return totalDuration
   }, [tracksList])
 
   return { totalTrackLike, totalTrackTime }

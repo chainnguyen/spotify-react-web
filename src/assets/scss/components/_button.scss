@@ -28,6 +28,18 @@
   }
 }
 
+.hqfSfC {
+  button {
+    width: 100%;
+  }
+
+  @media #{$min_info-ipad} {
+    button {
+      width: auto;
+    }
+  }
+}
+
 .hNxTPt {
   @include flex-inline();
   position: relative;
@@ -69,6 +81,14 @@
   }
 }
 
+.cJdEzG {
+  @include signup-button-content();
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: $main-color;
+  color: $background-press;
+}
+
 .futnNt {
   @include common-button();
   font-size: 1.125rem;
@@ -85,7 +105,7 @@
   .dpREpp {
     @include flex();
     position: relative;
-    color: #000000;
+    color: $text-black;
     font-size: inherit;
     border-radius: 500px;
     -webkit-tap-highlight-color: transparent;
@@ -134,5 +154,75 @@
 
   &:active, &:focus, &:hover {
     color: $text-base;
+  }
+}
+
+.jJyUnh {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: transparent;
+  border-radius: 500px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  padding-block: 7px;
+  padding-inline: 31px;
+  border: 1px solid $button-grey-outline;
+  color: $text-black;
+  min-block-size: 48px;
+  justify-content: center;
+  inline-size: 100%;
+  transition-duration: 33ms;
+  transform: translate3d(0, 0, 0);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    border-color: $text-black;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    background: transparent;
+    inline-size: calc(100% + 12px);
+    block-size: calc(100% + 12px);
+    border-radius: 500px;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    transition: border-color 200ms ease-in 0s;
+  }
+
+  .dswDUK {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #6a6a6a;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    box-sizing: border-box;
+  }
+}
+
+.otMlU {
+  @include common-button();
+
+  &:hover .ButtonInner-sc-14ud5tc-0 {
+    background-color: $main-color-highlight;
+  }
+
+  &:hover .ButtonInner-sc-14ud5tc-0,
+  &:hover .ButtonFocus-sc-2hq6ey-0 {
+    @include css3-prefix('transform', scale(1.04));
   }
 }

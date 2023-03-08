@@ -128,3 +128,11 @@
   font-weight: 400;
   padding-block-end: 16px;
 }
+
+.itlAHd {
+  letter-spacing: 0.107em;
+  text-transform: uppercase;
+  @media #{$min_info-ipad} {
+    letter-spacing: 0.107em;
+  }
+}
