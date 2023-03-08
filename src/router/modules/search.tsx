@@ -5,9 +5,7 @@ export default [
   {
     path: 'search',
     element: (
-      <WrapperResolveGuard
-        isPublic
-        guard="auth">
+      <WrapperResolveGuard isPublic>
         <Search />
       </WrapperResolveGuard>
     ),

@@ -5,7 +5,7 @@ export default [
   {
     path: 'library',
     element: (
-      <WrapperResolveGuard guard="auth">
+      <WrapperResolveGuard>
         <Library />
       </WrapperResolveGuard>
     ),

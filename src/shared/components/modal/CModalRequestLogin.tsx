@@ -20,8 +20,8 @@ function CModalRequestLogin({ isOpen, data }: IProps) {
   const { t } = useTranslation()
   const dispatch = useDispatch<AppDispatch>()
 
-  const redirectSignup = () => {
-    navigate('/auth/signup')
+  const redirectAuthentication = (page: 'signup' | 'login') => {
+    navigate(`/auth/${page}`)
     closeModal()
   }
 
@@ -64,7 +64,7 @@ function CModalRequestLogin({ isOpen, data }: IProps) {
                 <button className="Button-sc-qlcn5g-0 iPtRzt">
                   <span
                     className="ButtonInner-sc-14ud5tc-0 cJdEzG encore-bright-accent-set"
-                    onClick={redirectSignup}>
+                    onClick={() => redirectAuthentication('signup')}>
                     {t('signup_free')}
                   </span>
                 </button>
@@ -79,11 +79,12 @@ function CModalRequestLogin({ isOpen, data }: IProps) {
                   <span className="Type__TypeElement-sc-goli3j-0 hGXzYa">
                     {t('already_have_an_account')}
                   </span>
-                  <Link
-                    to="/auth/login"
-                    className="Type__TypeElement-sc-goli3j-0 gkqrGP">
+
+                  <button
+                    className="Type__TypeElement-sc-goli3j-0 gkqrGP"
+                    onClick={() => redirectAuthentication('login')}>
                     {t('login')}
-                  </Link>
+                  </button>
                 </p>
               </div>
             </div>

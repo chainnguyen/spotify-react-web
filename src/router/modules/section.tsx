@@ -5,9 +5,7 @@ export default [
   {
     path: 'section',
     element: (
-      <WrapperResolveGuard
-        isPublic
-        guard="auth">
+      <WrapperResolveGuard isPublic>
         <Section />
       </WrapperResolveGuard>
     ),

@@ -104,3 +104,40 @@
     padding-inline-start: 8px;
   }
 }
+
+.odcjv30UQnjaTv4sylc0 {
+  @include flex();
+  position: relative;
+  color: $text-base;
+  background-color: rgba(0,0,0,.7);
+  gap: 8px;
+  height: 32px;
+  padding: 2px;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  align-items: center;
+  border: 0;
+  border-radius: 23px;
+  cursor: pointer;
+
+  &:focus,
+  &:hover,
+  &[data-context-menu-open=true] {
+    background-color: $background-active-card;
+  }
+
+  .tp8rO9vtqBGPLOhwcdYv {
+    display: inline-block;
+    position: relative;
+    width: 28px;
+    height: 28px;
+  }
+
+  .eAXFT6yvz37fvS1lmt6k {
+    -webkit-margin-end: 6px;
+    margin-inline-end: 6px;
+  }
+}

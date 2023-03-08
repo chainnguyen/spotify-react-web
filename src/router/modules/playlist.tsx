@@ -5,9 +5,7 @@ export default [
   {
     path: 'playlist',
     element: (
-      <WrapperResolveGuard
-        isPublic
-        guard="auth">
+      <WrapperResolveGuard isPublic>
         <Playlist />
       </WrapperResolveGuard>
     ),

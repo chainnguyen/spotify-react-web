@@ -11,7 +11,7 @@ export type WrapperRouteProps = RouteProps & {
 }
 
 function WrapperResolveGuard(props: WrapperRouteProps) {
-  const { isPublic, guard } = props
+  const { guard } = props
 
   const protector = {
     login: <LoginGuard {...props} />,

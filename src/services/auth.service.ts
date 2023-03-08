@@ -17,7 +17,7 @@ export const AuthService = {
   },
 
   async logout() {
-    return await Get('/mocks/user.json').then((resp: any) => resp.data)
+    return await Get('/mocks/auth.json').then((resp: any) => resp.data)
   },
 
   async profile() {

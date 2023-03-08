@@ -1,5 +1,6 @@
 import '@/assets/scss/components/modal/modal-language-selection.scss'
 
+import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 
 import { LOCALES } from '@/enums/locales.enum'
@@ -12,6 +13,7 @@ interface IProps {
 }
 
 function CModalLanguageSelection({ isOpen }: IProps) {
+  const { t } = useTranslation()
   const dispatch = useDispatch<AppDispatch>()
 
   const closeModal = () => {
@@ -42,7 +44,7 @@ function CModalLanguageSelection({ isOpen }: IProps) {
                 <h1
                   id="language-selection-title"
                   className="Type__TypeElement-sc-goli3j-0 cZAxWV">
-                  Choose a language
+                  {t('choose_language')}
                 </h1>
 
                 <p

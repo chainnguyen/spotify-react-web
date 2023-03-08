@@ -25,9 +25,7 @@ function RenderRoutes({ path, layout }: IPropsRoute) {
         {
           path: '/',
           element: (
-            <WrapperResolveGuard
-              isPublic
-              guard="auth">
+            <WrapperResolveGuard isPublic>
               <Home />
             </WrapperResolveGuard>
           ),
