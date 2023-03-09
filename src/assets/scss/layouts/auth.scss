@@ -1,0 +1,92 @@
+@import "@/assets/scss/helpers/mixins";
+@import "@/assets/scss/helpers/variables";
+
+.bOnYLb {
+  @include flex();
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.eJVpgn {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgb(217, 218, 220);
+  margin-bottom: 10px;
+
+  @media #{$min_info-ipad} {
+    padding: 25px 0 10px;
+    margin-bottom: 30px;
+  }
+
+  .ldNDEI {
+    height: 42px;
+    padding: 0 0 6px;
+
+    @media #{$min_info-ipad} {
+      height: 56px;
+      padding: 0 0 12px;
+    }
+  }
+}
+
+.dMDoZC {
+  @include flex();
+  flex: 3 1 0;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 10px;
+  background: white;
+
+  .cDIjMy {
+    width: 100%;
+    max-width: 450px;
+
+    .wKwWn {
+      @include flex();
+      flex-direction: column;
+      row-gap: 10px;
+      color: $text-black;
+    }
+
+    .eiDqql {
+      color: inherit;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      margin-block: 0;
+      font-size: 1.125rem;
+      font-weight: 700;
+      padding-block-end: 20px;
+    }
+
+    .cIqjxr {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      color: inherit;
+      -webkit-box-align: center;
+      align-items: center;
+      text-decoration: none;
+      &[href]:hover {
+        text-decoration: underline;
+        color: $text-light-green;
+      }
+
+      &[href], &:hover:not([disabled]) {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.iSayOZ {
+  margin-top: 16px;
+  @media #{$min_info-ipad} {
+    @include flex();
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: end;
+    align-items: flex-end;
+  }
+}

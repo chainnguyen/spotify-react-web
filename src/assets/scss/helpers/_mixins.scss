@@ -1,0 +1,191 @@
+@import "@/assets/scss/helpers/variables";
+
+/**
+* Adds a browser prefix to the property
+* @param {*} $property Property
+* @param {*} $value Value
+*/
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property} : #{$value};
+  -moz-#{$property}   : #{$value};
+  -ms-#{$property}    : #{$value};
+  -o-#{$property}     : #{$value};
+  #{$property}        : #{$value};
+}
+
+/**
+* Keyframes
+* @param {*} $animation-name - Animation name
+* @content [Animation css]
+*/
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+/**
+* Animation
+* @param {*} $str - name duration timing-function delay iteration-count direction fill-mode play-state ([http://www.w3schools.com/cssref/css3_pr_animation.asp](http://www.w3schools.com/cssref/css3_pr_animation.asp))
+* @require {mixin} css3-prefix
+*/
+@mixin animation($str) {
+  @include css3-prefix('animation', $str);
+}
+
+/**
+* Border Radius
+* @param {Size} $radius [5px] - Radius
+* @require {mixin} css3-prefix
+*/
+@mixin border-radius($radius: 5px) {
+  @include css3-prefix('border-radius', $radius);
+}
+
+/**
+* Transform
+* @param {List} $params - Params
+* @require {mixin} css3-prefix
+*/
+@mixin transform($params) {
+  @include css3-prefix('transform', $params);
+}
+
+/**
+* Transform-Origin
+* @param {List} $params - Params
+* @require {mixin} css3-prefix
+*/
+@mixin transform-origin($params) {
+  @include css3-prefix('transform-origin', $params);
+}
+
+/**
+* Transition
+* @param {List} $properties - Properties
+* @require {mixin} css3-prefix
+*/
+@mixin transition($properties...) {
+  @if length($properties) >= 1 {
+    @include css3-prefix('transition', $properties);
+  } @else {
+    @include css3-prefix('transition', "all 0.25s cubic-bezier(0.55, 0.1, 0.15, 0.95)");
+  }
+}
+
+// Flex
+@mixin flex() {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// Inline Flex
+@mixin flex-inline() {
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+
+@mixin common-flex() {
+  @include flex();
+  -webkit-box-direction: normal;
+}
+
+@mixin flex-align-center() {
+  @include flex();
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin absolute() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin fixed() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin common-button() {
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: transparent;
+  border: 0;
+  border-radius: 500px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  transition-duration: 33ms;
+  transition-property: background-color, border-color, color, box-shadow, filter, transform;
+  user-select: none;
+  vertical-align: middle;
+  transform: translate3d(0px, 0px, 0px);
+  padding: 0;
+  min-inline-size: 0;
+  align-self: center;
+}
+
+@mixin signup-button-content() {
+  @include flex();
+  position: relative;
+  background-color: $text-base;
+  color: $background-base;
+  border-radius: 500px;
+  font-size: inherit;
+  min-block-size: 48px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-block: 8px;
+  padding-inline: 32px;
+}
+
+@mixin controller-player-button() {
+  position: relative;
+  width: var(--button-size);
+  min-width: var(--button-size);
+  height: var(--button-size);
+  @include flex();
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: $text-light-white;
+  &[disabled] {
+    color: hsla(0,0%,100%,.3);
+  }
+}

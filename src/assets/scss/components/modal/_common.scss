@@ -1,0 +1,26 @@
+@import "@/assets/scss/helpers/_mixins.scss";
+@import "@/assets/scss/helpers/_variables.scss";
+
+
+.dialog {
+  @include fixed();
+  background-color: rgba(0,0,0,.9);
+  z-index: 104;
+
+  .overlay {
+    @include absolute();
+  }
+}
+
+.ftlV6Ixmq4wkKMg7hJ1v {
+  @media (min-width: 615px) {
+    @include flex();
+    @include css3-prefix('animation', UpsellShowAnimation .2s 1);
+    @include css3-prefix('animation-fill-mode', both);
+  }
+}
+
+@keyframes UpsellShowAnimation {
+  0% { opacity: 0 }
+  100% { opacity: 1 }
+}

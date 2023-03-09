@@ -1,0 +1,138 @@
+@import "@/assets/scss/helpers/variables";
+@import "@/assets/scss/helpers/mixins";
+
+.ellipsis-one-line,
+.standalone-ellipsis-one-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.UyzJidwrGk3awngSGIwv,
+.poz9gZKE7xqFwgk231J4,
+.xWm_uA0Co4SXVxaO7wlB {
+  color: $text-light-white;
+  white-space: nowrap;
+}
+
+.dZYxEP {
+  position: relative;
+  @include flex-inline();
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  color: $text-subdued;
+  background-color: transparent;
+  border: 0;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  vertical-align: middle;
+  min-inline-size: 0;
+  padding-block: 8px;
+  min-block-size: 48px;
+  padding-inline: 32px;
+  user-select: none;
+  touch-action: manipulation;
+  @include css3-prefix('transform', translate3d(0px, 0px, 0px));
+  transition-duration: 33ms;
+  transition-property: background-color, border-color, color, box-shadow, filter, transform;
+
+  &:hover {
+    color: $text-base;
+    @include css3-prefix('transform', scale(1.04));
+  }
+}
+
+.jdSGNV {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: inherit;
+  @media #{$min_info-ipad} {
+    font-size: 0.875rem;
+  }
+}
+
+.hGXzYa {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: inherit;
+  @media #{$min_info-ipad} {
+    font-size: 0.875rem;
+  }
+}
+
+.eRYMpa {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: inherit;
+}
+
+.dvSMET {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: $text-subdued;
+  @media #{$min_info-ipad} {
+    font-size: 0.875rem;
+  }
+}
+
+.VpYFchIiPg3tPhBGyynT {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  color: #b3b3b3;
+  display: inline-block;
+}
+
+.gkqrGP {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: inherit;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+}
+
+.cZAxWV, .iHGtYM {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $text-base;
+  -webkit-tap-highlight-color: transparent;
+  margin-block: 0;
+  padding-block-end: 8px;
+  box-sizing: border-box;
+}
+
+.iHGtYM {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-block-end: 16px;
+}
+
+.itlAHd {
+  letter-spacing: 0.107em;
+  text-transform: uppercase;
+  @media #{$min_info-ipad} {
+    letter-spacing: 0.107em;
+  }
+}

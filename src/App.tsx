@@ -1,77 +1,59 @@
-import './App.css'
+import type { BaseSyntheticEvent } from 'react'
+import { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
+import type { IFreeObject } from '@/@types/global'
+import AuthLayout from '@/layouts/Auth'
+import DefaultLayout from '@/layouts/Default'
+import RenderRoutes from '@/router'
+import type { AppDispatch } from '@/shared/store'
+import { COMMON_GETTER } from '@/shared/store/common'
+import { LOCALES_GETTER, SET_LANGUAGE } from '@/shared/store/modules/locales'
 
 function App() {
+  const dispatch = useDispatch<AppDispatch>()
+
+  const $currentLocale = useSelector(LOCALES_GETTER.currentLocale)
+  const $globalLayout = useSelector(COMMON_GETTER.layout)
+
+  const [attributeInspect, setAttributeInspect] = useState<IFreeObject>({})
+
+  const displayLayout = {
+    auth: <AuthLayout />,
+    default: <DefaultLayout />,
+  }
+
+  useEffect(() => {
+    // Set default app title
+    document.title = import.meta.env.VITE_DEFAULT_TITLE
+    // Set language saved from localStorage
+    $currentLocale && dispatch(SET_LANGUAGE($currentLocale))
+
+    if (['production', 'staging'].includes(import.meta.env.MODE)) {
+      setAttributeInspect({
+        onKeyDown: (e: BaseSyntheticEvent) => preventInspectElement(e),
+        onClick: (e: BaseSyntheticEvent) => preventInspectElement(e),
+        onContextMenu: (e: BaseSyntheticEvent) => preventInspectElement(e),
+      })
+    }
+  }, [])
+
+  const preventInspectElement = (evt: BaseSyntheticEvent): void => {
+    // Block the user to perform: Right-Click, F12
+    // @ts-ignore
+    if (evt.keyCode === 123 || evt.type === 'contextmenu' || evt.nativeEvent?.button === 2) {
+      evt.preventDefault()
+    }
+  }
+
   return (
-    <div className="App">
-      <h1 className="text-7xl font-bold mb-5">
-        Spotify React Web
-      </h1>
-
-      <div className="bg-gray-100">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div
-            className="mx-auto max-w-2xl py-16 sm:py-24 lg:max-w-none lg:py-8">
-            <h2 className="text-2xl font-bold text-gray-900">Collections</h2>
-
-            <div
-              className="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
-              <div className="group relative">
-                <div
-                  className="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                  <img
-                    src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg"
-                    alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug."
-                    className="h-full w-full object-cover object-center"/>
-                </div>
-                <h3 className="mt-6 text-sm text-gray-500">
-                  <a href="#">
-                    <span className="absolute inset-0"></span>
-                    Desk and Office
-                  </a>
-                </h3>
-                <p className="text-base font-semibold text-gray-900">Work from
-                  home accessories</p>
-              </div>
-
-              <div className="group relative">
-                <div
-                  className="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                  <img
-                    src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg"
-                    alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant."
-                    className="h-full w-full object-cover object-center"/>
-                </div>
-                <h3 className="mt-6 text-sm text-gray-500">
-                  <a href="#">
-                    <span className="absolute inset-0"></span>
-                    Self-Improvement
-                  </a>
-                </h3>
-                <p className="text-base font-semibold text-gray-900">Journals
-                  and note-taking</p>
-              </div>
-
-              <div className="group relative">
-                <div
-                  className="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
-                  <img
-                    src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg"
-                    alt="Collection of four insulated travel bottles on wooden shelf."
-                    className="h-full w-full object-cover object-center"/>
-                </div>
-                <h3 className="mt-6 text-sm text-gray-500">
-                  <a href="#">
-                    <span className="absolute inset-0"></span>
-                    Travel
-                  </a>
-                </h3>
-                <p className="text-base font-semibold text-gray-900">Daily
-                  commute essentials</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div
+      className="Root"
+      {...attributeInspect}>
+      <RenderRoutes
+        path={import.meta.env.VITE_ROUTER_BASE as string}
+        layout={$globalLayout ? displayLayout[$globalLayout] : displayLayout['default']}
+      />
     </div>
   )
 }

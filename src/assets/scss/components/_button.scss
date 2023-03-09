@@ -1,0 +1,228 @@
+@import "@/assets/scss/helpers/mixins";
+@import "@/assets/scss/helpers/variables";
+
+
+.jsmWVV {
+  @include common-button();
+  &:hover {
+    transform: scale(1.04);
+  }
+
+  .kuwYvr {
+    @include signup-button-content()
+  }
+}
+
+.iPtRzt {
+  @include common-button();
+
+  &:active .ButtonInner-sc-14ud5tc-0 {
+    background-color: #169c46;
+    box-shadow: none;
+    @include css3-prefix('transform', scale(1));
+  }
+
+  &:hover .ButtonInner-sc-14ud5tc-0,
+  &:hover .ButtonFocus-sc-2hq6ey-0 {
+    @include css3-prefix('transform', scale(1.04));
+  }
+}
+
+.hqfSfC {
+  button {
+    width: 100%;
+  }
+
+  @media #{$min_info-ipad} {
+    button {
+      width: auto;
+    }
+  }
+}
+
+.hNxTPt {
+  @include flex-inline();
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid $essential-subdued;
+  color: $text-base;
+  background-color: transparent;
+  border-radius: 500px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  padding-block: 7px;
+  padding-inline: 31px;
+  min-block-size: 48px;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  user-select: none;
+  transform: translate3d(0px, 0px, 0px);
+  transition-duration: 33ms;
+  transition-property: background-color, border-color, color, box-shadow, filter, transform;
+
+  &:hover {
+    border-color: $essential-base;
+    @include css3-prefix('transform', scale(1.04));
+  }
+
+  &:active {
+    opacity: 0.7;
+    outline: none;
+    border-color: $essential-subdued;
+    @include css3-prefix('transform', scale(1));
+  }
+}
+
+.cJdEzG {
+  @include signup-button-content();
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: $main-color;
+  color: $background-press;
+}
+
+.futnNt {
+  @include common-button();
+  font-size: 1.125rem;
+
+  &:hover .ButtonInner-sc-14ud5tc-0,
+  &:hover .ButtonFocus-sc-2hq6ey-0 {
+    transform: scale(1.04);
+  }
+
+  &:hover .ButtonInner-sc-14ud5tc-0 {
+    background-color: $main-color-highlight;
+  }
+
+  .dpREpp {
+    @include flex();
+    position: relative;
+    color: $text-black;
+    font-size: inherit;
+    border-radius: 500px;
+    -webkit-tap-highlight-color: transparent;
+    background-color: $main-color;
+    min-block-size: 56px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    inline-size: 56px;
+    block-size: 56px;
+
+    .fSnHJ {
+      @include flex();
+      position: absolute;
+      top: 14px;
+      left: 14px;
+    }
+  }
+}
+
+.Fm7C3gdh5Lsc9qSXrQwO {
+  @include flex();
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: $text-light-white;
+
+  &:focus, &:hover {
+    color: $text-base;
+  }
+}
+
+.T0anrkk_QA4IAQL29get {
+  @include flex();
+  padding: 0;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  color: hsla(0,0%,100%,.6);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+
+  &:active, &:focus, &:hover {
+    color: $text-base;
+  }
+}
+
+.jJyUnh {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: transparent;
+  border-radius: 500px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  padding-block: 7px;
+  padding-inline: 31px;
+  border: 1px solid $button-grey-outline;
+  color: $text-black;
+  min-block-size: 48px;
+  justify-content: center;
+  inline-size: 100%;
+  transition-duration: 33ms;
+  transform: translate3d(0, 0, 0);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    border-color: $text-black;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    background: transparent;
+    inline-size: calc(100% + 12px);
+    block-size: calc(100% + 12px);
+    border-radius: 500px;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 3px solid transparent;
+    transition: border-color 200ms ease-in 0s;
+  }
+
+  .dswDUK {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #6a6a6a;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0;
+    box-sizing: border-box;
+  }
+}
+
+.otMlU {
+  @include common-button();
+
+  &:hover .ButtonInner-sc-14ud5tc-0 {
+    background-color: $main-color-highlight;
+  }
+
+  &:hover .ButtonInner-sc-14ud5tc-0,
+  &:hover .ButtonFocus-sc-2hq6ey-0 {
+    @include css3-prefix('transform', scale(1.04));
+  }
+}

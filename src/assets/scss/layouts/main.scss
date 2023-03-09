@@ -1,0 +1,225 @@
+@import "@/assets/scss/helpers/mixins";
+@import "@/assets/scss/helpers/variables";
+
+.Root__main-view {
+  @include common-flex();
+  position: relative;
+  width: 100%;
+  grid-area: main-view;
+  -webkit-box-orient: vertical;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.main-view-container {
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-height: 0;
+  &__scroll-node {
+    height: 100%;
+  }
+  &__scroll-node-child {
+    isolation: isolate;
+    padding-bottom: 32px;
+    min-height: calc(((100vh - 64px) - 90px) - 519px);
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+.os-host, .os-host-textarea {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -ms-flex-line-pack: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  -ms-grid-row-align: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow: visible!important;
+}
+
+.os-resize-observer,
+.os-resize-observer-host {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.os-resize-observer {
+  @include css3-prefix('animation-duration', 1ms);
+  @include css3-prefix('animation-name', os-resize-observer-dummy-animation);
+}
+
+.os-resize-observer-host {
+  border: inherit;
+  border-color: transparent;
+  border-style: solid;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: inherit;
+  &.observed {
+    @include common-flex();
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    >.os-resize-observer,
+    >.os-resize-observer:before {
+      position: relative;
+      @include flex();
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+      -ms-flex-negative: 0;
+      -ms-flex-preferred-size: auto;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      flex-basis: auto;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
+
+    >.os-resize-observer:before {
+      content: "";
+      border: inherit;
+      -webkit-box-sizing: content-box;
+      box-sizing: content-box;
+      margin: 0;
+      padding: inherit;
+    }
+  }
+
+  &.observed>.os-resize-observer,
+  >.os-resize-observer {
+    display: block;
+    width: 200%;
+    height: 200%;
+    margin: 0;
+    padding: inherit;
+    border: inherit;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+}
+
+.os-host-overflow {
+  overflow: hidden!important;
+}
+
+.os-host-overflow>.os-padding, .os-viewport {
+  overflow: hidden;
+}
+
+.os-content-glue, .os-padding {
+  @include css3-prefix(box-sizing, inherit);
+}
+
+.os-theme-spotify .os-viewport {
+  @include css3-prefix(transform, 0);
+}
+
+.os-padding {
+  @include absolute();
+  padding: 0;
+  margin: 0;
+  direction: inherit;
+  width: auto!important;
+  height: auto!important;
+  overflow: visible;
+  z-index: 0;
+}
+
+.os-viewport {
+  @include absolute();
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  -webkit-box-sizing: inherit!important;
+  box-sizing: inherit!important;
+  direction: inherit!important;
+  outline: none!important;
+  resize: none!important;
+}
+
+.os-content {
+  position: relative;
+  direction: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+}
+
+#os-dummy-scrollbar-size:after,
+#os-dummy-scrollbar-size:before,
+.os-content:after,
+.os-content:before {
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  -ms-flex-negative: 0;
+  content: "";
+  display: table;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 0.01px;
+  line-height: 0;
+  visibility: hidden;
+  width: 0.01px;
+}
+
+.main-view-container__scroll-node-child-spacer {
+  height: 64px;
+  position: sticky;
+  top: 0;
+}
+
+.HsbczDqu9qjcYr7EIdHR {
+  position: absolute;
+  width: 100%;
+  height: 332px;
+  margin-top: -64px;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.6)),to($background-base)),$background-noise;
+  background-image: linear-gradient(rgba(0,0,0,.6) 0, $background-base 100%), $background-noise;
+  background-color: rgb(83, 83, 83);
+  @include transition(background 1s ease);
+  z-index: -1;
+}
+
+@keyframes os-resize-observer-dummy-animation {
+  0% {
+    cursor: auto;
+  }
+  100% {
+    cursor: none;
+  }
+}

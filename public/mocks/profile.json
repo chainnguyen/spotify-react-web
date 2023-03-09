@@ -1,0 +1,11 @@
+{
+  "status": 200,
+  "success": true,
+  "data": {
+    "id": "825fb95b-e0aa-4aa2-bd29-ad97c41e6cdb",
+    "role": "admin",
+    "name": "Chain Nguyễn",
+    "email": "ntrungtn@gmail.com",
+    "avatar": "https://i.scdn.co/image/ab6775700000ee858c3657ea06907b0ed350968d"
+  }
+}
