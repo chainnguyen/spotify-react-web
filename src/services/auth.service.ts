@@ -5,7 +5,13 @@ const { Get, Post } = useAxios()
 
 export const AuthService = {
   async login(form: ICredentials) {
-    return await Post('/mocks/auth.json', form).then((resp: any) => resp.data)
+    return await Post('/mocks/auth.json', form).then((resp: any) => {
+      const { email, password } = resp.data.data
+      if (form.email === email && form.password === password) {
+        return resp.data
+      }
+      throw new Error('Username or password incorrect')
+    })
   },
 
   async loginSNS(form: any) {
