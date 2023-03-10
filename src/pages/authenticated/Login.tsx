@@ -1,12 +1,14 @@
 import '@/assets/scss/layouts/auth.scss'
 
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
+import * as yup from 'yup'
 
 import type { ICredentials } from '@/@types/views/auth'
 import { AuthService } from '@/services/auth.service'
+import { CInputText } from '@/shared/components'
+import { useFormHandler } from '@/shared/hooks'
 import type { AppDispatch } from '@/shared/store'
 import { SET_LOGIN } from '@/shared/store/modules/auth'
 
@@ -15,97 +17,57 @@ function Login() {
   const { t } = useTranslation()
   const dispatch = useDispatch<AppDispatch>()
 
-  const [formLogin, setFormLogin] = useState<ICredentials>({
+  const defaultValues = {
     email: '',
     password: '',
+  }
+
+  const validScheme = yup.object().shape({
+    email: yup.string().label('auth.email_address_or_username').email().max(100).required(),
+    password: yup.string().label('auth.password').max(100).required(),
   })
 
-  const handleSubmit = async () => {
+  const { registerField, handleSubmit } = useFormHandler<ICredentials>({
+    defaultValues,
+    validScheme,
+  })
+
+  const onSubmit = async (form: ICredentials) => {
     try {
-      await AuthService.login(formLogin).then((res) => {
+      await AuthService.login(form).then((res) => {
         dispatch(SET_LOGIN({ token: res.data.bearer_token }))
         navigate('/')
       })
     } catch (err) {
-      // handle err
+      alert(err)
     }
   }
 
   return (
     <div className="sc-gswNZR wKwWn">
-      <div>
-        <div className="Group-sc-u9bcx5-0 kWRxyd sc-fEXmlR gaqGa-D">
-          <div className="LabelGroup-sc-1ibddrg-0 duTSXm">
-            <label
-              htmlFor="login-username"
-              className="Label-sc-1c0cv3r-0 cwWhaQ">
-              <span className="LabelInner-sc-19pye2k-0 LnTCl">Email address or username</span>
-            </label>
-          </div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <CInputText
+          reid="email"
+          field="email"
+          {...registerField}
+          label={t('auth.email_address_or_username')}
+          placeholder={t('auth.email_address_or_username')}
+        />
 
-          <input
-            aria-invalid="false"
-            type="text"
-            placeholder="Email address or username"
-            autoCapitalize="off"
-            autoComplete="username"
-            spellCheck="false"
-            autoCorrect="off"
-            aria-describedby="username-error"
-            className="Input-sc-1gbx9xe-0 fOpTaL"
-          />
-        </div>
-
-        <div className="Group-sc-u9bcx5-0 kWRxyd sc-fEXmlR gaqGa-D">
-          <div className="LabelGroup-sc-1ibddrg-0 duTSXm">
-            <label
-              htmlFor="login-password"
-              className="Label-sc-1c0cv3r-0 cwWhaQ">
-              <span className="LabelInner-sc-19pye2k-0 LnTCl">Password</span>
-            </label>
-          </div>
-
-          <input
-            aria-invalid="false"
-            type="password"
-            placeholder="Password"
-            autoComplete="current-password"
-            spellCheck="false"
-            autoCorrect="off"
-            aria-describedby="password-error"
-            className="Input-sc-1gbx9xe-0 fOpTaL"
-          />
-        </div>
-
-        <button className="Link-sc-k8gsk-0 cIqjxr">{t('auth.forgot_your_password')}</button>
+        <CInputText
+          reid="password"
+          field="password"
+          type="password"
+          {...registerField}
+          label={t('auth.password')}
+          placeholder={t('auth.password')}
+        />
 
         <div className="sc-idXgbr iSayOZ">
-          <div className="Group-sc-u9bcx5-0 kWRxyd sc-fEXmlR gaqGa-D">
-            <div className="Checkbox-sc-svpvf6-0 ktsNkz">
-              <input
-                type="checkbox"
-                id="login-remember"
-                name="remember"
-                className="VisuallyHidden__VisuallyHiddenElement-sc-17bibe8-0 eUaqVT"
-                checked
-              />
-              <label
-                htmlFor="login-remember"
-                className="Label-sc-cpoq-0 bbKAxy">
-                <span className="Indicator-sc-1airx73-0 bpcByA"></span>
-                <span className="TextForLabel-sc-1jqya9m-0 hGXvoZ">
-                  <p className="Type__TypeElement-sc-goli3j-0 gkqrGP sc-csuSiG gshWbo">
-                    {t('auth.remember_me')}
-                  </p>
-                </span>
-              </label>
-            </div>
-          </div>
-
           <div className="sc-hHTYSt hqfSfC">
             <button
-              className="Button-sc-qlcn5g-0 otMlU"
-              onClick={handleSubmit}>
+              type="submit"
+              className="Button-sc-qlcn5g-0 otMlU">
               <span className="ButtonInner-sc-14ud5tc-0 cJdEzG encore-bright-accent-set">
                 <span className="Type__TypeElement-sc-goli3j-0 kwLSIj sc-eDvSVe itlAHd">
                   {t('login')}
@@ -115,7 +77,7 @@ function Login() {
             </button>
           </div>
         </div>
-      </div>
+      </form>
 
       <hr
         role="presentation"

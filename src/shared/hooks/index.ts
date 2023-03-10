@@ -1,6 +1,7 @@
 export { default as useAxios } from './useAxios'
 export { default as useCopyToClipboard } from './useCopyToClipboard'
 export { default as useFetch } from './useFetch'
+export { default as useFormHandler } from './useFormHandler'
 export { default as useLazyLoad } from './useLazyLoad'
 export { default as useLocalStorage } from './useLocalStorage'
 export { default as usePortal } from './usePortal'

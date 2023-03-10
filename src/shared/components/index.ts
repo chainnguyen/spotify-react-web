@@ -4,6 +4,9 @@ export { default as CGlobalSidebar } from './common/CGlobalSidebar'
 export { default as CHeader } from './common/CHeader'
 export { default as CLoading } from './common/CLoading'
 export { default as CPlayingBar } from './common/CPlayingBar'
+// Form
+export { default as CErrorMessage } from './form/CErrorMessage'
+export { default as CInputText } from './form/CInputText'
 // Button
 export { default as CButtonMore } from './button/CButtonMore'
 export { default as CButtonPlay } from './button/CButtonPlay'
