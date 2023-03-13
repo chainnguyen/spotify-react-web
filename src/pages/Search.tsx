@@ -28,7 +28,7 @@ function SearchPage() {
 
   useEffect(() => {
     $genreList && setGenreData($genreList)
-  }, [$genreList])
+  }, [JSON.stringify($genreList)])
 
   const fetchList = async () => {
     try {

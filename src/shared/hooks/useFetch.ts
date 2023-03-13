@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 import type { IFreeObject } from '@/@types/global'
 
-function useFetch<T>(url: string, options: IFreeObject) {
+function useFetch<T>(url: string, options?: IFreeObject) {
   const [response, setResponse] = useState<T | null>(null)
   const [error, setError] = useState<any>(null)
   const [abort, setAbort] = useState<any>(() => {})
@@ -21,7 +21,7 @@ function useFetch<T>(url: string, options: IFreeObject) {
         setError(error)
       }
     }
-    fetchData()
+    fetchData().then((r) => r)
 
     return () => {
       abort()

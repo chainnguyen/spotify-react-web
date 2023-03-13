@@ -18,8 +18,8 @@ function Login() {
   const dispatch = useDispatch<AppDispatch>()
 
   const defaultValues = {
-    email: '',
-    password: '',
+    email: 'ntrungtn@gmail.com',
+    password: '123456',
   }
 
   const validScheme = yup.object().shape({
@@ -37,6 +37,8 @@ function Login() {
       await AuthService.login(form).then((res) => {
         dispatch(SET_LOGIN({ token: res.data.bearer_token }))
         navigate('/')
+        // Remove process login api in network tab
+        window.location.reload()
       })
     } catch (err) {
       alert(err)

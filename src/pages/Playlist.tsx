@@ -49,12 +49,12 @@ function Playlist() {
     return () => {
       document.title = import.meta.env.VITE_DEFAULT_TITLE
     }
-  }, [playlistData])
+  }, [JSON.stringify(playlistData)])
 
   useEffect(() => {
     setPlaylistData($detailSection)
     setTrackListData($trackList)
-  }, [$detailSection, $trackList])
+  }, [JSON.stringify($detailSection), JSON.stringify($trackList)])
 
   const fetchPlaylistDetail = async (id: string | undefined) => {
     try {

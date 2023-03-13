@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'
 
@@ -15,7 +15,7 @@ function AuthGuard(props: WrapperRouteProps) {
   const $logged = useSelector(AUTH_GETTER.token)
   const $profile = useSelector(AUTH_GETTER.profile)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     dispatch(SET_LAYOUT('default'))
     if (!$logged) return
     // Check information user is empty
