@@ -30,7 +30,7 @@ function CGlobalSidebar() {
           role="banner"
           className="NyIynkmMpZXSoaE3XGhA">
           <Link
-            to="/"
+            to={import.meta.env.VITE_ROUTER_BASE as string}
             draggable="false"
             className="liKqY2CEkAKTwX2SfNCu WJsKJXEbycxxq8OcGHM1 active"
             aria-current="page">

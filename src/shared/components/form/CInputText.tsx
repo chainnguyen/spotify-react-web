@@ -69,7 +69,7 @@ function CInputText(props: IInputTextProps) {
         id={reid}
         {...register(field)}
         type={type ? type : 'text'}
-        aria-label={(disabled ? `${reid} disabled` : '') || (readOnly ? `${reid} readOnly` : '')}
+        aria-label={(disabled ? `${reid} disabled` : '') || (readOnly ? `${reid} readonly` : '')}
         aria-describedby={`${reid}-error`}
         autoCapitalize="off"
         spellCheck="false"

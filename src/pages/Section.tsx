@@ -29,7 +29,7 @@ function Section() {
 
   useEffect(() => {
     $detailSection && setSectionData($detailSection)
-  }, [$detailSection])
+  }, [JSON.stringify($detailSection)])
 
   const fetchSectionById = async (id: string | undefined) => {
     try {

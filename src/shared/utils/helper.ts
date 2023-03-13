@@ -1,9 +1,15 @@
+/* Docs - Locale of countries: https://www.localeplanet.com/icu/ */
+import i18next from 'i18next'
+
 /**
  * Convert a date to a relative time string, such as
  * "a minute ago", "in 2 hours", "yesterday", "3 months ago", etc.
  * using Intl.RelativeTimeFormat
  */
-export function getRelativeTimeString(date: Date | number, lang = navigator.language): string {
+export function getRelativeTimeString(
+  date: Date | number,
+  lang = i18next?.language || navigator.language
+): string {
   // Allow dates or times to be passed
   const timeMs = typeof date === 'number' ? date : date.getTime()
 
