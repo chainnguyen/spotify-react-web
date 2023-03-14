@@ -15,7 +15,7 @@ const resources = {
 }
 
 i18next.use(initReactI18next).init({
-  lng: DEFAULT_LANGUAGE, // default language
+  lng: DEFAULT_LANGUAGE,
   resources,
   interpolation: {
     escapeValue: false,

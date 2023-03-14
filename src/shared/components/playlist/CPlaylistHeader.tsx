@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import { useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
@@ -15,17 +16,17 @@ function CPlaylistHeader({ data, childrenData }: IProps) {
 
   const { totalTrackLike, totalTrackTime } = useTrackStatistics(childrenData)
 
-  const renderTotalTrackTime = () => {
-    return (
+  const renderTotalTrackTime = useCallback(
+    () =>
       (totalTrackTime.hour > 0
         ? `${totalTrackTime.hour + ' ' + t('relative_time.symbol.hour')} `
         : '') +
       ' ' +
       (totalTrackTime.minute > 0
         ? `${totalTrackTime.minute + ' ' + t('relative_time.symbol.minute')} `
-        : '')
-    )
-  }
+        : ''),
+    [JSON.stringify(totalTrackTime)]
+  )
 
   return (
     <div className="contentSpacing NXiYChVp4Oydfxd7rT5r RMDSGDMFrx8eXHpFphqG">

@@ -10,7 +10,7 @@ import { SET_LOGOUT } from '@/shared/store/modules/auth'
 
 const { dispatch } = store
 
-const AcceptType: IFreeObject = {
+const RequestType: IFreeObject = {
   json: 'application/json;charset=UTF-8',
   formData: 'multipart/form-data',
 }
@@ -19,7 +19,7 @@ const instance: AxiosInstance = axios.create({
   baseURL: import.meta.env.VITE_AXIOS_BASE_URL as string,
   headers: {
     Accept: 'application/json',
-    ContentType: 'application/json;charset=UTF-8',
+    ContentType: RequestType['json'],
   },
   // See more: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials
   withCredentials: false,
@@ -33,7 +33,7 @@ instance.interceptors.request.use((config: AxiosRequestConfig | any): AxiosReque
   if (token) {
     config.headers['Authorization'] = `Bearer ${token}`
     config.headers['Content-Type'] =
-      AcceptType[config.data instanceof FormData ? 'formData' : 'json']
+      RequestType[config.data instanceof FormData ? 'formData' : 'json']
   }
   return config
 })

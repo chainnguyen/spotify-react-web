@@ -85,7 +85,7 @@
   @media #{$min_info-ipad} {
     @include flex();
     -webkit-box-pack: justify;
-    justify-content: space-between;
+    justify-content: flex-end;
     -webkit-box-align: end;
     align-items: flex-end;
   }

@@ -1,6 +1,5 @@
 import moment from 'moment'
 import { useMemo } from 'react'
-import { useTranslation } from 'react-i18next'
 
 import type { ITrack, TrackList } from '@/@types/views/playlist'
 import { formatNumberDecimal } from '@/shared/utils/helper'
@@ -12,8 +11,6 @@ type TotalDuration = {
 }
 
 function useTrackStatistics(tracksList: TrackList | null) {
-  const { t } = useTranslation()
-
   const totalTrackLike = useMemo<string | number>(() => {
     if (tracksList && tracksList.data.length) {
       const total: number = tracksList.data.reduce(
@@ -23,7 +20,7 @@ function useTrackStatistics(tracksList: TrackList | null) {
       return formatNumberDecimal(total, ',')
     }
     return 0
-  }, [tracksList])
+  }, [JSON.stringify(tracksList)])
 
   const totalTrackTime = useMemo<TotalDuration>(() => {
     const totalDuration: TotalDuration = {
@@ -47,7 +44,7 @@ function useTrackStatistics(tracksList: TrackList | null) {
       return totalDuration
     }
     return totalDuration
-  }, [tracksList])
+  }, [JSON.stringify(tracksList)])
 
   return { totalTrackLike, totalTrackTime }
 }

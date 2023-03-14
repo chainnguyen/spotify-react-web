@@ -1,5 +1,7 @@
 import '@/assets/scss/components/_playlist-bar.scss'
 
+import React, { useCallback } from 'react'
+
 import type { Card } from '@/@types/views/playlist'
 import { CButtonMore, CButtonPlay, CButtonSaveToLibrary } from '@/shared/components'
 import { useTrackController } from '@/shared/hooks'
@@ -11,23 +13,29 @@ interface IProps {
 function CPlaylistBar({ data }: IProps) {
   const { enforcePlayList } = useTrackController()
 
+  const MemoizedCButtonPlay = React.memo(CButtonPlay)
+  const MemoizedCButtonSaveToLibrary = React.memo(CButtonSaveToLibrary)
+  const MemoizedCButtonMore = React.memo(CButtonMore)
+
+  const onEnforcePlayList = useCallback(() => enforcePlayList(data), [JSON.stringify(data)])
+
   return (
     <div className="E4q8ogfdWtye7YgotBlN contentSpacing">
       <div className="eSg4ntPU2KQLfpLGXAww">
         <div className="PFgcCoJSWC3KjhZxHDYH">
-          <CButtonPlay
+          <MemoizedCButtonPlay
             width={28}
             height={28}
-            onClick={() => enforcePlayList(data)}
+            onClick={onEnforcePlayList}
           />
         </div>
 
-        <CButtonSaveToLibrary
+        <MemoizedCButtonSaveToLibrary
           width={32}
           height={32}
         />
 
-        <CButtonMore
+        <MemoizedCButtonMore
           width={32}
           height={32}
           ariaLabel={`More options for ${data.title}`}

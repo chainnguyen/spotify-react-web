@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { useEffect } from 'react'
+import { useLayoutEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Navigate } from 'react-router-dom'
 
@@ -13,11 +13,11 @@ function LoginGuard(props: WrapperRouteProps) {
 
   const $logged = useSelector(AUTH_GETTER.token)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     dispatch(SET_LAYOUT('auth'))
   }, [])
 
-  if ($logged) return <Navigate to="/" />
+  if ($logged) return <Navigate to={import.meta.env.VITE_ROUTER_BASE as string} />
 
   return props.children as ReactElement
 }

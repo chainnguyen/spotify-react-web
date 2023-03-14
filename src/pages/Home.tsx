@@ -27,7 +27,7 @@ function HomePage() {
 
   useEffect(() => {
     $listOfPlaylist && setSectionPlayListData($listOfPlaylist)
-  }, [$listOfPlaylist])
+  }, [JSON.stringify($listOfPlaylist)])
 
   const fetchPlaylist = async () => {
     try {
