@@ -17,10 +17,11 @@
   "keywords": [
     "react",
     "redux",
+    "redux-toolkit",
     "react-hook-form",
+    "react-i18next",
     "vite",
     "tailwindcss",
-    "flowbite",
     "music-player",
     "spotify"
   ],

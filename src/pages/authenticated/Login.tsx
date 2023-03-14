@@ -1,5 +1,6 @@
 import '@/assets/scss/layouts/auth.scss'
 
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
@@ -16,6 +17,8 @@ function Login() {
   const navigate = useNavigate()
   const { t } = useTranslation()
   const dispatch = useDispatch<AppDispatch>()
+
+  const MemoizedCInputText = React.memo(CInputText)
 
   const defaultValues = {
     email: 'ntrungtn@gmail.com',
@@ -48,7 +51,7 @@ function Login() {
   return (
     <div className="sc-gswNZR wKwWn">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <CInputText
+        <MemoizedCInputText
           reid="email"
           field="email"
           {...registerField}
@@ -56,7 +59,7 @@ function Login() {
           placeholder={t('auth.email_address_or_username')}
         />
 
-        <CInputText
+        <MemoizedCInputText
           reid="password"
           field="password"
           type="password"

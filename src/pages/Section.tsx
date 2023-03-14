@@ -1,6 +1,6 @@
 import '@/assets/scss/pages/home.scss'
 
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
@@ -17,6 +17,8 @@ function Section() {
   const $detailSection = useSelector(PLAYLIST_GETTER.section_detail)
 
   const [sectionData, setSectionData] = useState<Playlist | null>(null)
+
+  const MemoizedCSectionPlaylist = React.memo(CSectionPlaylist)
 
   useEffect(() => {
     fetchSectionById(sectionId).then((r) => r)
@@ -52,7 +54,7 @@ function Section() {
           <section aria-label="Section Page">
             <div className="uIJTvxFOg2izOY7aRRiU">
               <div className="I3EivnXTjYMpSbPUiYEg contentSpacing">
-                <CSectionPlaylist
+                <MemoizedCSectionPlaylist
                   data={sectionData}
                   hiddenTitle
                 />
