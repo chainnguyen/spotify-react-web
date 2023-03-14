@@ -1,3 +1,4 @@
+import React, { useCallback } from 'react'
 import { Link } from 'react-router-dom'
 
 import type { ITrack } from '@/@types/views/playlist'
@@ -12,6 +13,11 @@ interface IProps {
 
 function CTrackCard({ data, order }: IProps) {
   const { enforceTrack } = useTrackController()
+
+  const MemoizedCButtonSaveToLibrary = React.memo(CButtonSaveToLibrary)
+  const MemoizedCButtonMore = React.memo(CButtonMore)
+
+  const onEnforceTrack = useCallback(() => enforceTrack(data), [JSON.stringify(data)])
 
   return (
     <div
@@ -37,7 +43,7 @@ function CTrackCard({ data, order }: IProps) {
               aria-label={`Play ${data.title} by ${data.artist.name}`}
               tabIndex={0}
               aria-expanded="false"
-              onClick={() => enforceTrack(data)}>
+              onClick={onEnforceTrack}>
               <svg
                 role="img"
                 height="24"
@@ -125,7 +131,7 @@ function CTrackCard({ data, order }: IProps) {
           role="gridcell"
           aria-colindex={5}
           tabIndex={-1}>
-          <CButtonSaveToLibrary
+          <MemoizedCButtonSaveToLibrary
             width={16}
             height={16}
             classButton={'tGKwoPuvNBNK3TzCS5OH'}
@@ -135,7 +141,7 @@ function CTrackCard({ data, order }: IProps) {
             {data.track_duration}
           </div>
 
-          <CButtonMore
+          <MemoizedCButtonMore
             width={16}
             height={16}
             tabIndex={-1}

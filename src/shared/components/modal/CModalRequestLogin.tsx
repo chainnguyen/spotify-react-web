@@ -3,7 +3,7 @@ import '@/assets/scss/components/modal/modal-request-login.scss'
 import type { CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import type { Card, ITrack } from '@/@types/views/playlist'
 import { CModalCurtain } from '@/shared/components'

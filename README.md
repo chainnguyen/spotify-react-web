@@ -5,12 +5,14 @@
 
 ## Technologies
 Project is created with:
-* Vite version: 4.1.0
-* ReactJS version: 18.2.0
-* TypeScript version: 4.9.3
-* Eslint version: 8.31.0
-* Prettier version: 2.8.1
-* Flowbite version: 1.6.3
+* Vite: 4.1.0
+* ReactJS: 18.2.0
+* Redux-toolkit: 2.9.11
+* React-hook-form: 7.43.5
+* React-i18next: 12.2.0
+* TypeScript: 4.9.3
+* Eslint: 8.31.0
+* Prettier: 2.8.1
 
 ## Setup
 ```
