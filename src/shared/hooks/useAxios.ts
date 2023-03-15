@@ -7,8 +7,8 @@ function useAxios() {
     return axiosInstance.get(`${url}`, { params })
   }
 
-  const Post = (url: string, body: any, config?: any): Promise<AxiosResponse<any>> => {
-    return axiosInstance.post(`${url}`, body, config)
+  const Post = (url: string, body: any, params?: any): Promise<AxiosResponse<any>> => {
+    return axiosInstance.post(`${url}`, body, { params })
   }
 
   const Put = (url: string, body: any, params?: any): Promise<AxiosResponse<any>> => {

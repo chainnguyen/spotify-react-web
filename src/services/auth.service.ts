@@ -5,7 +5,7 @@ const { Get, Post } = useAxios()
 
 export const AuthService = {
   async login(form: ICredentials) {
-    return await Post('/mocks/auth.json', form).then((resp: any) => {
+    return await Post('/mocks/auth.json', null, form).then((resp: any) => {
       const { email, password } = resp.data.data
       if (form.email === email && form.password === password) {
         return resp.data
