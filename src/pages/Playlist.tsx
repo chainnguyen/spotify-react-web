@@ -51,7 +51,7 @@ function Playlist() {
     }
     // Cleanup
     return () => {
-      document.title = import.meta.env.VITE_DEFAULT_TITLE
+      document.title = 'Spotify - Web Player'
     }
   }, [JSON.stringify(playlistData)])
 

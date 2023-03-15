@@ -23,21 +23,18 @@ yarn | npm install
 <code>.env.development</code>
 ```
 VITE_ROUTER_BASE=/
-VITE_DEFAULT_TITLE='Spotify - Web Player'
 VITE_AXIOS_BASE_URL=http://localhost:8080/
 ```
 
 <code>.env.staging</code>
 ```
 VITE_ROUTER_BASE=/
-VITE_DEFAULT_TITLE='Spotify - Web Player'
 VITE_AXIOS_BASE_URL=https://localhost:8080/stag
 ```
 
 <code>.env.production</code>
 ```
 VITE_ROUTER_BASE=/
-VITE_DEFAULT_TITLE='Spotify - Web Player'
 VITE_AXIOS_BASE_URL=https://localhost:8080/prod
 ```
 
