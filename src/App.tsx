@@ -24,8 +24,6 @@ function App() {
   }
 
   useEffect(() => {
-    // Set default app title
-    document.title = import.meta.env.VITE_DEFAULT_TITLE
     // Set language saved from localStorage
     $currentLocale && dispatch(SET_LANGUAGE($currentLocale))
 

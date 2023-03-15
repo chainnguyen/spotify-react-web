@@ -30,7 +30,7 @@ function AuthGuard(props: WrapperRouteProps) {
         dispatch(SET_PROFILE(res.data))
       })
     } catch (err) {
-      throw err
+      console.error(err)
     }
   }
 

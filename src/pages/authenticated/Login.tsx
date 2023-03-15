@@ -1,6 +1,5 @@
 import '@/assets/scss/layouts/auth.scss'
 
-import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
@@ -18,8 +17,6 @@ function Login() {
   const { t } = useTranslation()
   const dispatch = useDispatch<AppDispatch>()
 
-  const MemoizedCInputText = React.memo(CInputText)
-
   const defaultValues = {
     email: 'ntrungtn@gmail.com',
     password: '123456',
@@ -27,7 +24,7 @@ function Login() {
 
   const validScheme = yup.object().shape({
     email: yup.string().label('auth.email_address_or_username').email().max(100).required(),
-    password: yup.string().label('auth.password').max(100).required(),
+    password: yup.string().label('auth.password').min(6).max(100).required(),
   })
 
   const { registerField, handleSubmit } = useFormHandler<ICredentials>({
@@ -44,14 +41,14 @@ function Login() {
         window.location.reload()
       })
     } catch (err) {
-      alert(err)
+      alert('Username or password incorrect')
     }
   }
 
   return (
     <div className="sc-gswNZR wKwWn">
       <form onSubmit={handleSubmit(onSubmit)}>
-        <MemoizedCInputText
+        <CInputText
           reid="email"
           field="email"
           {...registerField}
@@ -59,7 +56,7 @@ function Login() {
           placeholder={t('auth.email_address_or_username')}
         />
 
-        <MemoizedCInputText
+        <CInputText
           reid="password"
           field="password"
           type="password"

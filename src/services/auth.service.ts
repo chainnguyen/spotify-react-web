@@ -10,7 +10,7 @@ export const AuthService = {
       if (form.email === email && form.password === password) {
         return resp.data
       }
-      throw new Error('Username or password incorrect')
+      return null
     })
   },
 
